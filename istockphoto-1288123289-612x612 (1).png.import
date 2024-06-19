@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dt3nrpbgdxrub"
-path="res://.godot/imported/bubble bath.jpg-a77f4ac30c8b2e8c242dd635bc17820c.ctex"
+uid="uid://dbyat70wyhdee"
+path="res://.godot/imported/istockphoto-1288123289-612x612 (1).png-3dbf7a315634d4b7e8aa3e5ea8714ebd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://bubble bath.jpg"
-dest_files=["res://.godot/imported/bubble bath.jpg-a77f4ac30c8b2e8c242dd635bc17820c.ctex"]
+source_file="res://istockphoto-1288123289-612x612 (1).png"
+dest_files=["res://.godot/imported/istockphoto-1288123289-612x612 (1).png-3dbf7a315634d4b7e8aa3e5ea8714ebd.ctex"]
 
 [params]
 

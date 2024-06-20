@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bdmgfhhmn4glj"]
+
+[node name="Dead" type="Node2D"]
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 522.0
+offset_top = 260.0
+offset_right = 768.0
+offset_bottom = 403.0
+text = "Dead :("

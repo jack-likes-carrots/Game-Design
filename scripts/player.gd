@@ -36,4 +36,4 @@ func _physics_process(delta):
 
 func _on_area_2d_body_entered(body):
 	if body.name == "Bubbles":
-		print("Die")
+		get_tree().change_scene_to_file("res://scenes/dead.tscn")

@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://duieeqku3etp6"]
+
+[ext_resource type="Script" path="res://credits.gd" id="1_tig5v"]
+[ext_resource type="Script" path="res://scenes/game.gd" id="1_w24ur"]
+
+[node name="main menu" type="Node2D"]
+
+[node name="game" type="Button" parent="."]
+offset_left = 520.0
+offset_top = 264.0
+offset_right = 632.0
+offset_bottom = 304.0
+text = "New Game"
+script = ExtResource("1_w24ur")
+
+[node name="credits" type="Button" parent="."]
+offset_left = 520.0
+offset_top = 328.0
+offset_right = 632.0
+offset_bottom = 368.0
+text = "Credits"
+script = ExtResource("1_tig5v")
+
+[connection signal="pressed" from="game" to="game" method="_on_pressed"]
+[connection signal="pressed" from="credits" to="credits" method="_on_pressed"]

@@ -32,3 +32,8 @@ func _physics_process(delta):
 	#respawn
 	if position.y > 900:
 		position = start_position
+
+
+func _on_area_2d_body_entered(body):
+	if body.name == "Bubbles":
+		print("Die")

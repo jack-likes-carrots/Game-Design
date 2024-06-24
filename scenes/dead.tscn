@@ -1,10 +1,15 @@
-[gd_scene format=3 uid="uid://bdmgfhhmn4glj"]
+[gd_scene load_steps=2 format=3 uid="uid://bdmgfhhmn4glj"]
+
+[ext_resource type="Script" path="res://scenes/Button.gd" id="1_7ikjy"]
 
 [node name="Dead" type="Node2D"]
 
-[node name="TextEdit" type="TextEdit" parent="."]
-offset_left = 522.0
-offset_top = 260.0
-offset_right = 768.0
-offset_bottom = 403.0
-text = "Dead :("
+[node name="Button" type="Button" parent="."]
+offset_left = 576.0
+offset_top = 312.0
+offset_right = 664.0
+offset_bottom = 343.0
+text = "Play Again"
+script = ExtResource("1_7ikjy")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bdmgfhhmn4glj"]
+[gd_scene load_steps=5 format=3 uid="uid://bdmgfhhmn4glj"]
 
 [ext_resource type="Script" path="res://scenes/Button.gd" id="1_7ikjy"]
 [ext_resource type="Texture2D" uid="uid://bhktnjse1rb5p" path="res://black screen.png" id="1_rniur"]
+[ext_resource type="Script" path="res://scenes/main menu.gd" id="3_j0ilv"]
 
 [sub_resource type="FontFile" id="FontFile_kw2kc"]
 cache/0/16/0/ascent = 0.0
@@ -8015,16 +8016,8 @@ cache/0/56/0/kerning_overrides/56/0 = Vector2(0, 0)
 position = Vector2(323, 389)
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
-position = Vector2(-2, -2)
+position = Vector2(77, 3)
 texture = ExtResource("1_rniur")
-
-[node name="Button" type="Button" parent="Area2D"]
-offset_left = 189.0
-offset_top = 59.0
-offset_right = 317.0
-offset_bottom = 123.0
-text = "Play Again"
-script = ExtResource("1_7ikjy")
 
 [node name="TextEdit" type="TextEdit" parent="."]
 offset_left = 400.0
@@ -8036,4 +8029,21 @@ theme_override_fonts/font = SubResource("FontFile_kw2kc")
 theme_override_font_sizes/font_size = 71
 text = "You Died :("
 
-[connection signal="pressed" from="Area2D/Button" to="Area2D/Button" method="_on_pressed"]
+[node name="play again" type="Button" parent="."]
+offset_left = 512.0
+offset_top = 384.0
+offset_right = 640.0
+offset_bottom = 448.0
+text = "Play Again"
+script = ExtResource("1_7ikjy")
+
+[node name="main menu" type="Button" parent="."]
+offset_left = 512.0
+offset_top = 472.0
+offset_right = 640.0
+offset_bottom = 536.0
+text = "Main Menu"
+script = ExtResource("3_j0ilv")
+
+[connection signal="pressed" from="play again" to="play again" method="_on_pressed"]
+[connection signal="pressed" from="main menu" to="main menu" method="_on_pressed"]

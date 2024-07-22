@@ -32,5 +32,3 @@ func _physics_process(delta):
 	if position.y > 900:
 		position = start_position
 
-
-

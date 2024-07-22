@@ -1,6 +1,6 @@
 [gd_scene load_steps=19 format=3 uid="uid://cd7d23ft20rn"]
 
-[ext_resource type="PackedScene" uid="uid://c0cgqth0fx6d2" path="res://prefabs/death bath.tscn" id="1_4cfei"]
+[ext_resource type="PackedScene" path="res://prefabs/death bath.tscn" id="1_4cfei"]
 [ext_resource type="PackedScene" uid="uid://bctej106jjdu" path="res://prefabs/player.tscn" id="1_csmgx"]
 [ext_resource type="Texture2D" uid="uid://14u6gr4t446a" path="res://icon.svg" id="2_1wbp0"]
 [ext_resource type="PackedScene" uid="uid://cxwcpi4qfkye5" path="res://prefabs/portal.tscn" id="3_cbhu8"]

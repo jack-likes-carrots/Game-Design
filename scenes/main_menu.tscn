@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://duieeqku3etp6"]
+[gd_scene load_steps=5 format=3 uid="uid://duieeqku3etp6"]
 
+[ext_resource type="PackedScene" uid="uid://eipmfgq4e7xx" path="res://scenes/tile_map.tscn" id="1_dkhpb"]
 [ext_resource type="Script" path="res://credits.gd" id="1_tig5v"]
 [ext_resource type="Script" path="res://scenes/game.gd" id="1_w24ur"]
 [ext_resource type="Script" path="res://scenes/controls.gd" id="3_algai"]
 
 [node name="main menu" type="Node2D"]
+
+[node name="TileMap" parent="." instance=ExtResource("1_dkhpb")]
 
 [node name="game" type="Button" parent="."]
 offset_left = 520.0

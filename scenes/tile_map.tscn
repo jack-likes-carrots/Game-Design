@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://eipmfgq4e7xx"]
+
+[ext_resource type="Texture2D" uid="uid://xx0ulljbl31x" path="res://bubble bath.png" id="1_56kbm"]
+[ext_resource type="Texture2D" uid="uid://ck7rt7j7tcfjy" path="res://image (1).png" id="2_cn85f"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gs10e"]
+texture = ExtResource("1_56kbm")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rgn8d"]
+texture = ExtResource("2_cn85f")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_jv5h2"]
+tile_size = Vector2i(128, 128)
+sources/1 = SubResource("TileSetAtlasSource_gs10e")
+sources/4 = SubResource("TileSetAtlasSource_rgn8d")
+
+[node name="TileMap" type="TileMap"]
+tile_set = SubResource("TileSet_jv5h2")
+format = 2
+layer_0/tile_data = PackedInt32Array(262144, 1, 0, 262145, 1, 0, 262146, 1, 0, 262147, 1, 0, 262148, 1, 0, 262149, 1, 0, 262150, 1, 0, 262151, 1, 0, 262152, 1, 0, 196608, 4, 0, 131072, 4, 0, 65536, 4, 0, 0, 4, 0, 1, 4, 0, 2, 4, 0, 3, 4, 0, 4, 4, 0, 5, 4, 0, 6, 4, 0, 7, 4, 0, 8, 4, 0, 65544, 4, 0, 131080, 4, 0, 196615, 4, 0, 196614, 4, 0, 196613, 4, 0, 196612, 4, 0, 196611, 4, 0, 196616, 4, 0, 196610, 4, 0, 196609, 4, 0, 131073, 4, 0, 65537, 4, 0, 65538, 4, 0, 65539, 4, 0, 65540, 4, 0, 65541, 4, 0, 65542, 4, 0, 131078, 4, 0, 131079, 4, 0, 65543, 4, 0, 131077, 4, 0, 131076, 4, 0, 131075, 4, 0, 131074, 4, 0)

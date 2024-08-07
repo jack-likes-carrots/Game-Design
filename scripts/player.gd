@@ -38,4 +38,6 @@ func _physics_process(delta):
 	#respawn
 	if position.y > 900:
 		position = start_position
+		
+
 

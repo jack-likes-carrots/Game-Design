@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://c6fo7vvxmy5qt"]
+
+[ext_resource type="Script" path="res://prefabs/death bath.gd" id="1_ao0ld"]
+[ext_resource type="Texture2D" uid="uid://xx0ulljbl31x" path="res://art/bubble bath.png" id="1_cd0v2"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_05pcf"]
+texture = ExtResource("1_cd0v2")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+
+[sub_resource type="TileSet" id="TileSet_urco0"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_05pcf")
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_ao0ld")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_urco0")
+format = 2
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

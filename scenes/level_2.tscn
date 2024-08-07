@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://dkc88gxn3qcm1"]
 
-[ext_resource type="Texture2D" uid="uid://ck7rt7j7tcfjy" path="res://image (1).png" id="3_7qs64"]
+[ext_resource type="Texture2D" uid="uid://ck7rt7j7tcfjy" path="res://art/image (1).png" id="3_7qs64"]
 [ext_resource type="PackedScene" uid="uid://bctej106jjdu" path="res://prefabs/player.tscn" id="3_060l4"]
 [ext_resource type="Texture2D" uid="uid://d3heh62io0anf" path="res://New Piskel-1.png.png" id="4_oofqv"]
 [ext_resource type="Texture2D" uid="uid://bo8ogbbu3i6ax" path="res://kenney.nl/New Piskel (1).png" id="4_wp5rt"]
@@ -61,4 +61,3 @@ layer_0/tile_data = PackedInt32Array(262152, 3, 0, 262151, 3, 0, 262150, 3, 0, 2
 [node name="TileMap2" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_aj7iy")
 format = 2
-layer_0/tile_data = PackedInt32Array(1245211, 458752, 2, 1179675, 458752, 2, 1179676, 458752, 2, 1179677, 458752, 2, 1179678, 458752, 2, 1179679, 458752, 2, 1179680, 458752, 2, 1245216, 458752, 2, 1245215, 458752, 2, 1245214, 458752, 2, 1245213, 458752, 2, 1245212, 458752, 2, 1114139, 458752, 2, 1048603, 458752, 2, 1114140, 458752, 2, 1114141, 458752, 2, 1114142, 458752, 2, 983067, 458752, 2, 1048604, 458752, 2)

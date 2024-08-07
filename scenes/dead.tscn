@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://bdmgfhhmn4glj"]
 
 [ext_resource type="Script" path="res://scenes/Button.gd" id="1_7ikjy"]
-[ext_resource type="Texture2D" uid="uid://bhktnjse1rb5p" path="res://black screen.png" id="1_rniur"]
-[ext_resource type="Script" path="res://scenes/main menu.gd" id="3_j0ilv"]
+[ext_resource type="Texture2D" path="res://black screen.png" id="1_rniur"]
+[ext_resource type="Script" path="res://scripts/main menu.gd" id="3_j0ilv"]
 
 [sub_resource type="FontFile" id="FontFile_kw2kc"]
 cache/0/16/0/ascent = 0.0

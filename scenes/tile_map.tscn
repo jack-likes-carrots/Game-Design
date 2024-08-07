@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://eipmfgq4e7xx"]
 
-[ext_resource type="Texture2D" uid="uid://xx0ulljbl31x" path="res://bubble bath.png" id="1_56kbm"]
-[ext_resource type="Texture2D" uid="uid://ck7rt7j7tcfjy" path="res://image (1).png" id="2_cn85f"]
+[ext_resource type="Texture2D" uid="uid://xx0ulljbl31x" path="res://art/bubble bath.png" id="1_56kbm"]
+[ext_resource type="Texture2D" uid="uid://ck7rt7j7tcfjy" path="res://art/image (1).png" id="2_cn85f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gs10e"]
 texture = ExtResource("1_56kbm")

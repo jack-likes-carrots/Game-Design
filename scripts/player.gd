@@ -5,7 +5,7 @@ const SPEED = 400.0
 const JUMP_VELOCITY = -700.0
 #double jumping
 var jump_count = 0
-var max_jumps = 2
+var max_jumps = 13
 
 var start_position = Vector2(600, 250)
 

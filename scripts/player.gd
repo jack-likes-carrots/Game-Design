@@ -9,6 +9,8 @@ var max_jumps = 13
 
 var start_position = Vector2(600, 250)
 
+@onready var anim : AnimatedSprite2D = $AnimatedSprite2D
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -16,6 +18,16 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
+	else:
+		if velocity.x > 10:
+			anim.play("run")
+		elif velocity.x == 0:
+			anim.play("Idle")
+
+	if velocity.x < 0:
+		anim.flip_h = true
+	else:
+		anim.flip_h = false
 
 	if is_on_floor():
 		jump_count = 0
@@ -23,7 +35,9 @@ func _physics_process(delta):
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and jump_count < max_jumps:
 		velocity.y = JUMP_VELOCITY
+		anim.play("jump")
 		jump_count += 1
+	
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -35,9 +49,9 @@ func _physics_process(delta):
 
 	move_and_slide()
 	
+	
+	
 	#respawn
 	if position.y > 900:
 		position = start_position
 		
-
-

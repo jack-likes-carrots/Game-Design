@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c6fo7vvxmy5qt"]
 
-[ext_resource type="Script" path="res://prefabs/death bath.gd" id="1_ao0ld"]
+[ext_resource type="Script" path="res://scripts/death bath.gd" id="1_ao0ld"]
 [ext_resource type="Texture2D" uid="uid://xx0ulljbl31x" path="res://art/bubble bath.png" id="1_cd0v2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_05pcf"]

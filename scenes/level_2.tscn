@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://ck7rt7j7tcfjy" path="res://art/image (1).png" id="3_7qs64"]
 [ext_resource type="PackedScene" uid="uid://bctej106jjdu" path="res://prefabs/player.tscn" id="3_060l4"]
-[ext_resource type="Texture2D" uid="uid://d3heh62io0anf" path="res://New Piskel-1.png.png" id="4_oofqv"]
+[ext_resource type="Texture2D" uid="uid://d3heh62io0anf" path="res://art/New Piskel-1.png.png" id="4_oofqv"]
 [ext_resource type="Texture2D" uid="uid://bo8ogbbu3i6ax" path="res://kenney.nl/New Piskel (1).png" id="4_wp5rt"]
 [ext_resource type="Texture2D" uid="uid://xadradbn0oyf" path="res://kenney.nl/Tilemap/rock.png" id="5_pqjia"]
 

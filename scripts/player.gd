@@ -19,15 +19,17 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	else:
-		if velocity.x > 10:
+		if velocity.x > 1:
 			anim.play("run")
 		elif velocity.x == 0:
 			anim.play("Idle")
 
 	if velocity.x < 0:
-		anim.flip_h = true
+		anim.flip_h = false
 	else:
 		anim.flip_h = false
+		
+
 
 	if is_on_floor():
 		jump_count = 0
@@ -49,9 +51,8 @@ func _physics_process(delta):
 
 	move_and_slide()
 	
+	if Input.is_action_pressed("player_back"):
+		anim.play("run_back")
+
+
 	
-	
-	#respawn
-	if position.y > 900:
-		position = start_position
-		

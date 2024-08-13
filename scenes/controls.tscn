@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cl5oegl7j51n8"]
 
 [ext_resource type="PackedScene" uid="uid://eipmfgq4e7xx" path="res://scenes/tile_map.tscn" id="1_can8b"]
-[ext_resource type="Script" path="res://scenes/Button.gd" id="1_w1vwv"]
+[ext_resource type="Script" path="res://scripts/back_menu.gd" id="1_w1vwv"]
 
 [node name="controls" type="Node2D"]
 

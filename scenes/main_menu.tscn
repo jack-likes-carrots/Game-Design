@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://eipmfgq4e7xx" path="res://scenes/tile_map.tscn" id="1_dkhpb"]
 [ext_resource type="Script" path="res://scripts/credits.gd" id="1_tig5v"]
-[ext_resource type="Script" path="res://scenes/game.gd" id="1_w24ur"]
-[ext_resource type="Script" path="res://scenes/controls.gd" id="3_algai"]
+[ext_resource type="Script" path="res://scripts/new_game.gd" id="1_w24ur"]
+[ext_resource type="Script" path="res://scripts/controls.gd" id="3_algai"]
 
 [node name="main menu" type="Node2D"]
 

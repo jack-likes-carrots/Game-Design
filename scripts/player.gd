@@ -30,7 +30,6 @@ func _physics_process(delta):
 		anim.flip_h = false
 		
 
-
 	if is_on_floor():
 		jump_count = 0
 	
@@ -53,6 +52,9 @@ func _physics_process(delta):
 	
 	if Input.is_action_pressed("player_back"):
 		anim.play("run_back")
+	elif Input.is_action_pressed("player_back") and Input.is_action_pressed("player_jump"):
+		anim.play("jump_back")
+
 
 
 	

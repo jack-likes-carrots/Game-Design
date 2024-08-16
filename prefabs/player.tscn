@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bctej106jjdu"]
+[gd_scene load_steps=18 format=3 uid="uid://bctej106jjdu"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_djx3c"]
 [ext_resource type="Texture2D" uid="uid://q7ycfdvtl5u0" path="res://art/Jonty.png" id="2_11buc"]
@@ -23,6 +23,18 @@ region = Rect2(128, 128, 128, 128)
 [sub_resource type="AtlasTexture" id="AtlasTexture_n2qt8"]
 atlas = ExtResource("2_11buc")
 region = Rect2(256, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n521i"]
+atlas = ExtResource("3_fgprs")
+region = Rect2(256, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s8wo1"]
+atlas = ExtResource("3_fgprs")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ufh4s"]
+atlas = ExtResource("3_fgprs")
+region = Rect2(0, 128, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vr351"]
 atlas = ExtResource("2_11buc")
@@ -69,6 +81,20 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_n521i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s8wo1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ufh4s")
+}],
+"loop": true,
+"name": &"jump_back",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_vr351")
 }, {
 "duration": 1.0,
@@ -100,9 +126,8 @@ metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_urwnc")
-animation = &"run_back"
+animation = &"jump_back"
 autoplay = "Idle"
-frame_progress = 0.794851
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_v1xp8")

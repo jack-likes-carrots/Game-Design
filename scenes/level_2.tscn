@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://dkc88gxn3qcm1"]
+[gd_scene load_steps=36 format=3 uid="uid://dkc88gxn3qcm1"]
 
 [ext_resource type="Texture2D" uid="uid://br4211rf570nq" path="res://art/bush 1.png" id="1_y45wc"]
 [ext_resource type="Texture2D" uid="uid://ceyo3plp7aoic" path="res://art/wood 1.png" id="2_wl357"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://c55gudfukp1kb" path="res://art/cage.png" id="14_1ygvu"]
 [ext_resource type="Texture2D" uid="uid://rdbby3alnkpf" path="res://sprites/Freddy.png" id="15_5oeq8"]
 [ext_resource type="Texture2D" uid="uid://cmaukb6aaylw0" path="res://sprites/Piggy.png" id="16_0dxxj"]
+[ext_resource type="PackedScene" uid="uid://cm6ksqhgmrnsr" path="res://prefabs/enemy.tscn" id="17_ei1tj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b1h8x"]
 texture = ExtResource("1_y45wc")
@@ -197,3 +198,6 @@ text = "Oh NO!!! The Lemon Tree is locked.
 You will have to get the chrystal Lemons 
 if you want to unlock the cage and SAVE
 your Lemonade stand"
+
+[node name="enemy" parent="." instance=ExtResource("17_ei1tj")]
+position = Vector2(8032, 1000)

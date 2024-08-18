@@ -7,6 +7,9 @@ const JUMP_VELOCITY = -700.0
 var jump_count = 0
 var max_jumps = 2
 
+func jump():
+	velocity.y = JUMP_VELOCITY
+
 var start_position = Vector2(600, 250)
 
 @onready var anim : AnimatedSprite2D = $AnimatedSprite2D

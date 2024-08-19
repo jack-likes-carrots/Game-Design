@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjajan76h3fsm"]
+
+[ext_resource type="Texture2D" uid="uid://by1xkoakl5j5x" path="res://art/mr_hippo.jpg" id="1_tywpp"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="MrHippo" type="Sprite2D" parent="."]
+position = Vector2(576, 360)
+texture = ExtResource("1_tywpp")

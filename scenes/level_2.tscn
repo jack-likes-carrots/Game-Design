@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://dkc88gxn3qcm1"]
+[gd_scene load_steps=42 format=3 uid="uid://dkc88gxn3qcm1"]
 
 [ext_resource type="Texture2D" uid="uid://d04ocgv1osxsa" path="res://art/WTF.png" id="1_m5ncu"]
 [ext_resource type="Texture2D" uid="uid://br4211rf570nq" path="res://art/bush 1.png" id="1_y45wc"]
@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://dlpcdyrmgtwtn" path="res://art/cave_interior.png" id="4_7ieyi"]
 [ext_resource type="Texture2D" uid="uid://bceoeunatew8p" path="res://art/no physics.png" id="4_lrxs4"]
 [ext_resource type="Texture2D" uid="uid://bo8ogbbu3i6ax" path="res://kenney.nl/New Piskel (1).png" id="4_wp5rt"]
-[ext_resource type="PackedScene" uid="uid://cxwcpi4qfkye5" path="res://prefabs/portal.tscn" id="5_7styh"]
 [ext_resource type="Texture2D" uid="uid://bf5a6ppahysgi" path="res://art/background.png" id="5_jgym8"]
 [ext_resource type="Texture2D" uid="uid://c3f8se6jux6ar" path="res://art/clouds.png" id="9_ju83n"]
 [ext_resource type="Texture2D" uid="uid://ccsvqolpa7plf" path="res://art/tiles.png" id="10_xgy1y"]
@@ -19,6 +18,9 @@
 [ext_resource type="Texture2D" uid="uid://rdbby3alnkpf" path="res://sprites/Freddy.png" id="15_5oeq8"]
 [ext_resource type="Texture2D" uid="uid://cmaukb6aaylw0" path="res://sprites/Piggy.png" id="16_0dxxj"]
 [ext_resource type="PackedScene" uid="uid://pyt0l6gb3uid" path="res://prefabs/enemy.tscn" id="17_ei1tj"]
+[ext_resource type="Script" path="res://scenes/area_2d.gd" id="19_fjvde"]
+[ext_resource type="Texture2D" uid="uid://d3heh62io0anf" path="res://art/New Piskel-1.png.png" id="20_4pwkh"]
+[ext_resource type="Texture2D" uid="uid://bobgaanwh4yi0" path="res://art/Lemonade.png" id="20_ekp6d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b1h8x"]
 texture = ExtResource("1_y45wc")
@@ -139,6 +141,9 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_reuh4")
 sources/1 = SubResource("TileSetAtlasSource_r8uty")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vk4cj"]
+size = Vector2(128, 128)
+
 [node name="level_2" type="Node2D"]
 
 [node name="Wtf" type="Sprite2D" parent="."]
@@ -164,9 +169,6 @@ tile_set = SubResource("TileSet_ivgu3")
 format = 2
 layer_0/tile_data = PackedInt32Array(458812, 0, 0, 393276, 0, 0, 458816, 0, 0, 393280, 0, 0, 327744, 0, 0, 196674, 0, 0, 196675, 0, 0, 196676, 0, 0, 196680, 0, 0, 196681, 0, 0, 196682, 0, 0, 196683, 0, 0, 196684, 0, 0, 72, 0, 0, 73, 0, 0, 75, 0, 0, 74, 0, 0, 76, 0, 0, 327759, 0, 0, 393295, 0, 0, 458831, 0, 0, 393299, 0, 0, 458835, 0, 0)
 
-[node name="Portal" parent="." instance=ExtResource("5_7styh")]
-position = Vector2(11456, 960)
-
 [node name="tree" type="Sprite2D" parent="."]
 position = Vector2(5080, 39.9999)
 scale = Vector2(5.375, 5.375)
@@ -188,8 +190,14 @@ scale = Vector2(2.32813, 2.32813)
 texture = ExtResource("16_0dxxj")
 flip_v = true
 
-[node name="player" parent="." instance=ExtResource("3_060l4")]
-position = Vector2(1216, 320)
+[node name="Label3" type="Label" parent="."]
+offset_left = 1518.0
+offset_top = -232.0
+offset_right = 1992.0
+offset_bottom = -146.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 52
+text = "LEMONADE!!! :D"
 
 [node name="Label2" type="Label" parent="."]
 offset_left = 4360.0
@@ -221,3 +229,23 @@ position = Vector2(8040, 928)
 
 [node name="enemy2" parent="." instance=ExtResource("17_ei1tj")]
 position = Vector2(10472, 928)
+
+[node name="Lemonade" type="Sprite2D" parent="."]
+position = Vector2(1464, -192)
+texture = ExtResource("20_ekp6d")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(11840, 960)
+script = ExtResource("19_fjvde")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+texture = ExtResource("20_4pwkh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_vk4cj")
+
+[node name="player" parent="." instance=ExtResource("3_060l4")]
+position = Vector2(1216, 320)
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

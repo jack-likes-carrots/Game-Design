@@ -1,0 +1,70 @@
+[gd_scene load_steps=10 format=3 uid="uid://ba5suvk62iv2o"]
+
+[ext_resource type="Script" path="res://area_2d.gd" id="1_qjxru"]
+[ext_resource type="Texture2D" uid="uid://dclyn1at8sxwe" path="res://sprites/Shummys.png" id="2_wireb"]
+
+[sub_resource type="Curve2D" id="Curve2D_isjxe"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1856, 8, 0, 0, 0, 0, 0, 0)
+}
+point_count = 3
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bq7s8"]
+atlas = ExtResource("2_wireb")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w4jka"]
+atlas = ExtResource("2_wireb")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12ooh"]
+atlas = ExtResource("2_wireb")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wskfp"]
+atlas = ExtResource("2_wireb")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_clgav"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bq7s8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w4jka")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_12ooh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wskfp")
+}],
+"loop": true,
+"name": &"shummy",
+"speed": 2.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gvad7"]
+size = Vector2(64, 72)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_isjxe")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+rotation = 0.00431032
+
+[node name="Area2D" type="Area2D" parent="Path2D/PathFollow2D"]
+script = ExtResource("1_qjxru")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Path2D/PathFollow2D/Area2D"]
+sprite_frames = SubResource("SpriteFrames_clgav")
+animation = &"shummy"
+autoplay = "shummy"
+frame_progress = 0.292316
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/Area2D"]
+position = Vector2(0, -12)
+shape = SubResource("RectangleShape2D_gvad7")

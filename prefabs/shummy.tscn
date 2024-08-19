@@ -1,0 +1,68 @@
+[gd_scene load_steps=10 format=3 uid="uid://doc8ohkqh5eds"]
+
+[ext_resource type="Script" path="res://shumy.gd" id="1_chfyl"]
+[ext_resource type="Texture2D" uid="uid://dclyn1at8sxwe" path="res://sprites/Shummys.png" id="2_nadn8"]
+
+[sub_resource type="Curve2D" id="Curve2D_pe25k"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -272, 184, 0, 0, 0, 0, 624, 184, 0, 0, 0, 0, -272, 184)
+}
+point_count = 3
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hp58t"]
+atlas = ExtResource("2_nadn8")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xk6wq"]
+atlas = ExtResource("2_nadn8")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jiabq"]
+atlas = ExtResource("2_nadn8")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bdadi"]
+atlas = ExtResource("2_nadn8")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cu51j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hp58t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xk6wq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jiabq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bdadi")
+}],
+"loop": true,
+"name": &"shummy",
+"speed": 2.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tapdw"]
+size = Vector2(66.5, 70.25)
+
+[node name="Path2D" type="Path2D"]
+curve = SubResource("Curve2D_pe25k")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+position = Vector2(-272, 184)
+
+[node name="Area2D" type="Area2D" parent="PathFollow2D"]
+script = ExtResource("1_chfyl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PathFollow2D/Area2D"]
+sprite_frames = SubResource("SpriteFrames_cu51j")
+animation = &"shummy"
+autoplay = "shummy"
+frame_progress = 0.967324
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/Area2D"]
+position = Vector2(1.25, -12.875)
+shape = SubResource("RectangleShape2D_tapdw")

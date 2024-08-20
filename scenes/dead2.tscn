@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://dyuo5hn7p8pfe"]
+
+[ext_resource type="Script" path="res://scripts/main menu.gd" id="1_fxybc"]
+
+[node name="Dead" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(323, 389)
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(77, 3)
+
+[node name="main menu" type="Button" parent="."]
+offset_left = 512.0
+offset_top = 472.0
+offset_right = 640.0
+offset_bottom = 536.0
+text = "Main Menu"
+script = ExtResource("1_fxybc")
+
+[node name="play again" type="Button" parent="."]
+offset_left = 512.0
+offset_top = 384.0
+offset_right = 640.0
+offset_bottom = 448.0
+text = "Play Again"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 352.0
+offset_top = 192.0
+offset_right = 800.0
+offset_bottom = 297.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 76
+text = "Your Dead :("
+
+[connection signal="pressed" from="main menu" to="main menu" method="_on_pressed"]
+[connection signal="pressed" from="play again" to="main menu" method="_on_play_again_pressed"]

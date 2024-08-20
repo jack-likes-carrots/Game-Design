@@ -16,4 +16,4 @@ func _on_pressed():
 
 
 func _on_play_again_pressed():
-	get_tree().change_scene_to_file("res://scenes/level_1.tscn")
+	get_tree().change_scene_to_file("res://scenes/level_2.tscn")

@@ -70,5 +70,6 @@ text = "Inpirational
 Quote"
 script = ExtResource("6_ea3nt")
 
-[connection signal="pressed" from="main_menu" to="quote" method="_on_button_pressed"]
+[connection signal="pressed" from="main_menu" to="main_menu" method="_on_pressed"]
 [connection signal="pressed" from="play_again" to="play_again" method="_on_pressed"]
+[connection signal="pressed" from="quote" to="quote" method="_on_pressed"]

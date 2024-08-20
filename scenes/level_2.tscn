@@ -17,7 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://c55gudfukp1kb" path="res://art/cage.png" id="14_1ygvu"]
 [ext_resource type="Texture2D" uid="uid://rdbby3alnkpf" path="res://sprites/Freddy.png" id="15_5oeq8"]
 [ext_resource type="Texture2D" uid="uid://cmaukb6aaylw0" path="res://sprites/Piggy.png" id="16_0dxxj"]
-[ext_resource type="PackedScene" uid="uid://pyt0l6gb3uid" path="res://prefabs/enemy.tscn" id="17_ei1tj"]
+[ext_resource type="PackedScene" uid="uid://cm6ksqhgmrnsr" path="res://prefabs/enemy.tscn" id="17_ei1tj"]
 [ext_resource type="Script" path="res://scenes/area_2d.gd" id="19_fjvde"]
 [ext_resource type="Texture2D" uid="uid://d3heh62io0anf" path="res://art/New Piskel-1.png.png" id="20_4pwkh"]
 [ext_resource type="Texture2D" uid="uid://bobgaanwh4yi0" path="res://art/Lemonade.png" id="20_ekp6d"]

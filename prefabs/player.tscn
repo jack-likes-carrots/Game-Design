@@ -117,14 +117,15 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v1xp8"]
-size = Vector2(128, 128)
+size = Vector2(112, 112)
 
 [node name="player" type="CharacterBody2D"]
-position = Vector2(2.08165e-12, 2.08165e-12)
 script = ExtResource("1_djx3c")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2.38419e-07, 3.8147e-06)
+scale = Vector2(0.875, 0.875)
 sprite_frames = SubResource("SpriteFrames_urwnc")
 animation = &"jump_back"
 autoplay = "Idle"

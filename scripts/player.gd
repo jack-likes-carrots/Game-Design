@@ -27,12 +27,6 @@ func _physics_process(delta):
 		elif velocity.x == 0:
 			anim.play("Idle")
 
-	if velocity.x < 0:
-		anim.flip_h = false
-	else:
-		anim.flip_h = false
-		
-
 	if is_on_floor():
 		jump_count = 0
 	
@@ -52,12 +46,10 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
-	
-	if Input.is_action_pressed("player_back"):
-		anim.play("run_back")
-	elif Input.is_action_pressed("player_back") and Input.is_action_pressed("player_jump"):
-		anim.play("jump_back")
 
-
+	if velocity.x < 0:
+		anim.flip_h = true
+	else:
+		anim.flip_h = false
 
 	

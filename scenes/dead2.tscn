@@ -36,3 +36,4 @@ text = "Your Dead :("
 
 [connection signal="pressed" from="main menu" to="main menu" method="_on_pressed"]
 [connection signal="pressed" from="play again" to="main menu" method="_on_play_again_pressed"]
+[connection signal="pressed" from="play again" to="play again" method="_on_pressed"]

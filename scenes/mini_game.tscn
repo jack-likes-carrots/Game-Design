@@ -1,6 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://ckp1qa4oq8cl"]
+[gd_scene load_steps=7 format=3 uid="uid://ckp1qa4oq8cl"]
 
 [ext_resource type="Texture2D" uid="uid://crp56ne4yfawj" path="res://art/bg_minigames.png" id="1_gw254"]
+[ext_resource type="Texture2D" uid="uid://ch3fd4r67xbsd" path="res://art/memory.png" id="2_ueijd"]
+[ext_resource type="Script" path="res://scripts/mini_game.gd" id="3_m4bug"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eibq1"]
 texture = ExtResource("1_gw254")
@@ -8,12 +10,19 @@ texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 0:1/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_845pv"]
+texture = ExtResource("2_ueijd")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_722yh"]
 tile_size = Vector2i(128, 128)
 physics_layer_0/collision_layer = 1
 sources/3 = SubResource("TileSetAtlasSource_eibq1")
+sources/4 = SubResource("TileSetAtlasSource_845pv")
 
-[node name="TileMap" type="TileMap"]
+[node name="Memory" type="TileMap"]
 tile_set = SubResource("TileSet_722yh")
 format = 2
-layer_0/tile_data = PackedInt32Array(2, 3, 0, 4, 3, 0, 6, 3, 0, 8, 3, 0, 65537, 3, 0, 65539, 3, 0, 65541, 3, 0, 65543, 3, 0, 131080, 3, 0, 131078, 3, 0, 131076, 3, 0, 131074, 3, 0, 131072, 3, 0, 196609, 3, 0, 196611, 3, 0, 196613, 3, 0, 196615, 3, 0, 262152, 3, 0, 262150, 3, 0, 262148, 3, 0, 262146, 3, 0, 262144, 3, 0, 262145, 3, 1, 262147, 3, 1, 262149, 3, 1, 262151, 3, 1, 196616, 3, 1, 196614, 3, 1, 196612, 3, 1, 196610, 3, 1, 196608, 3, 1, 131073, 3, 1, 131075, 3, 1, 131077, 3, 1, 131079, 3, 1, 65544, 3, 1, 65542, 3, 1, 65540, 3, 1, 65538, 3, 1, 65536, 3, 1, 1, 3, 1, 3, 3, 1, 5, 3, 1, 7, 3, 1, 0, 3, 0)
+layer_0/tile_data = PackedInt32Array(2, 4, 0, 4, 4, 0, 6, 4, 0, 8, 4, 0, 65537, 4, 0, 65539, 4, 0, 65541, 4, 0, 65543, 4, 0, 131080, 4, 0, 131078, 4, 0, 131076, 4, 0, 131074, 4, 0, 131072, 4, 0, 196609, 4, 0, 196611, 4, 0, 196613, 4, 0, 196615, 4, 0, 262152, 4, 0, 262150, 4, 0, 262148, 4, 0, 262146, 4, 0, 262144, 4, 0, 262145, 4, 0, 262147, 4, 0, 262149, 4, 0, 262151, 4, 0, 196616, 4, 0, 196614, 4, 0, 196612, 4, 0, 196610, 4, 0, 196608, 4, 0, 131073, 4, 0, 131075, 4, 0, 131077, 4, 0, 131079, 4, 0, 65544, 4, 0, 65542, 4, 0, 65540, 4, 0, 65538, 4, 0, 65536, 4, 0, 1, 4, 0, 3, 4, 0, 5, 4, 0, 7, 4, 0, 0, 4, 0)
+script = ExtResource("3_m4bug")

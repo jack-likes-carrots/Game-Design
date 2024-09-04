@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://dkc88gxn3qcm1"]
+[gd_scene load_steps=45 format=3 uid="uid://dkc88gxn3qcm1"]
 
 [ext_resource type="Texture2D" uid="uid://d04ocgv1osxsa" path="res://art/WTF.png" id="1_m5ncu"]
 [ext_resource type="Texture2D" uid="uid://br4211rf570nq" path="res://art/bush 1.png" id="1_y45wc"]
@@ -18,10 +18,11 @@
 [ext_resource type="Texture2D" uid="uid://c55gudfukp1kb" path="res://art/cage.png" id="14_1ygvu"]
 [ext_resource type="Texture2D" uid="uid://rdbby3alnkpf" path="res://sprites/Freddy.png" id="15_5oeq8"]
 [ext_resource type="Texture2D" uid="uid://cmaukb6aaylw0" path="res://sprites/Piggy.png" id="16_0dxxj"]
-[ext_resource type="PackedScene" uid="uid://pyt0l6gb3uid" path="res://prefabs/enemy.tscn" id="17_ei1tj"]
-[ext_resource type="Script" path="res://scenes/area_2d.gd" id="19_fjvde"]
+[ext_resource type="PackedScene" uid="uid://cm6ksqhgmrnsr" path="res://prefabs/enemy.tscn" id="17_ei1tj"]
+[ext_resource type="Script" path="res://sprites/portal.gd" id="19_fjvde"]
 [ext_resource type="Texture2D" uid="uid://d3heh62io0anf" path="res://art/New Piskel-1.png.png" id="20_4pwkh"]
 [ext_resource type="Texture2D" uid="uid://bobgaanwh4yi0" path="res://art/Lemonade.png" id="20_ekp6d"]
+[ext_resource type="AudioStream" uid="uid://cdsfqglur23tb" path="res://Audio/music.mp3" id="23_sxjts"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b1h8x"]
 texture = ExtResource("1_y45wc")
@@ -207,12 +208,12 @@ theme_override_font_sizes/font_size = 52
 text = "LEMONADE!!! :D"
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 4360.0
-offset_top = 128.0
-offset_right = 4680.0
-offset_bottom = 229.0
+offset_left = 4112.0
+offset_top = -8.0
+offset_right = 4695.0
+offset_bottom = 169.0
 theme_override_colors/font_color = Color(1, 1, 0, 1)
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 30
 text = "Oh NO!!! The Lemon Tree is locked. 
 You will have to get the chrystal Lemons 
 if you want to unlock the cage and SAVE
@@ -254,5 +255,9 @@ shape = SubResource("RectangleShape2D_vk4cj")
 
 [node name="player" parent="." instance=ExtResource("3_060l4")]
 position = Vector2(1216, 320)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("23_sxjts")
+autoplay = true
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

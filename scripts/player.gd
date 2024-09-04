@@ -48,8 +48,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 	if velocity.x < 0:
-		anim.flip_h = true
-	else:
-		anim.flip_h = false
+		anim.play("run_back")
+	
 
 	

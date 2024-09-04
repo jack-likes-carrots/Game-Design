@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckp1qa4oq8cl"]
+
+[ext_resource type="Texture2D" uid="uid://crp56ne4yfawj" path="res://art/bg_minigames.png" id="1_gw254"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eibq1"]
+texture = ExtResource("1_gw254")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_722yh"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 1
+sources/3 = SubResource("TileSetAtlasSource_eibq1")
+
+[node name="TileMap" type="TileMap"]
+tile_set = SubResource("TileSet_722yh")
+format = 2
+layer_0/tile_data = PackedInt32Array(2, 3, 0, 4, 3, 0, 6, 3, 0, 8, 3, 0, 65537, 3, 0, 65539, 3, 0, 65541, 3, 0, 65543, 3, 0, 131080, 3, 0, 131078, 3, 0, 131076, 3, 0, 131074, 3, 0, 131072, 3, 0, 196609, 3, 0, 196611, 3, 0, 196613, 3, 0, 196615, 3, 0, 262152, 3, 0, 262150, 3, 0, 262148, 3, 0, 262146, 3, 0, 262144, 3, 0, 262145, 3, 1, 262147, 3, 1, 262149, 3, 1, 262151, 3, 1, 196616, 3, 1, 196614, 3, 1, 196612, 3, 1, 196610, 3, 1, 196608, 3, 1, 131073, 3, 1, 131075, 3, 1, 131077, 3, 1, 131079, 3, 1, 65544, 3, 1, 65542, 3, 1, 65540, 3, 1, 65538, 3, 1, 65536, 3, 1, 1, 3, 1, 3, 3, 1, 5, 3, 1, 7, 3, 1, 0, 3, 0)

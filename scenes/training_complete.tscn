@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://rhdccpl3aoa7"]
+[gd_scene load_steps=4 format=3 uid="uid://rhdccpl3aoa7"]
 
 [ext_resource type="Script" path="res://scenes/button.gd" id="1_jcwq7"]
 [ext_resource type="Script" path="res://scripts/button_2.gd" id="2_jucd6"]
+[ext_resource type="AudioStream" uid="uid://n1oh2x5gvjng" path="res://Audio/complete.mp3" id="3_rfof5"]
 
 [node name="Training Complete" type="Node2D"]
 
@@ -34,6 +35,11 @@ offset_bottom = 512.0
 theme_override_font_sizes/font_size = 34
 text = "Main Menu"
 script = ExtResource("2_jucd6")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_rfof5")
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="level 1" to="level 1" method="_on_pressed"]
 [connection signal="pressed" from="main menu" to="main menu" method="_on_pressed"]

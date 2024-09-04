@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://23qlbnvj7o62"]
+[gd_scene load_steps=4 format=3 uid="uid://23qlbnvj7o62"]
 
 [ext_resource type="PackedScene" uid="uid://eipmfgq4e7xx" path="res://scenes/tile_map.tscn" id="1_futcw"]
 [ext_resource type="Script" path="res://scripts/back_menu.gd" id="1_gj4m1"]
+[ext_resource type="AudioStream" uid="uid://dm0pak1keqt17" path="res://Audio/credits:controls.mp3" id="3_33dye"]
 
 [node name="Credits" type="Node2D"]
 
@@ -20,7 +21,7 @@ offset_left = 128.0
 offset_top = 384.0
 offset_right = 384.0
 offset_bottom = 513.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.258824, 0, 1, 1)
 theme_override_font_sizes/font_size = 21
 text = "Thank You nyulus for 
 the Bubble Bath art, 
@@ -28,16 +29,63 @@ check them out on
 Deviant Art"
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 512.0
-offset_top = 128.0
-offset_right = 768.0
-offset_bottom = 256.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_left = 648.0
+offset_top = 256.0
+offset_right = 1020.0
+offset_bottom = 384.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 text = "Thank you kenney for the tile 
 assets including the tile this 
 message is on. Go to kenney.nl"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 128.0
+offset_top = 136.0
+offset_right = 256.0
+offset_bottom = 256.0
+theme_override_colors/font_color = Color(1, 0.458824, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "Xtreme Freddy 
+on Pixabay for
+Credits and 
+Controls Music"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 920.0
+offset_top = 32.0
+offset_right = 1136.0
+offset_bottom = 96.0
+theme_override_colors/font_color = Color(1, 0, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "Thanks Pixabay for 
+the main menu music."
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 424.0
+offset_top = 16.0
+offset_right = 621.0
+offset_bottom = 104.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Thank you Raspberry
+music on Pixabay
+for the main game theme"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_33dye")
+autoplay = true
+parameters/looping = true
+
+[node name="Label6" type="Label" parent="."]
+offset_left = 304.0
+offset_top = 288.0
+offset_right = 565.0
+offset_bottom = 345.0
+theme_override_colors/font_color = Color(1, 0, 0.439216, 1)
+theme_override_font_sizes/font_size = 19
+text = "Thanks to Harumachi Music 
+for the song when you finish"
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

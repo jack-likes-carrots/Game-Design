@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://duieeqku3etp6"]
+[gd_scene load_steps=6 format=3 uid="uid://duieeqku3etp6"]
 
 [ext_resource type="PackedScene" uid="uid://eipmfgq4e7xx" path="res://scenes/tile_map.tscn" id="1_dkhpb"]
 [ext_resource type="Script" path="res://scripts/credits.gd" id="1_tig5v"]
 [ext_resource type="Script" path="res://scripts/new_game.gd" id="1_w24ur"]
 [ext_resource type="Script" path="res://scripts/controls.gd" id="3_algai"]
+[ext_resource type="AudioStream" uid="uid://b3ki4cf21dpi7" path="res://Audio/waddle.mp3" id="5_2p5sq"]
 
 [node name="main menu" type="Node2D"]
 
@@ -32,6 +33,11 @@ offset_right = 632.0
 offset_bottom = 432.0
 text = "Controls"
 script = ExtResource("3_algai")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_2p5sq")
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="game" to="game" method="_on_pressed"]
 [connection signal="pressed" from="credits" to="credits" method="_on_pressed"]

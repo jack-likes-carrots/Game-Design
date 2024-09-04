@@ -102,7 +102,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"run",
-"speed": 4.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -129,7 +129,7 @@ scale = Vector2(0.875, 0.875)
 sprite_frames = SubResource("SpriteFrames_urwnc")
 animation = &"run"
 autoplay = "Idle"
-frame_progress = 0.324618
+frame_progress = 0.779844
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_v1xp8")

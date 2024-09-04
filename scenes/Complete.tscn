@@ -22,7 +22,7 @@ tile_size = Vector2i(128, 128)
 sources/1 = SubResource("TileSetAtlasSource_80r67")
 sources/2 = SubResource("TileSetAtlasSource_mxavi")
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_yo7dy")

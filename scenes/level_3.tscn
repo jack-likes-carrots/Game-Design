@@ -38,7 +38,7 @@ sources/1 = SubResource("TileSetAtlasSource_ta4m5")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g226b"]
 size = Vector2(256, 384)
 
-[node name="Node2D" type="Node2D"]
+[node name="level_3" type="Node2D"]
 
 [node name="Background" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_lnmog")

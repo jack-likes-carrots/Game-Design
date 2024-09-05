@@ -3,9 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://ck7rt7j7tcfjy" path="res://art/image (1).png" id="1_8622q"]
 [ext_resource type="Texture2D" uid="uid://xx0ulljbl31x" path="res://art/bubble bath.png" id="2_np7hm"]
 [ext_resource type="Texture2D" uid="uid://bobgaanwh4yi0" path="res://art/Lemonade.png" id="3_bpdkd"]
-[ext_resource type="Script" path="res://scenes/button.gd" id="4_g2ymx"]
 [ext_resource type="Script" path="res://scenes/button_2.gd" id="5_h84h5"]
 [ext_resource type="Script" path="res://scenes/button_3.gd" id="6_ea3nt"]
+[ext_resource type="Script" path="res://scripts/main_menu_2.gd" id="6_u2tk3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_80r67"]
 texture = ExtResource("1_8622q")
@@ -45,20 +45,12 @@ position = Vector2(536, 392)
 scale = Vector2(1.75, 1.75)
 texture = ExtResource("3_bpdkd")
 
-[node name="main_menu" type="Button" parent="."]
-offset_left = 768.0
-offset_top = 304.0
-offset_right = 896.0
-offset_bottom = 344.0
-text = "Main Menu"
-script = ExtResource("4_g2ymx")
-
 [node name="play_again" type="Button" parent="."]
 offset_left = 768.0
 offset_top = 368.0
 offset_right = 896.0
 offset_bottom = 408.0
-text = "Play Again"
+text = "Next Level"
 script = ExtResource("5_h84h5")
 
 [node name="quote" type="Button" parent="."]
@@ -70,6 +62,14 @@ text = "Inpirational
 Quote"
 script = ExtResource("6_ea3nt")
 
-[connection signal="pressed" from="main_menu" to="main_menu" method="_on_pressed"]
+[node name="main_menu2" type="Button" parent="."]
+offset_left = 768.0
+offset_top = 304.0
+offset_right = 896.0
+offset_bottom = 343.0
+text = "Main Menu"
+script = ExtResource("6_u2tk3")
+
 [connection signal="pressed" from="play_again" to="play_again" method="_on_pressed"]
 [connection signal="pressed" from="quote" to="quote" method="_on_pressed"]
+[connection signal="pressed" from="main_menu2" to="main_menu2" method="_on_pressed"]

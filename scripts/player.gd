@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 400.0
+const SPEED = 800.0
 const JUMP_VELOCITY = -700.0
 #double jumping
 var jump_count = 0

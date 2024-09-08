@@ -233,10 +233,10 @@ your Lemonade Stand
 "
 
 [node name="enemy" parent="." instance=ExtResource("17_ei1tj")]
-position = Vector2(8040, 928)
+position = Vector2(7864, 960)
 
 [node name="enemy2" parent="." instance=ExtResource("17_ei1tj")]
-position = Vector2(10472, 928)
+position = Vector2(10296, 960)
 
 [node name="Lemonade" type="Sprite2D" parent="."]
 position = Vector2(1464, -192)

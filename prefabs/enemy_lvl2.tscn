@@ -1,20 +1,21 @@
-[gd_scene load_steps=8 format=3 uid="uid://cv86ugayubmth"]
+[gd_scene load_steps=9 format=3 uid="uid://12pxm85q21j7"]
 
-[ext_resource type="Script" path="res://scripts/enemy_3.gd" id="1_cwj7k"]
-[ext_resource type="Texture2D" uid="uid://go426shfkem2" path="res://sprites/toothys.png" id="2_ckik6"]
+[ext_resource type="Script" path="res://scripts/enemy_3.gd" id="1_bg1rr"]
+[ext_resource type="Texture2D" uid="uid://go426shfkem2" path="res://sprites/toothys.png" id="2_36mph"]
+[ext_resource type="Script" path="res://prefabs/enemy_lvl2.gd" id="3_l3b7y"]
 
-[sub_resource type="Curve2D" id="Curve2D_dk1pr"]
+[sub_resource type="Curve2D" id="Curve2D_q8x88"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 384, 0, 0, 0, 0, 0, 0, 0)
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 256, 0, 0, 0, 0, 0, 0, 0)
 }
 point_count = 3
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s6c1t"]
-atlas = ExtResource("2_ckik6")
+atlas = ExtResource("2_36mph")
 region = Rect2(0, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2ab8q"]
-atlas = ExtResource("2_ckik6")
+atlas = ExtResource("2_36mph")
 region = Rect2(128, 0, 128, 128)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kshym"]
@@ -35,21 +36,27 @@ animations = [{
 size = Vector2(128, 128)
 
 [node name="enemy" type="Node2D"]
-script = ExtResource("1_cwj7k")
+position = Vector2(1208, 448)
+script = ExtResource("1_bg1rr")
+metadata/_edit_group_ = true
 
 [node name="Path2D" type="Path2D" parent="."]
-curve = SubResource("Curve2D_dk1pr")
+curve = SubResource("Curve2D_q8x88")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+scale = Vector2(0.923077, 1)
+rotates = false
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Path2D/PathFollow2D"]
 sprite_frames = SubResource("SpriteFrames_kshym")
 animation = &"idle"
 autoplay = "idle"
-frame = 1
-frame_progress = 1.0
+frame_progress = 0.558234
 
 [node name="Area2D" type="Area2D" parent="Path2D/PathFollow2D/AnimatedSprite2D"]
+script = ExtResource("3_l3b7y")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/AnimatedSprite2D/Area2D"]
 shape = SubResource("RectangleShape2D_8j58c")
+
+[connection signal="body_entered" from="Path2D/PathFollow2D/AnimatedSprite2D/Area2D" to="Path2D/PathFollow2D/AnimatedSprite2D/Area2D" method="_on_body_entered"]

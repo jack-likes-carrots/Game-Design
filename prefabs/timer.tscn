@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvohii6rfyc6d"]
+
+[ext_resource type="Script" path="res://timer.gd" id="1_pc2bl"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_pc2bl")
+
+[node name="time" type="Panel" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="minutes" type="Label" parent="time"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "00 : "
+horizontal_alignment = 2
+
+[node name="milleseconds" type="Label" parent="time"]
+layout_mode = 0
+offset_left = 48.0
+offset_right = 88.0
+offset_bottom = 23.0
+text = "00"
+horizontal_alignment = 2
+
+[node name="seconds" type="Label" parent="time"]
+layout_mode = 0
+offset_left = 24.0
+offset_right = 64.0
+offset_bottom = 23.0
+text = "00 :"
+horizontal_alignment = 2

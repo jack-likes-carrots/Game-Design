@@ -208,12 +208,12 @@ theme_override_font_sizes/font_size = 52
 text = "LEMONADE!!! :D"
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 4112.0
-offset_top = -8.0
-offset_right = 4695.0
-offset_bottom = 169.0
+offset_left = 3928.0
+offset_top = -112.0
+offset_right = 4666.0
+offset_bottom = 109.0
 theme_override_colors/font_color = Color(1, 1, 0, 1)
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 38
 text = "Oh NO!!! The Lemon Tree is locked. 
 You will have to get the chrystal Lemons 
 if you want to unlock the cage and SAVE
@@ -221,11 +221,11 @@ your Lemonade stand"
 
 [node name="Label" type="Label" parent="."]
 modulate = Color(1, 1, 0, 1)
-offset_left = 893.0
-offset_top = 11.0
-offset_right = 1518.0
-offset_bottom = 216.0
-theme_override_font_sizes/font_size = 30
+offset_left = 688.0
+offset_top = 8.0
+offset_right = 1407.0
+offset_bottom = 237.0
+theme_override_font_sizes/font_size = 40
 text = "Oh NO! You have ran out of Lemons 
 for your customers. Go into the cave 
 to see if you can harvest anymore for 

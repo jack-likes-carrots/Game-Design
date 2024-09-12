@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b4g3plehfokmd"]
+[gd_scene load_steps=15 format=3 uid="uid://b4g3plehfokmd"]
 
 [ext_resource type="Texture2D" uid="uid://wopy58fy80i" path="res://art/cave_terrain.png" id="1_ifebi"]
 [ext_resource type="Texture2D" uid="uid://0byurus8hwk3" path="res://art/cave_interior2.png" id="2_8xsw7"]
@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cm6ksqhgmrnsr" path="res://prefabs/enemy.tscn" id="7_fehl1"]
 [ext_resource type="Texture2D" uid="uid://d3heh62io0anf" path="res://art/New Piskel-1.png.png" id="7_i8rwt"]
 [ext_resource type="PackedScene" uid="uid://beqb22q17qsic" path="res://prefabs/bath_lvl3.tscn" id="8_uw6w1"]
-[ext_resource type="Texture2D" uid="uid://whs1bmr4dmi7" path="res://art/purple_lemon.png" id="10_gpwvl"]
+[ext_resource type="PackedScene" uid="uid://bn8jounngpg1h" path="res://prefabs/portal_lvl3.tscn" id="8_ymymx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6saja"]
 texture = ExtResource("2_8xsw7")
@@ -37,9 +37,6 @@ tile_size = Vector2i(128, 128)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_37irt")
 sources/1 = SubResource("TileSetAtlasSource_ta4m5")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_56tou"]
-size = Vector2(128, 128)
 
 [node name="level_3" type="Node2D"]
 position = Vector2(-1, 0)
@@ -88,31 +85,29 @@ position = Vector2(9513, 5920)
 [node name="Area2D3" parent="." instance=ExtResource("8_uw6w1")]
 position = Vector2(11945, 5920)
 
-[node name="Area2D4" type="Area2D" parent="."]
-position = Vector2(15937, 5440)
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Area2D4"]
-texture = ExtResource("10_gpwvl")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4"]
-position = Vector2(1, 0)
-shape = SubResource("RectangleShape2D_56tou")
+[node name="Portal_lvl3" parent="." instance=ExtResource("8_ymymx")]
 
 [node name="Label" type="Label" parent="."]
-offset_left = 15385.0
-offset_top = 5016.0
-offset_right = 15801.0
-offset_bottom = 5307.0
-theme_override_colors/font_color = Color(1, 0.441872, 0.668026, 1)
-theme_override_font_sizes/font_size = 28
-text = "CONGRATS!!! You have found 
-the first chrystal lemon. 
-This purple lemon represents 
-power and greed. Of course 
-this isn't relavant to the game 
-at all. Keep searching. Only
+offset_left = 14819.0
+offset_top = 4953.0
+offset_right = 15661.0
+offset_bottom = 5243.0
+theme_override_colors/font_color = Color(1, 0, 1, 1)
+theme_override_font_sizes/font_size = 38
+text = "CONGRATS!!! You have found the first chrystal 
+lemon. This purple lemon represents power 
+and greed. Of course this isn't relavant to the 
+game at all. Keep searching. Only
 two more to go. GOOD LUCK!!!!"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 2817.0
+offset_top = -439.0
+offset_right = 4077.0
+offset_bottom = -340.0
+theme_override_colors/font_color = Color(0.133766, 0.690361, 0.819657, 1)
+theme_override_font_sizes/font_size = 72
+text = "DON'T FALL IN THE BUBBLE BATH!!!!!"
 
 [node name="player" parent="." instance=ExtResource("3_mi007")]
 position = Vector2(192, 456)

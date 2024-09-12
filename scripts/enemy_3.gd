@@ -11,4 +11,4 @@ func _process(delta):
 
 func _on_body_entered(body):
 	if body.name == "player":
-		get_tree().change_scene_to_file("res://scenes/death_lvl2.tscn")
+		get_tree().change_scene_to_file("res://scenes/death_lvl3.tscn")

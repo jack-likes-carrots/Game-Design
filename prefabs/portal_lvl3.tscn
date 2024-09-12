@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bn8jounngpg1h"]
+
+[ext_resource type="Script" path="res://scripts/portal_lvl_3.gd" id="1_36pdc"]
+[ext_resource type="Texture2D" uid="uid://whs1bmr4dmi7" path="res://art/purple_lemon.png" id="1_wo20u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_56tou"]
+size = Vector2(128, 128)
+
+[node name="Portal_lvl3" type="Area2D"]
+position = Vector2(15937, 5440)
+script = ExtResource("1_36pdc")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_wo20u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_56tou")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

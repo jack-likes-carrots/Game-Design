@@ -12,4 +12,5 @@ func _process(delta):
 
 
 func _on_body_entered(body):
-	get_tree().change_scene_to_file("res://scenes/Complete.tscn")
+	if body.name == 'player':
+		get_tree().change_scene_to_file("res://scenes/Complete.tscn")

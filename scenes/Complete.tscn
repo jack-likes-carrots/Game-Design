@@ -31,13 +31,14 @@ layer_0/tile_data = PackedInt32Array(196608, 1, 0, 131072, 1, 0, 65536, 1, 0, 0,
 
 [node name="Label" type="Label" parent="."]
 offset_left = 8.0
-offset_top = 136.0
+offset_top = 64.0
 offset_right = 1145.0
-offset_bottom = 293.0
-theme_override_colors/font_color = Color(0, 1, 0, 1)
+offset_bottom = 232.0
+theme_override_colors/font_color = Color(0.0792511, 1, 0.237998, 1)
 theme_override_font_sizes/font_size = 39
-text = "You WON!!
-i haven't finished yet sorry but here is a glass of Lemonade :)"
+text = "You may have completed the first level. 
+But now comes you first test.
+Watch out. Also here is some complimentry Lemonade :)"
 horizontal_alignment = 1
 
 [node name="Lemonade" type="Sprite2D" parent="."]

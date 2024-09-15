@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://blc2xx241et5p"]
+[gd_scene load_steps=7 format=3 uid="uid://blc2xx241et5p"]
 
 [ext_resource type="Texture2D" uid="uid://xx0ulljbl31x" path="res://art/bubble bath.png" id="1_j5ohd"]
 [ext_resource type="Texture2D" uid="uid://ck7rt7j7tcfjy" path="res://art/image (1).png" id="2_4kfbq"]
+[ext_resource type="Script" path="res://scripts/next_level_lvl4.gd" id="3_d7dpr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rxiuj"]
 texture = ExtResource("1_j5ohd")
@@ -24,3 +25,29 @@ sources/1 = SubResource("TileSetAtlasSource_xgpln")
 tile_set = SubResource("TileSet_rpmtf")
 format = 2
 layer_0/tile_data = PackedInt32Array(0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 65544, 1, 0, 131080, 1, 0, 131079, 1, 0, 131078, 1, 0, 131077, 1, 0, 131076, 1, 0, 131075, 1, 0, 131074, 1, 0, 131073, 1, 0, 131072, 1, 0, 65536, 1, 0, 65537, 1, 0, 65538, 1, 0, 65539, 1, 0, 65540, 1, 0, 65541, 1, 0, 65542, 1, 0, 65543, 1, 0, 196616, 1, 0, 196615, 1, 0, 196614, 1, 0, 196613, 1, 0, 196612, 1, 0, 196611, 1, 0, 196610, 1, 0, 196609, 1, 0, 196608, 1, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0)
+
+[node name="Congrats" type="Label" parent="."]
+offset_left = 216.0
+offset_top = 88.0
+offset_right = 947.0
+offset_bottom = 343.0
+theme_override_colors/font_color = Color(1, 0, 1, 1)
+theme_override_font_sizes/font_size = 29
+text = "Well Done!!! You have found the first chrystal 
+lemon. That wasn't too hard was it? You only
+have to find two more. The purple lemon represents 
+lust, greed and power. Of course this is completely
+irrelevant to the plot. There is no turning back now.
+GOOD LUCK!!!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+offset_left = 512.0
+offset_top = 384.0
+offset_right = 640.0
+offset_bottom = 440.0
+text = "Next Level"
+script = ExtResource("3_d7dpr")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

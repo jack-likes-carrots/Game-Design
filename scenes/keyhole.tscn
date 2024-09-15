@@ -1,0 +1,78 @@
+[gd_scene load_steps=16 format=3 uid="uid://badn2srf4tdyx"]
+
+[ext_resource type="Texture2D" uid="uid://ck7rt7j7tcfjy" path="res://art/image (1).png" id="1_qai6a"]
+[ext_resource type="Texture2D" uid="uid://xx0ulljbl31x" path="res://art/bubble bath.png" id="2_su8cs"]
+[ext_resource type="Texture2D" uid="uid://dfmjmt1l8jclb" path="res://art/Black.png" id="3_6efhb"]
+[ext_resource type="Texture2D" uid="uid://dqp8ciuihjop2" path="res://art/blue_lemon.png" id="4_1bb7s"]
+[ext_resource type="Texture2D" uid="uid://dtsbhtmh4tdgt" path="res://art/green_lemon.png" id="5_nib22"]
+[ext_resource type="Texture2D" uid="uid://whs1bmr4dmi7" path="res://art/purple_lemon.png" id="6_vuitv"]
+[ext_resource type="Texture2D" uid="uid://g2krsk11n3jx" path="res://art/tree.png" id="7_vtxqu"]
+[ext_resource type="Script" path="res://scripts/peaceful_land.gd" id="8_n8p1e"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s3dmx"]
+texture = ExtResource("1_qai6a")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tu8ov"]
+texture = ExtResource("2_su8cs")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gu14t"]
+texture = ExtResource("3_6efhb")
+texture_region_size = Vector2i(128, 128)
+1:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kqtdp"]
+texture = ExtResource("4_1bb7s")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nwukb"]
+texture = ExtResource("5_nib22")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ljwo8"]
+texture = ExtResource("6_vuitv")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_noqm0"]
+tile_size = Vector2i(128, 128)
+sources/0 = SubResource("TileSetAtlasSource_s3dmx")
+sources/1 = SubResource("TileSetAtlasSource_tu8ov")
+sources/2 = SubResource("TileSetAtlasSource_gu14t")
+sources/3 = SubResource("TileSetAtlasSource_kqtdp")
+sources/4 = SubResource("TileSetAtlasSource_nwukb")
+sources/5 = SubResource("TileSetAtlasSource_ljwo8")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_noqm0")
+format = 2
+layer_0/tile_data = PackedInt32Array(262144, 1, 0, 262145, 1, 0, 262146, 1, 0, 262147, 1, 0, 262148, 1, 0, 262149, 1, 0, 262150, 1, 0, 262151, 1, 0, 262152, 1, 0, 196608, 0, 0, 131072, 0, 0, 65536, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 7, 0, 0, 8, 0, 0, 6, 0, 0, 65544, 0, 0, 131080, 0, 0, 196616, 0, 0, 196615, 0, 0, 196614, 0, 0, 196613, 0, 0, 196612, 0, 0, 196611, 0, 0, 196610, 0, 0, 196609, 0, 0, 131073, 0, 0, 65537, 0, 0, 131077, 0, 0, 131076, 0, 0, 131075, 0, 0, 65539, 0, 0, 65538, 0, 0, 131079, 0, 0, 131074, 5, 0, 65540, 4, 0, 131078, 3, 0)
+
+[node name="congrats" type="Label" parent="."]
+offset_left = 440.0
+offset_top = 280.0
+offset_right = 722.0
+offset_bottom = 355.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+text = "You have restored balance. 
+People can now get there lemonade. 
+There is peace amongst the galaxy"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+offset_left = 504.0
+offset_top = 376.0
+offset_right = 640.0
+offset_bottom = 512.0
+icon = ExtResource("7_vtxqu")
+flat = true
+script = ExtResource("8_n8p1e")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

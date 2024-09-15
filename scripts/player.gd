@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 const SPEED = 900.0
-const JUMP_VELOCITY = -700.0
+const JUMP_VELOCITY = -750.0
 #double jumping
 var jump_count = 0
 var max_jumps = 15

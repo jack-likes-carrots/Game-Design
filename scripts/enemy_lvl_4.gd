@@ -1,16 +1,14 @@
-extends Area2D
+extends Node2D
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
+@onready var path_follow : PathFollow2D = $Path2D/PathFollow2D
+#pixels per second
+@export var speed = 500
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	path_follow.progress += speed * delta
 
-	
+
 func _on_body_entered(body):
 	if body.name == "player":
 		get_tree().change_scene_to_file("res://scenes/death_lvl3.tscn")

@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bctej106jjdu" path="res://prefabs/player.tscn" id="3_mi007"]
 [ext_resource type="Texture2D" uid="uid://ck7rt7j7tcfjy" path="res://art/image (1).png" id="3_o3bka"]
 [ext_resource type="AudioStream" uid="uid://cdsfqglur23tb" path="res://Audio/music.mp3" id="6_i3niw"]
-[ext_resource type="PackedScene" uid="uid://cm6ksqhgmrnsr" path="res://prefabs/enemy.tscn" id="7_fehl1"]
+[ext_resource type="PackedScene" uid="uid://cm6ksqhgmrnsr" path="res://prefabs/enemy_lvl3.tscn" id="7_fehl1"]
 [ext_resource type="Texture2D" uid="uid://d3heh62io0anf" path="res://art/New Piskel-1.png.png" id="7_i8rwt"]
 [ext_resource type="PackedScene" uid="uid://beqb22q17qsic" path="res://prefabs/bath_lvl3.tscn" id="8_uw6w1"]
 [ext_resource type="PackedScene" uid="uid://bn8jounngpg1h" path="res://prefabs/portal_lvl3.tscn" id="8_ymymx"]
@@ -87,25 +87,12 @@ position = Vector2(11945, 5920)
 
 [node name="Portal_lvl3" parent="." instance=ExtResource("8_ymymx")]
 
-[node name="Label" type="Label" parent="."]
-offset_left = 14819.0
-offset_top = 4953.0
-offset_right = 15661.0
-offset_bottom = 5243.0
-theme_override_colors/font_color = Color(1, 0, 1, 1)
-theme_override_font_sizes/font_size = 38
-text = "CONGRATS!!! You have found the first chrystal 
-lemon. This purple lemon represents power 
-and greed. Of course this isn't relavant to the 
-game at all. Keep searching. Only
-two more to go. GOOD LUCK!!!!"
-
 [node name="Label2" type="Label" parent="."]
 offset_left = 2817.0
 offset_top = -439.0
 offset_right = 4077.0
 offset_bottom = -340.0
-theme_override_colors/font_color = Color(0.133766, 0.690361, 0.819657, 1)
+theme_override_colors/font_color = Color(0.625091, 0.144961, 0.791994, 1)
 theme_override_font_sizes/font_size = 72
 text = "DON'T FALL IN THE BUBBLE BATH!!!!!"
 

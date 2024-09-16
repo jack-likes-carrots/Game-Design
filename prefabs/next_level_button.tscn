@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://di8ma6x8cwegs"]
+
+[ext_resource type="Script" path="res://scenes/button_2.gd" id="1_3ptid"]
+[ext_resource type="Texture2D" uid="uid://btpt5lmcn13cb" path="res://art/next_level_button.png" id="2_dusyi"]
+
+[node name="play_again" type="Button"]
+offset_right = 128.0
+offset_bottom = 128.0
+flat = true
+script = ExtResource("1_3ptid")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(64, 64)
+scale = Vector2(0.161376, 0.161376)
+texture = ExtResource("2_dusyi")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

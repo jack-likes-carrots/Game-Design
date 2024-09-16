@@ -1,20 +1,14 @@
 [gd_scene load_steps=4 format=3 uid="uid://23qlbnvj7o62"]
 
 [ext_resource type="PackedScene" uid="uid://eipmfgq4e7xx" path="res://scenes/tile_map.tscn" id="1_futcw"]
-[ext_resource type="Script" path="res://scripts/back_menu.gd" id="1_gj4m1"]
+[ext_resource type="PackedScene" uid="uid://14dwmo2l5tq0" path="res://prefabs/main_menu_button.tscn" id="2_ddabj"]
 [ext_resource type="AudioStream" uid="uid://dm0pak1keqt17" path="res://Audio/credits:controls.mp3" id="3_33dye"]
 
 [node name="Credits" type="Node2D"]
 
 [node name="TileMap" parent="." instance=ExtResource("1_futcw")]
 
-[node name="Button" type="Button" parent="."]
-offset_left = 24.0
-offset_top = 8.0
-offset_right = 120.0
-offset_bottom = 39.0
-text = "Main Menu"
-script = ExtResource("1_gj4m1")
+[node name="Button" parent="." instance=ExtResource("2_ddabj")]
 
 [node name="Label" type="Label" parent="."]
 offset_left = 128.0
@@ -88,4 +82,10 @@ theme_override_font_sizes/font_size = 19
 text = "Thanks to Harumachi Music 
 for the song when you finish"
 
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[node name="Label7" type="Label" parent="."]
+offset_left = 528.0
+offset_top = 176.0
+offset_right = 902.0
+offset_bottom = 199.0
+theme_override_colors/font_color = Color(0.419608, 0, 1, 1)
+text = "Thanks melodyayregriffiths for end game theme"

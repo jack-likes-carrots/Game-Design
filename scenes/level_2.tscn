@@ -247,9 +247,6 @@ texture = ExtResource("20_4pwkh")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_vk4cj")
 
-[node name="player" parent="." instance=ExtResource("3_060l4")]
-position = Vector2(1216, 320)
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("23_sxjts")
 autoplay = true
@@ -260,5 +257,8 @@ position = Vector2(7864, 960)
 
 [node name="enemy2" parent="." instance=ExtResource("23_ncyq4")]
 position = Vector2(10296, 960)
+
+[node name="player" parent="." instance=ExtResource("3_060l4")]
+position = Vector2(1216, 320)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://deeh4joh8okgv"]
+[gd_scene load_steps=18 format=3 uid="uid://deeh4joh8okgv"]
 
 [ext_resource type="Texture2D" uid="uid://0byurus8hwk3" path="res://art/cave_interior2.png" id="1_q48ty"]
 [ext_resource type="Texture2D" uid="uid://d3heh62io0anf" path="res://art/New Piskel-1.png.png" id="2_qyrxh"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bctej106jjdu" path="res://prefabs/player.tscn" id="6_eoxpp"]
 [ext_resource type="Script" path="res://scripts/lemon_lvl5.gd" id="6_q5yr8"]
 [ext_resource type="Texture2D" uid="uid://dtsbhtmh4tdgt" path="res://art/green_lemon.png" id="7_12n2a"]
+[ext_resource type="PackedScene" uid="uid://c1iwcprnmb50t" path="res://prefabs/end_game.tscn" id="9_f0hmu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k6jgp"]
 texture = ExtResource("1_q48ty")
@@ -138,6 +139,8 @@ texture = ExtResource("7_12n2a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_8wafu")
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource("9_f0hmu")]
 
 [node name="player" parent="." instance=ExtResource("6_eoxpp")]
 position = Vector2(320, 256)

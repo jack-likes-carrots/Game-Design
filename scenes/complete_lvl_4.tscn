@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://c0bt41cr7jboe"]
+[gd_scene load_steps=8 format=3 uid="uid://c0bt41cr7jboe"]
 
 [ext_resource type="Texture2D" uid="uid://xx0ulljbl31x" path="res://art/bubble bath.png" id="1_j8v8j"]
 [ext_resource type="Texture2D" uid="uid://ck7rt7j7tcfjy" path="res://art/image (1).png" id="2_biibj"]
-[ext_resource type="Script" path="res://scripts/level5_button.gd" id="3_ixabw"]
+[ext_resource type="PackedScene" uid="uid://di8ma6x8cwegs" path="res://prefabs/next_level_button.tscn" id="4_froik"]
+[ext_resource type="PackedScene" uid="uid://c1iwcprnmb50t" path="res://prefabs/end_game.tscn" id="4_g303x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6ejpi"]
 texture = ExtResource("1_j8v8j")
@@ -31,9 +32,9 @@ layer_0/tile_data = PackedInt32Array(262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 2
 offset_left = 264.0
 offset_top = 8.0
 offset_right = 893.0
-offset_bottom = 421.0
+offset_bottom = 381.0
 theme_override_colors/font_color = Color(1, 0, 0, 1)
-theme_override_font_sizes/font_size = 35
+theme_override_font_sizes/font_size = 31
 text = "You are so close, you can't give 
 up now. If you die you restart. 
 No lives. This is endgame. 
@@ -44,13 +45,10 @@ tears, hard work and wisom. Again
 completely irrelavant from the game."
 horizontal_alignment = 1
 
-[node name="next_level" type="Button" parent="."]
-offset_left = 520.0
-offset_top = 448.0
-offset_right = 632.0
-offset_bottom = 503.0
-text = "Next  Level
-"
-script = ExtResource("3_ixabw")
+[node name="AudioStreamPlayer" parent="." instance=ExtResource("4_g303x")]
 
-[connection signal="pressed" from="next_level" to="next_level" method="_on_pressed"]
+[node name="play_again" parent="." instance=ExtResource("4_froik")]
+offset_left = 512.0
+offset_top = 384.0
+offset_right = 640.0
+offset_bottom = 512.0

@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://14dwmo2l5tq0"]
+
+[ext_resource type="Script" path="res://scripts/back_menu.gd" id="1_dq56b"]
+[ext_resource type="Texture2D" uid="uid://dyebynmq1ron0" path="res://art/14-147111_menu-button-png-menu-button-icon-png.png" id="2_j7l2n"]
+
+[sub_resource type="Theme" id="Theme_v7frn"]
+
+[node name="Button" type="Button"]
+offset_right = 128.0
+offset_bottom = 128.0
+theme = SubResource("Theme_v7frn")
+theme_override_colors/font_color = Color(0.835746, 0.000164607, 0.719857, 1)
+theme_override_font_sizes/font_size = 20
+flat = true
+script = ExtResource("1_dq56b")
+
+[node name="14-147111Menu-button-png-menu-button-icon-png" type="Sprite2D" parent="."]
+position = Vector2(64, 64)
+scale = Vector2(0.14878, 0.148781)
+texture = ExtResource("2_j7l2n")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

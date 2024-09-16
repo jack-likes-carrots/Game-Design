@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://xx0ulljbl31x" path="res://art/bubble bath.png" id="1_j5ohd"]
 [ext_resource type="Texture2D" uid="uid://ck7rt7j7tcfjy" path="res://art/image (1).png" id="2_4kfbq"]
-[ext_resource type="Script" path="res://scripts/next_level_lvl4.gd" id="3_d7dpr"]
+[ext_resource type="PackedScene" uid="uid://di8ma6x8cwegs" path="res://prefabs/next_level_button.tscn" id="3_w7nfk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rxiuj"]
 texture = ExtResource("1_j5ohd")
@@ -42,12 +42,8 @@ GOOD LUCK!!!!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="."]
+[node name="play_again" parent="." instance=ExtResource("3_w7nfk")]
 offset_left = 512.0
 offset_top = 384.0
 offset_right = 640.0
-offset_bottom = 440.0
-text = "Next Level"
-script = ExtResource("3_d7dpr")
-
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+offset_bottom = 512.0

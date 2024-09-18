@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://ddgrqew43pdv2"]
+[gd_scene load_steps=18 format=3 uid="uid://ddgrqew43pdv2"]
 
 [ext_resource type="Texture2D" uid="uid://0byurus8hwk3" path="res://art/cave_interior2.png" id="1_cvcgq"]
 [ext_resource type="Texture2D" uid="uid://wopy58fy80i" path="res://art/cave_terrain.png" id="2_ohjhp"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://beack33uk7pfa" path="res://prefabs/enemy_lvl4.tscn" id="7_0e0wp"]
 [ext_resource type="Script" path="res://scripts/lemon_lvl4.gd" id="7_sxqss"]
 [ext_resource type="Texture2D" uid="uid://dqp8ciuihjop2" path="res://art/blue_lemon.png" id="8_oyj21"]
+[ext_resource type="AudioStream" uid="uid://cdsfqglur23tb" path="res://Audio/music.mp3" id="10_ukm41"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t7efi"]
 texture = ExtResource("1_cvcgq")
@@ -99,5 +100,10 @@ shape = SubResource("RectangleShape2D_xjbpb")
 
 [node name="player" parent="." instance=ExtResource("5_k1b8t")]
 position = Vector2(320, 320)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_ukm41")
+autoplay = true
+parameters/looping = true
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://blc2xx241et5p"]
+[gd_scene load_steps=8 format=3 uid="uid://blc2xx241et5p"]
 
 [ext_resource type="Texture2D" uid="uid://xx0ulljbl31x" path="res://art/bubble bath.png" id="1_j5ohd"]
 [ext_resource type="Texture2D" uid="uid://ck7rt7j7tcfjy" path="res://art/image (1).png" id="2_4kfbq"]
 [ext_resource type="PackedScene" uid="uid://di8ma6x8cwegs" path="res://prefabs/next_level_button.tscn" id="3_w7nfk"]
+[ext_resource type="AudioStream" uid="uid://n1oh2x5gvjng" path="res://Audio/complete.mp3" id="4_ptpvd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rxiuj"]
 texture = ExtResource("1_j5ohd")
@@ -38,6 +39,7 @@ lemon. That wasn't too hard was it? You only
 have to find two more. The purple lemon represents 
 lust, greed and power. Of course this is completely
 irrelevant to the plot. There is no turning back now.
+If you die you are back to the start.
 GOOD LUCK!!!!"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -47,3 +49,8 @@ offset_left = 512.0
 offset_top = 384.0
 offset_right = 640.0
 offset_bottom = 512.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ptpvd")
+autoplay = true
+parameters/looping = true

@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://c0bt41cr7jboe"]
+[gd_scene load_steps=9 format=3 uid="uid://c0bt41cr7jboe"]
 
 [ext_resource type="Texture2D" uid="uid://xx0ulljbl31x" path="res://art/bubble bath.png" id="1_j8v8j"]
 [ext_resource type="Texture2D" uid="uid://ck7rt7j7tcfjy" path="res://art/image (1).png" id="2_biibj"]
 [ext_resource type="PackedScene" uid="uid://di8ma6x8cwegs" path="res://prefabs/next_level_button.tscn" id="4_froik"]
 [ext_resource type="PackedScene" uid="uid://c1iwcprnmb50t" path="res://prefabs/end_game.tscn" id="4_g303x"]
+[ext_resource type="Script" path="res://scripts/next_level_button_lvl5.gd" id="5_aybyi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6ejpi"]
 texture = ExtResource("1_j8v8j")
@@ -33,7 +34,7 @@ offset_left = 264.0
 offset_top = 8.0
 offset_right = 893.0
 offset_bottom = 381.0
-theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(0.106238, 0.333863, 0.709082, 1)
 theme_override_font_sizes/font_size = 31
 text = "You are so close, you can't give 
 up now. If you die you restart. 
@@ -46,9 +47,11 @@ completely irrelavant from the game."
 horizontal_alignment = 1
 
 [node name="AudioStreamPlayer" parent="." instance=ExtResource("4_g303x")]
+parameters/looping = true
 
 [node name="play_again" parent="." instance=ExtResource("4_froik")]
 offset_left = 512.0
 offset_top = 384.0
 offset_right = 640.0
 offset_bottom = 512.0
+script = ExtResource("5_aybyi")

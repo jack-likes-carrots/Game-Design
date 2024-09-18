@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://b20ec7w4u7psf"]
+[gd_scene load_steps=9 format=3 uid="uid://b20ec7w4u7psf"]
 
 [ext_resource type="Texture2D" uid="uid://xx0ulljbl31x" path="res://art/bubble bath.png" id="1_ghy7k"]
 [ext_resource type="Texture2D" uid="uid://ck7rt7j7tcfjy" path="res://art/image (1).png" id="2_movqa"]
 [ext_resource type="Texture2D" uid="uid://g2krsk11n3jx" path="res://art/tree.png" id="3_2xi3t"]
 [ext_resource type="Script" path="res://scripts/tree.gd" id="4_6mvlg"]
+[ext_resource type="AudioStream" uid="uid://sdjdljvq05ky" path="res://Audio/end game.mp3" id="5_m1pf3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g0m68"]
 texture = ExtResource("1_ghy7k")
@@ -32,7 +33,7 @@ offset_left = 280.0
 offset_top = 128.0
 offset_right = 868.0
 offset_bottom = 251.0
-theme_override_colors/font_color = Color(0.963837, 4.13924e-06, 0.591816, 1)
+theme_override_colors/font_color = Color(0, 0.64505, 0.0959914, 1)
 theme_override_font_sizes/font_size = 28
 text = "YOU DID IT!!! Congragulations. Now 
 you must go back to the lemon tree
@@ -47,5 +48,10 @@ offset_bottom = 408.0
 icon = ExtResource("3_2xi3t")
 flat = true
 script = ExtResource("4_6mvlg")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_m1pf3")
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

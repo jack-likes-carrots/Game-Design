@@ -6,8 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://dqp8ciuihjop2" path="res://art/blue_lemon.png" id="4_1bb7s"]
 [ext_resource type="Texture2D" uid="uid://dtsbhtmh4tdgt" path="res://art/green_lemon.png" id="5_nib22"]
 [ext_resource type="Texture2D" uid="uid://whs1bmr4dmi7" path="res://art/purple_lemon.png" id="6_vuitv"]
-[ext_resource type="Texture2D" uid="uid://g2krsk11n3jx" path="res://art/tree.png" id="7_vtxqu"]
-[ext_resource type="Script" path="res://scripts/peaceful_land.gd" id="8_n8p1e"]
+[ext_resource type="Script" path="res://scripts/ending.gd" id="7_m2oft"]
+[ext_resource type="Script" path="res://scripts/ending_2.gd" id="7_tp161"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s3dmx"]
 texture = ExtResource("1_qai6a")
@@ -56,23 +56,57 @@ format = 2
 layer_0/tile_data = PackedInt32Array(262144, 1, 0, 262145, 1, 0, 262146, 1, 0, 262147, 1, 0, 262148, 1, 0, 262149, 1, 0, 262150, 1, 0, 262151, 1, 0, 262152, 1, 0, 196608, 0, 0, 131072, 0, 0, 65536, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 7, 0, 0, 8, 0, 0, 6, 0, 0, 65544, 0, 0, 131080, 0, 0, 196616, 0, 0, 196615, 0, 0, 196614, 0, 0, 196613, 0, 0, 196612, 0, 0, 196611, 0, 0, 196610, 0, 0, 196609, 0, 0, 131073, 0, 0, 65537, 0, 0, 131077, 0, 0, 131076, 0, 0, 131075, 0, 0, 65539, 0, 0, 65538, 0, 0, 131079, 0, 0, 131074, 5, 0, 65540, 4, 0, 131078, 3, 0)
 
 [node name="congrats" type="Label" parent="."]
-offset_left = 440.0
-offset_top = 280.0
-offset_right = 722.0
-offset_bottom = 355.0
+offset_left = 392.0
+offset_top = 272.0
+offset_right = 761.0
+offset_bottom = 368.0
 theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 21
 text = "You have restored balance. 
 People can now get there lemonade. 
 There is peace amongst the galaxy"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="."]
-offset_left = 504.0
-offset_top = 376.0
-offset_right = 640.0
-offset_bottom = 512.0
-icon = ExtResource("7_vtxqu")
+[node name="Ending" type="Button" parent="."]
+offset_left = 256.0
+offset_top = 256.0
+offset_right = 384.0
+offset_bottom = 384.0
 flat = true
-script = ExtResource("8_n8p1e")
+script = ExtResource("7_m2oft")
 
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[node name="Ending2" type="Button" parent="."]
+offset_left = 512.0
+offset_top = 128.0
+offset_right = 640.0
+offset_bottom = 256.0
+flat = true
+script = ExtResource("7_tp161")
+
+[node name="Ending3" type="Button" parent="."]
+offset_left = 768.0
+offset_top = 256.0
+offset_right = 896.0
+offset_bottom = 384.0
+flat = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = 320.0
+offset_top = 8.0
+offset_right = 842.0
+offset_bottom = 86.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 57
+text = "PICK AN ENDING!!!!"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 464.0
+offset_top = 86.0
+offset_right = 691.0
+offset_bottom = 121.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Just press a Lemon"
+
+[connection signal="pressed" from="Ending" to="Ending" method="_on_pressed"]
+[connection signal="pressed" from="Ending2" to="Ending2" method="_on_pressed"]

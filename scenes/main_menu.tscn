@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://duieeqku3etp6"]
+[gd_scene load_steps=19 format=3 uid="uid://duieeqku3etp6"]
 
 [ext_resource type="PackedScene" uid="uid://eipmfgq4e7xx" path="res://scenes/tile_map.tscn" id="1_dkhpb"]
 [ext_resource type="Script" path="res://scripts/credits.gd" id="1_tig5v"]
@@ -7,7 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://dhu7eobwdfr8r" path="res://art/chrystal_lemons.png" id="5_34twy"]
 [ext_resource type="PackedScene" uid="uid://di8ma6x8cwegs" path="res://prefabs/next_level_button.tscn" id="8_3khw5"]
 [ext_resource type="Script" path="res://scripts/icons.gd" id="8_l1yly"]
+[ext_resource type="Texture2D" uid="uid://q7ycfdvtl5u0" path="res://art/Jonty.png" id="9_0cn6h"]
 [ext_resource type="Script" path="res://scripts/next_level_button_training.gd" id="9_v7l7a"]
+[ext_resource type="Texture2D" uid="uid://bxl7oc3kciwvw" path="res://art/enemy_lvl4.png" id="10_1xlx3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hg484"]
 texture = ExtResource("5_34twy")
@@ -20,7 +22,52 @@ texture_region_size = Vector2i(128, 128)
 tile_size = Vector2i(128, 128)
 sources/3 = SubResource("TileSetAtlasSource_hg484")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_44cs4"]
+atlas = ExtResource("9_0cn6h")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_068nu"]
+atlas = ExtResource("9_0cn6h")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kku4v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_44cs4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_068nu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rq8h8"]
+atlas = ExtResource("10_1xlx3")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iexcq"]
+atlas = ExtResource("10_1xlx3")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c34aj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rq8h8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iexcq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="main menu" type="Node2D"]
+position = Vector2(-1, 0)
 
 [node name="TileMap" parent="." instance=ExtResource("1_dkhpb")]
 
@@ -73,6 +120,19 @@ offset_top = 128.0
 offset_right = 640.0
 offset_bottom = 256.0
 script = ExtResource("9_v7l7a")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(185, 272)
+scale = Vector2(1.6875, 1.6875)
+sprite_frames = SubResource("SpriteFrames_kku4v")
+autoplay = "default"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(913, 272)
+scale = Vector2(1.75, 1.75)
+sprite_frames = SubResource("SpriteFrames_c34aj")
+autoplay = "default"
+frame_progress = 0.306057
 
 [connection signal="pressed" from="credits" to="credits" method="_on_pressed"]
 [connection signal="pressed" from="controls" to="controls" method="_on_pressed"]

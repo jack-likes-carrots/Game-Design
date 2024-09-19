@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://xlothxxaxnoa"]
+
+[ext_resource type="Script" path="res://Te Reo/scripts/next_level_button_lvl1.gd" id="1_1tfyr"]
+[ext_resource type="Texture2D" uid="uid://btpt5lmcn13cb" path="res://art/next_level_button.png" id="2_ioe7c"]
+
+[node name="play_again" type="Button"]
+offset_right = 128.0
+offset_bottom = 128.0
+flat = true
+script = ExtResource("1_1tfyr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(64, 64)
+scale = Vector2(0.161376, 0.161376)
+texture = ExtResource("2_ioe7c")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

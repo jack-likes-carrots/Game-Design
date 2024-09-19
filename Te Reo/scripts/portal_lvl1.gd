@@ -1,4 +1,4 @@
-extends Button
+extends Area2D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -11,5 +11,5 @@ func _process(delta):
 	pass
 
 
-func _on_pressed():
-	get_tree().change_scene_to_file("res://Te Reo/credits.tscn")
+func _on_body_entered(body):
+	get_tree().change_scene_to_file("res://Te Reo/complete/complete_lvl1.tscn")

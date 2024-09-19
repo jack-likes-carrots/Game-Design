@@ -1,24 +1,24 @@
-[gd_scene load_steps=15 format=3 uid="uid://c7hfvjcr3wbsp"]
+[gd_scene load_steps=15 format=3 uid="uid://bjrgfo8xes30n"]
 
-[ext_resource type="Texture2D" uid="uid://xx0ulljbl31x" path="res://art/bubble bath.png" id="1_okvbc"]
-[ext_resource type="Texture2D" uid="uid://ck7rt7j7tcfjy" path="res://art/image (1).png" id="2_75tdl"]
-[ext_resource type="Texture2D" uid="uid://g2krsk11n3jx" path="res://art/tree.png" id="3_ecqmw"]
-[ext_resource type="Texture2D" uid="uid://dyebynmq1ron0" path="res://art/14-147111_menu-button-png-menu-button-icon-png.png" id="4_mu6ay"]
-[ext_resource type="Texture2D" uid="uid://btpt5lmcn13cb" path="res://art/next_level_button.png" id="5_untml"]
-[ext_resource type="Texture2D" uid="uid://dqp8ciuihjop2" path="res://art/blue_lemon.png" id="6_fbdmn"]
-[ext_resource type="Texture2D" uid="uid://dtsbhtmh4tdgt" path="res://art/green_lemon.png" id="7_7bxut"]
-[ext_resource type="Texture2D" uid="uid://whs1bmr4dmi7" path="res://art/purple_lemon.png" id="8_gt06m"]
-[ext_resource type="Texture2D" uid="uid://d3heh62io0anf" path="res://art/New Piskel-1.png.png" id="9_fotl7"]
-[ext_resource type="AudioStream" uid="uid://dm0pak1keqt17" path="res://Audio/credits:controls.mp3" id="10_5vxkp"]
-[ext_resource type="PackedScene" uid="uid://14dwmo2l5tq0" path="res://prefabs/main_menu_button.tscn" id="11_nqgin"]
+[ext_resource type="Texture2D" uid="uid://xx0ulljbl31x" path="res://art/bubble bath.png" id="1_543c7"]
+[ext_resource type="Texture2D" uid="uid://ck7rt7j7tcfjy" path="res://art/image (1).png" id="2_6lujw"]
+[ext_resource type="Texture2D" uid="uid://g2krsk11n3jx" path="res://art/tree.png" id="3_5bcms"]
+[ext_resource type="Texture2D" uid="uid://dyebynmq1ron0" path="res://art/14-147111_menu-button-png-menu-button-icon-png.png" id="4_dowxn"]
+[ext_resource type="Texture2D" uid="uid://btpt5lmcn13cb" path="res://art/next_level_button.png" id="5_duayc"]
+[ext_resource type="Texture2D" uid="uid://dqp8ciuihjop2" path="res://art/blue_lemon.png" id="6_31dn1"]
+[ext_resource type="Texture2D" uid="uid://dtsbhtmh4tdgt" path="res://art/green_lemon.png" id="7_1rnjc"]
+[ext_resource type="Texture2D" uid="uid://whs1bmr4dmi7" path="res://art/purple_lemon.png" id="8_5ucob"]
+[ext_resource type="Texture2D" uid="uid://d3heh62io0anf" path="res://art/New Piskel-1.png.png" id="9_8njfb"]
+[ext_resource type="AudioStream" uid="uid://dm0pak1keqt17" path="res://Audio/credits:controls.mp3" id="10_mms5u"]
+[ext_resource type="PackedScene" uid="uid://cbk5bxjvnbvhs" path="res://Te Reo/prefabs/main_menu_button.tscn" id="11_m125x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7ltgb"]
-texture = ExtResource("1_okvbc")
+texture = ExtResource("1_543c7")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h4otl"]
-texture = ExtResource("2_75tdl")
+texture = ExtResource("2_6lujw")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 
@@ -36,33 +36,33 @@ layer_0/tile_data = PackedInt32Array(0, 2, 0, 1, 2, 0, 2, 2, 0, 3, 2, 0, 4, 2, 0
 
 [node name="Tree" type="Sprite2D" parent="."]
 position = Vector2(192, 192)
-texture = ExtResource("3_ecqmw")
+texture = ExtResource("3_5bcms")
 
 [node name="14-147111Menu-button-png-menu-button-icon-png" type="Sprite2D" parent="."]
 position = Vector2(320, 320)
 scale = Vector2(0.142073, 0.142073)
-texture = ExtResource("4_mu6ay")
+texture = ExtResource("4_dowxn")
 
 [node name="NextLevelButton" type="Sprite2D" parent="."]
 position = Vector2(448, 192)
 scale = Vector2(0.214727, 0.214727)
-texture = ExtResource("5_untml")
+texture = ExtResource("5_duayc")
 
 [node name="BlueLemon" type="Sprite2D" parent="."]
 position = Vector2(576, 320)
-texture = ExtResource("6_fbdmn")
+texture = ExtResource("6_31dn1")
 
 [node name="GreenLemon" type="Sprite2D" parent="."]
 position = Vector2(704, 192)
-texture = ExtResource("7_7bxut")
+texture = ExtResource("7_1rnjc")
 
 [node name="PurpleLemon" type="Sprite2D" parent="."]
 position = Vector2(832, 320)
-texture = ExtResource("8_gt06m")
+texture = ExtResource("8_5ucob")
 
 [node name="NewPiskel-1_png" type="Sprite2D" parent="."]
 position = Vector2(960, 192)
-texture = ExtResource("9_fotl7")
+texture = ExtResource("9_8njfb")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 128.0
@@ -70,9 +70,9 @@ offset_top = 280.0
 offset_right = 254.0
 offset_bottom = 355.0
 theme_override_colors/font_color = Color(1, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
-text = "Lemon Tree
-Level
+theme_override_font_sizes/font_size = 17
+text = "Rakau Rēmana
+Taumata
 "
 horizontal_alignment = 1
 
@@ -82,9 +82,9 @@ offset_top = 152.0
 offset_right = 382.0
 offset_bottom = 227.0
 theme_override_colors/font_color = Color(1, 0.45098, 0, 1)
-theme_override_font_sizes/font_size = 20
-text = "Main Menu
-Button
+theme_override_font_sizes/font_size = 18
+text = "Tahua Matua
+Pātene
 "
 horizontal_alignment = 1
 
@@ -94,9 +94,9 @@ offset_top = 280.0
 offset_right = 510.0
 offset_bottom = 355.0
 theme_override_colors/font_color = Color(1, 0.87451, 0, 1)
-theme_override_font_sizes/font_size = 20
-text = "Next Level
-Button
+theme_override_font_sizes/font_size = 15
+text = "Taumata Panuku
+Pātene
 "
 horizontal_alignment = 1
 
@@ -106,11 +106,11 @@ offset_top = 128.0
 offset_right = 638.0
 offset_bottom = 203.0
 theme_override_colors/font_color = Color(0.427451, 0.858824, 0, 1)
-theme_override_font_sizes/font_size = 20
-text = "The Blue 
-Lemon
-represents
-Wisdom
+theme_override_font_sizes/font_size = 18
+text = "Te Kahurangi 
+Rēmana
+tohu
+Whakaaro nui
 "
 horizontal_alignment = 1
 
@@ -121,10 +121,10 @@ offset_right = 766.0
 offset_bottom = 377.0
 theme_override_colors/font_color = Color(0.427451, 0.858824, 1, 1)
 theme_override_font_sizes/font_size = 20
-text = "The Green 
-Lemon
-represents
-Healing
+text = "Te Kakariki 
+Rēmana
+tohu
+Whakaora
 "
 horizontal_alignment = 1
 
@@ -134,11 +134,11 @@ offset_top = 131.0
 offset_right = 894.0
 offset_bottom = 252.0
 theme_override_colors/font_color = Color(0.427451, 0, 1, 1)
-theme_override_font_sizes/font_size = 20
-text = "The Purple 
-Lemon
-represents
-Healing
+theme_override_font_sizes/font_size = 16
+text = "Te Waiporoporo 
+Rēmana
+tohu
+Whakaora
 "
 horizontal_alignment = 1
 
@@ -149,15 +149,15 @@ offset_right = 1022.0
 offset_bottom = 380.0
 theme_override_colors/font_color = Color(0.869858, 5.75644e-05, 0.659365, 1)
 theme_override_font_sizes/font_size = 20
-text = "AND THIS IS
-THE 
-CHECKPOINT
+text = "A KOINEI
+TE 
+WĀHITAKI!!
 "
 horizontal_alignment = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("10_5vxkp")
+stream = ExtResource("10_mms5u")
 autoplay = true
 parameters/looping = true
 
-[node name="Button" parent="." instance=ExtResource("11_nqgin")]
+[node name="Button" parent="." instance=ExtResource("11_m125x")]

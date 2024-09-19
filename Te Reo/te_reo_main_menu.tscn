@@ -1,19 +1,18 @@
-[gd_scene load_steps=20 format=3 uid="uid://duieeqku3etp6"]
+[gd_scene load_steps=19 format=3 uid="uid://duhcu4o0e6e7g"]
 
-[ext_resource type="PackedScene" uid="uid://eipmfgq4e7xx" path="res://scenes/tile_map.tscn" id="1_dkhpb"]
-[ext_resource type="Script" path="res://scripts/credits1.gd" id="2_jmkdq"]
-[ext_resource type="Script" path="res://scripts/controls.gd" id="3_algai"]
-[ext_resource type="AudioStream" uid="uid://b3ki4cf21dpi7" path="res://Audio/waddle.mp3" id="5_2p5sq"]
-[ext_resource type="Texture2D" uid="uid://dhu7eobwdfr8r" path="res://art/chrystal_lemons.png" id="5_34twy"]
-[ext_resource type="PackedScene" uid="uid://di8ma6x8cwegs" path="res://prefabs/next_level_button.tscn" id="8_3khw5"]
-[ext_resource type="Script" path="res://scripts/icons.gd" id="8_l1yly"]
-[ext_resource type="Texture2D" uid="uid://q7ycfdvtl5u0" path="res://art/Jonty.png" id="9_0cn6h"]
-[ext_resource type="Script" path="res://scripts/next_level_button_training.gd" id="9_v7l7a"]
-[ext_resource type="Texture2D" uid="uid://bxl7oc3kciwvw" path="res://art/enemy_lvl4.png" id="10_1xlx3"]
-[ext_resource type="Script" path="res://scripts/te_reo_main_menu.gd" id="11_wb5s2"]
+[ext_resource type="PackedScene" uid="uid://eipmfgq4e7xx" path="res://scenes/tile_map.tscn" id="1_03vvr"]
+[ext_resource type="Script" path="res://scripts/credits_english.gd" id="2_ycawn"]
+[ext_resource type="Script" path="res://scripts/controls2.gd" id="3_8nfem"]
+[ext_resource type="AudioStream" uid="uid://b3ki4cf21dpi7" path="res://Audio/waddle.mp3" id="4_ee4j3"]
+[ext_resource type="Texture2D" uid="uid://dhu7eobwdfr8r" path="res://art/chrystal_lemons.png" id="5_iknd0"]
+[ext_resource type="Script" path="res://scripts/icons2.gd" id="6_5n1rp"]
+[ext_resource type="PackedScene" uid="uid://di8ma6x8cwegs" path="res://prefabs/next_level_button.tscn" id="7_24ria"]
+[ext_resource type="Script" path="res://scripts/next_level_button2.gd" id="8_h51lo"]
+[ext_resource type="Texture2D" uid="uid://q7ycfdvtl5u0" path="res://art/Jonty.png" id="9_4yt7t"]
+[ext_resource type="Texture2D" uid="uid://bxl7oc3kciwvw" path="res://art/enemy_lvl4.png" id="10_bef53"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hg484"]
-texture = ExtResource("5_34twy")
+texture = ExtResource("5_iknd0")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 1:0/0 = 0
@@ -24,11 +23,11 @@ tile_size = Vector2i(128, 128)
 sources/3 = SubResource("TileSetAtlasSource_hg484")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_44cs4"]
-atlas = ExtResource("9_0cn6h")
+atlas = ExtResource("9_4yt7t")
 region = Rect2(0, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_068nu"]
-atlas = ExtResource("9_0cn6h")
+atlas = ExtResource("9_4yt7t")
 region = Rect2(128, 0, 128, 128)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kku4v"]
@@ -46,11 +45,11 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rq8h8"]
-atlas = ExtResource("10_1xlx3")
+atlas = ExtResource("10_bef53")
 region = Rect2(0, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iexcq"]
-atlas = ExtResource("10_1xlx3")
+atlas = ExtResource("10_bef53")
 region = Rect2(0, 128, 128, 128)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_c34aj"]
@@ -70,7 +69,7 @@ animations = [{
 [node name="main menu" type="Node2D"]
 position = Vector2(-1, 0)
 
-[node name="TileMap" parent="." instance=ExtResource("1_dkhpb")]
+[node name="TileMap" parent="." instance=ExtResource("1_03vvr")]
 
 [node name="credits" type="Button" parent="."]
 offset_left = 648.0
@@ -78,10 +77,10 @@ offset_top = 296.0
 offset_right = 760.0
 offset_bottom = 336.0
 theme_override_colors/font_color = Color(0, 0, 1, 1)
-theme_override_font_sizes/font_size = 25
-text = "Credits"
+theme_override_font_sizes/font_size = 17
+text = "Whiwhinga"
 flat = true
-script = ExtResource("2_jmkdq")
+script = ExtResource("2_ycawn")
 
 [node name="controls" type="Button" parent="."]
 offset_left = 392.0
@@ -90,12 +89,12 @@ offset_right = 504.0
 offset_bottom = 336.0
 theme_override_colors/font_color = Color(1, 0, 1, 1)
 theme_override_font_sizes/font_size = 26
-text = "Controls"
+text = "Mana"
 flat = true
-script = ExtResource("3_algai")
+script = ExtResource("3_8nfem")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_2p5sq")
+stream = ExtResource("4_ee4j3")
 autoplay = true
 parameters/looping = true
 
@@ -111,16 +110,16 @@ offset_right = 629.0
 offset_bottom = 340.0
 theme_override_colors/font_color = Color(1.31878e-05, 0.82052, 7.70092e-07, 1)
 theme_override_font_sizes/font_size = 26
-text = "  Icons  "
+text = "Ata"
 flat = true
-script = ExtResource("8_l1yly")
+script = ExtResource("6_5n1rp")
 
-[node name="play_again" parent="." instance=ExtResource("8_3khw5")]
+[node name="play_again" parent="." instance=ExtResource("7_24ria")]
 offset_left = 512.0
 offset_top = 128.0
 offset_right = 640.0
 offset_bottom = 256.0
-script = ExtResource("9_v7l7a")
+script = ExtResource("8_h51lo")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(185, 272)
@@ -135,18 +134,6 @@ sprite_frames = SubResource("SpriteFrames_c34aj")
 autoplay = "default"
 frame_progress = 0.306057
 
-[node name="Button" type="Button" parent="."]
-offset_left = 537.0
-offset_top = 424.0
-offset_right = 629.0
-offset_bottom = 468.0
-theme_override_colors/font_color = Color(1, 0, 0, 1)
-theme_override_font_sizes/font_size = 26
-text = "Te Reo"
-flat = true
-script = ExtResource("11_wb5s2")
-
 [connection signal="pressed" from="credits" to="credits" method="_on_pressed"]
 [connection signal="pressed" from="controls" to="controls" method="_on_pressed"]
 [connection signal="pressed" from="icons" to="icons" method="_on_pressed"]
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

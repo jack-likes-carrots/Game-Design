@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=3 uid="uid://b3r533a6b0cmp"]
+
+[ext_resource type="Texture2D" uid="uid://xx0ulljbl31x" path="res://art/bubble bath.png" id="1_t2j5m"]
+[ext_resource type="Texture2D" uid="uid://ck7rt7j7tcfjy" path="res://art/image (1).png" id="2_lbacx"]
+[ext_resource type="AudioStream" uid="uid://n1oh2x5gvjng" path="res://Audio/complete.mp3" id="3_wa2nn"]
+[ext_resource type="PackedScene" uid="uid://xlothxxaxnoa" path="res://Te Reo/prefabs/next_level_button_lvl1.tscn" id="4_kob25"]
+[ext_resource type="PackedScene" uid="uid://cbk5bxjvnbvhs" path="res://Te Reo/prefabs/main_menu_button.tscn" id="5_ayh0o"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_omagu"]
+texture = ExtResource("1_t2j5m")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sx78l"]
+texture = ExtResource("2_lbacx")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_iduug"]
+tile_size = Vector2i(128, 128)
+sources/0 = SubResource("TileSetAtlasSource_omagu")
+sources/1 = SubResource("TileSetAtlasSource_sx78l")
+
+[node name="Training Complete" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_iduug")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 65544, 1, 0, 65543, 1, 0, 65542, 1, 0, 65541, 1, 0, 65540, 1, 0, 65539, 1, 0, 65538, 1, 0, 65537, 1, 0, 65536, 1, 0, 131072, 1, 0, 131073, 1, 0, 131074, 1, 0, 131075, 1, 0, 131076, 1, 0, 131077, 1, 0, 131078, 1, 0, 131079, 1, 0, 131080, 1, 0, 196616, 1, 0, 196615, 1, 0, 196614, 1, 0, 196613, 1, 0, 196612, 1, 0, 196611, 1, 0, 196610, 1, 0, 196609, 1, 0, 196608, 1, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 56.0
+offset_top = 72.0
+offset_right = 1090.0
+offset_bottom = 261.0
+theme_override_colors/font_color = Color(0.638727, 0.127258, 0.799061, 1)
+theme_override_font_sizes/font_size = 44
+text = "Mihi! Kua oti koe
+te taumata whakangungu. Inaianei ka taea e koe 
+nuku ki te Taumata 1!! :)"
+horizontal_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_wa2nn")
+autoplay = true
+parameters/looping = true
+
+[node name="play_again" parent="." instance=ExtResource("4_kob25")]
+offset_left = 515.0
+offset_top = 256.0
+offset_right = 643.0
+offset_bottom = 384.0
+
+[node name="Button" parent="." instance=ExtResource("5_ayh0o")]
+offset_left = 512.0
+offset_top = 384.0
+offset_right = 640.0
+offset_bottom = 512.0

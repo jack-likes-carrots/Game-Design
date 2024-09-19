@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6tskihg3ubxr"]
+
+[ext_resource type="Script" path="res://scripts/play_again_lvl4.gd" id="1_ywdr2"]
+[ext_resource type="Script" path="res://scripts/main_menu_lvl4.gd" id="2_cssup"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 392.0
+offset_top = 128.0
+offset_right = 775.0
+offset_bottom = 218.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 63
+text = "Your Dead :("
+
+[node name="play_again" type="Button" parent="."]
+offset_left = 512.0
+offset_top = 256.0
+offset_right = 640.0
+offset_bottom = 298.0
+theme_override_colors/font_disabled_color = Color(0, 0, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "Play Again"
+script = ExtResource("1_ywdr2")
+
+[node name="main_menu" type="Button" parent="."]
+offset_left = 504.0
+offset_top = 328.0
+offset_right = 648.0
+offset_bottom = 371.0
+theme_override_font_sizes/font_size = 25
+text = "Main Menu"
+script = ExtResource("2_cssup")
+
+[node name="text" type="Label" parent="."]
+offset_left = 240.0
+offset_top = 432.0
+offset_right = 917.0
+offset_bottom = 505.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "I'm so sorry. You are in the big leagues now. You have to 
+go back to the start sorry. Better Luck next time!!!"
+
+[connection signal="pressed" from="play_again" to="play_again" method="_on_pressed"]
+[connection signal="pressed" from="main_menu" to="main_menu" method="_on_pressed"]

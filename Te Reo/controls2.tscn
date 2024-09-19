@@ -1,23 +1,23 @@
-[gd_scene load_steps=5 format=3 uid="uid://cl5oegl7j51n8"]
+[gd_scene load_steps=5 format=3 uid="uid://dvy1h4f7nov6w"]
 
-[ext_resource type="PackedScene" uid="uid://eipmfgq4e7xx" path="res://scenes/tile_map.tscn" id="1_can8b"]
-[ext_resource type="AudioStream" uid="uid://dm0pak1keqt17" path="res://Audio/credits:controls.mp3" id="3_lvegf"]
-[ext_resource type="Texture2D" uid="uid://c3ji4fjvmj802" path="res://art/controls.png" id="4_0jgik"]
-[ext_resource type="PackedScene" uid="uid://14dwmo2l5tq0" path="res://prefabs/main_menu_button.tscn" id="4_t2t2a"]
+[ext_resource type="PackedScene" uid="uid://eipmfgq4e7xx" path="res://scenes/tile_map.tscn" id="1_uylqe"]
+[ext_resource type="AudioStream" uid="uid://dm0pak1keqt17" path="res://Audio/credits:controls.mp3" id="2_83ylm"]
+[ext_resource type="Texture2D" uid="uid://c3ji4fjvmj802" path="res://art/controls.png" id="3_wi1hn"]
+[ext_resource type="PackedScene" uid="uid://cbk5bxjvnbvhs" path="res://Te Reo/prefabs/main_menu_button.tscn" id="4_xu7mb"]
 
 [node name="controls" type="Node2D"]
 
-[node name="TileMap" parent="." instance=ExtResource("1_can8b")]
+[node name="TileMap" parent="." instance=ExtResource("1_uylqe")]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_lvegf")
+stream = ExtResource("2_83ylm")
 autoplay = true
 parameters/looping = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(579, 263)
 scale = Vector2(0.686, 0.686)
-texture = ExtResource("4_0jgik")
+texture = ExtResource("3_wi1hn")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 896.0
@@ -35,7 +35,7 @@ offset_right = 249.0
 offset_bottom = 353.0
 theme_override_colors/font_color = Color(0, 0, 0.839216, 1)
 theme_override_font_sizes/font_size = 42
-text = "Back"
+text = "Hoki"
 
 [node name="Label3" type="Label" parent="."]
 offset_left = 400.0
@@ -55,4 +55,4 @@ theme_override_colors/font_color = Color(0, 0, 0.839216, 1)
 theme_override_font_sizes/font_size = 42
 text = "I, AM STEVE!!!"
 
-[node name="Button" parent="." instance=ExtResource("4_t2t2a")]
+[node name="Button" parent="." instance=ExtResource("4_xu7mb")]

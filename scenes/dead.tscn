@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://bdmgfhhmn4glj"]
+[gd_scene load_steps=3 format=3 uid="uid://bdmgfhhmn4glj"]
 
+[ext_resource type="Script" path="res://scripts/play_again_training.gd" id="2_nkvsu"]
 [ext_resource type="Script" path="res://scripts/main menu.gd" id="3_j0ilv"]
 
 [node name="Dead" type="Node2D"]
@@ -24,6 +25,7 @@ offset_top = 384.0
 offset_right = 640.0
 offset_bottom = 448.0
 text = "Play Again"
+script = ExtResource("2_nkvsu")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 352.0
@@ -36,3 +38,4 @@ text = "Your Dead :("
 
 [connection signal="pressed" from="main menu" to="main menu" method="_on_pressed"]
 [connection signal="pressed" from="play again" to="main menu" method="_on_play_again_pressed"]
+[connection signal="pressed" from="play again" to="play again" method="_on_pressed"]

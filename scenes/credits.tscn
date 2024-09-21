@@ -98,3 +98,16 @@ offset_bottom = 448.0
 theme_override_colors/font_color = Color(0, 0.631373, 0.368627, 1)
 theme_override_font_sizes/font_size = 23
 text = "Thanks OpenClipart-Vecotrs on Pixabay for Arrow Art"
+
+[node name="Label9" type="Label" parent="."]
+offset_top = 272.0
+offset_right = 128.0
+offset_bottom = 373.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 15
+text = "UNIVERSFIELD
+ on Pixabay, 
+THANK YOU, for 
+the death theme"
+horizontal_alignment = 1

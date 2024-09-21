@@ -1,29 +1,31 @@
-[gd_scene load_steps=8 format=3 uid="uid://h4uqxldnmugw"]
+[gd_scene load_steps=10 format=3 uid="uid://bdr7r4a732v2r"]
 
 [ext_resource type="Texture2D" uid="uid://xx0ulljbl31x" path="res://art/bubble bath.png" id="1_1f0w6"]
+[ext_resource type="Script" path="res://scripts/play_again_training.gd" id="2_35rte"]
 [ext_resource type="Texture2D" uid="uid://ck7rt7j7tcfjy" path="res://art/image (1).png" id="2_iljgp"]
-[ext_resource type="PackedScene" uid="uid://cbk5bxjvnbvhs" path="res://Te Reo/prefabs/main_menu_button.tscn" id="3_jvpr5"]
-[ext_resource type="PackedScene" uid="uid://xlothxxaxnoa" path="res://Te Reo/prefabs/next_level_button_lvl1.tscn" id="4_itw40"]
+[ext_resource type="PackedScene" uid="uid://14dwmo2l5tq0" path="res://prefabs/main_menu_button.tscn" id="4_rffvt"]
+[ext_resource type="Texture2D" uid="uid://5yv8375w2nbk" path="res://art/yellow_lemon.png" id="5_cpb1w"]
+[ext_resource type="PackedScene" uid="uid://bwmcodteemvmo" path="res://prefabs/death_theme.tscn" id="6_4jx0v"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tm3tq"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ghqcl"]
 texture = ExtResource("1_1f0w6")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p5bd0"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6m0kc"]
 texture = ExtResource("2_iljgp")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_gnhfo"]
+[sub_resource type="TileSet" id="TileSet_kjbt5"]
 tile_size = Vector2i(128, 128)
-sources/0 = SubResource("TileSetAtlasSource_tm3tq")
-sources/1 = SubResource("TileSetAtlasSource_p5bd0")
+sources/0 = SubResource("TileSetAtlasSource_ghqcl")
+sources/1 = SubResource("TileSetAtlasSource_6m0kc")
 
 [node name="Dead" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
-tile_set = SubResource("TileSet_gnhfo")
+tile_set = SubResource("TileSet_kjbt5")
 format = 2
 layer_0/tile_data = PackedInt32Array(0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 65544, 1, 0, 65543, 1, 0, 65542, 1, 0, 65541, 1, 0, 65540, 1, 0, 65539, 1, 0, 65538, 1, 0, 65537, 1, 0, 65536, 1, 0, 131072, 1, 0, 131073, 1, 0, 131074, 1, 0, 131075, 1, 0, 131076, 1, 0, 131077, 1, 0, 131078, 1, 0, 131079, 1, 0, 131080, 1, 0, 196616, 1, 0, 196615, 1, 0, 196614, 1, 0, 196613, 1, 0, 196612, 1, 0, 196611, 1, 0, 196610, 1, 0, 196609, 1, 0, 196608, 1, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0)
 
@@ -33,24 +35,36 @@ position = Vector2(323, 389)
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
 position = Vector2(77, 3)
 
+[node name="Button" type="Button" parent="."]
+offset_left = 640.0
+offset_top = 288.0
+offset_right = 768.0
+offset_bottom = 352.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Play Again"
+flat = true
+script = ExtResource("2_35rte")
+
 [node name="Label" type="Label" parent="."]
 offset_left = 352.0
-offset_top = 104.0
+offset_top = 120.0
 offset_right = 800.0
-offset_bottom = 209.0
+offset_bottom = 225.0
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_font_sizes/font_size = 76
-text = "To Mate :("
-horizontal_alignment = 1
+text = "Your Dead :("
 
-[node name="Button" parent="." instance=ExtResource("3_jvpr5")]
-offset_left = 512.0
-offset_top = 384.0
-offset_right = 640.0
-offset_bottom = 512.0
-
-[node name="play_again" parent="." instance=ExtResource("4_itw40")]
-offset_left = 512.0
+[node name="Button2" parent="." instance=ExtResource("4_rffvt")]
+offset_left = 384.0
 offset_top = 256.0
-offset_right = 640.0
+offset_right = 512.0
 offset_bottom = 384.0
+
+[node name="YellowLemon" type="Sprite2D" parent="."]
+position = Vector2(576, 320)
+texture = ExtResource("5_cpb1w")
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource("6_4jx0v")]
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

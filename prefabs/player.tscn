@@ -1,8 +1,9 @@
-[gd_scene load_steps=18 format=3 uid="uid://bctej106jjdu"]
+[gd_scene load_steps=19 format=3 uid="uid://bctej106jjdu"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_djx3c"]
 [ext_resource type="Texture2D" uid="uid://q7ycfdvtl5u0" path="res://art/Jonty.png" id="2_11buc"]
 [ext_resource type="Texture2D" uid="uid://lj6b8jnank5u" path="res://art/Jonty copy.png" id="3_fgprs"]
+[ext_resource type="Script" path="res://scripts/jump.gd" id="4_jyu1s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mbbyg"]
 atlas = ExtResource("2_11buc")
@@ -136,3 +137,6 @@ shape = SubResource("RectangleShape2D_v1xp8")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.55, 0.55)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+script = ExtResource("4_jyu1s")

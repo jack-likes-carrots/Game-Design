@@ -35,6 +35,9 @@ func _physics_process(delta):
 		velocity.y = JUMP_VELOCITY
 		anim.play("jump")
 		jump_count += 1
+		
+	if Input.is_action_just_pressed("ui_accept"):
+		AudioManager.play("res://Audio/jump-sound-14839.mp3")
 	
 
 	# Get the input direction and handle the movement/deceleration.

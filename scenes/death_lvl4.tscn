@@ -1,47 +1,76 @@
-[gd_scene load_steps=3 format=3 uid="uid://d4gfqxle8gtmm"]
+[gd_scene load_steps=10 format=3 uid="uid://d4gfqxle8gtmm"]
 
+[ext_resource type="Texture2D" uid="uid://xx0ulljbl31x" path="res://art/bubble bath.png" id="1_5whb0"]
 [ext_resource type="Script" path="res://scripts/play_again_lvl4.gd" id="1_ru7cc"]
-[ext_resource type="Script" path="res://scripts/main_menu_lvl4.gd" id="2_vruve"]
+[ext_resource type="Texture2D" uid="uid://ck7rt7j7tcfjy" path="res://art/image (1).png" id="2_pwmux"]
+[ext_resource type="PackedScene" uid="uid://14dwmo2l5tq0" path="res://prefabs/main_menu_button.tscn" id="4_iom2i"]
+[ext_resource type="Texture2D" uid="uid://dqp8ciuihjop2" path="res://art/blue_lemon.png" id="5_oao5r"]
+[ext_resource type="PackedScene" uid="uid://bwmcodteemvmo" path="res://prefabs/death_theme.tscn" id="6_cbjnu"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gqs34"]
+texture = ExtResource("1_5whb0")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l0f1n"]
+texture = ExtResource("2_pwmux")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_3tkq1"]
+tile_size = Vector2i(128, 128)
+sources/0 = SubResource("TileSetAtlasSource_gqs34")
+sources/1 = SubResource("TileSetAtlasSource_l0f1n")
 
 [node name="Node2D" type="Node2D"]
 
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_3tkq1")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 65541, 1, 0, 65542, 1, 0, 65543, 1, 0, 65544, 1, 0, 8, 1, 0, 7, 1, 0, 6, 1, 0, 196608, 1, 0, 131072, 1, 0, 65536, 1, 0, 65537, 1, 0, 65538, 1, 0, 65539, 1, 0, 65540, 1, 0, 131076, 1, 0, 131075, 1, 0, 131074, 1, 0, 196610, 1, 0, 196609, 1, 0, 131073, 1, 0, 196611, 1, 0, 196612, 1, 0, 196613, 1, 0, 196614, 1, 0, 196615, 1, 0, 196616, 1, 0, 131080, 1, 0, 131079, 1, 0, 131078, 1, 0, 131077, 1, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0)
+
 [node name="Label" type="Label" parent="."]
-offset_left = 392.0
-offset_top = 128.0
-offset_right = 775.0
-offset_bottom = 218.0
+offset_left = 384.0
+offset_top = 88.0
+offset_right = 767.0
+offset_bottom = 178.0
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_font_sizes/font_size = 63
 text = "Your Dead :("
 
 [node name="play_again" type="Button" parent="."]
-offset_left = 512.0
-offset_top = 256.0
-offset_right = 640.0
-offset_bottom = 298.0
+offset_left = 640.0
+offset_top = 296.0
+offset_right = 768.0
+offset_bottom = 338.0
 theme_override_colors/font_disabled_color = Color(0, 0, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 1, 1)
 theme_override_font_sizes/font_size = 24
 text = "Play Again"
+flat = true
 script = ExtResource("1_ru7cc")
-
-[node name="main_menu" type="Button" parent="."]
-offset_left = 504.0
-offset_top = 328.0
-offset_right = 648.0
-offset_bottom = 371.0
-theme_override_font_sizes/font_size = 25
-text = "Main Menu"
-script = ExtResource("2_vruve")
 
 [node name="text" type="Label" parent="."]
 offset_left = 240.0
-offset_top = 432.0
+offset_top = 168.0
 offset_right = 917.0
-offset_bottom = 505.0
+offset_bottom = 241.0
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_font_sizes/font_size = 25
 text = "I'm so sorry. You are in the big leagues now. You have to 
 go back to the start sorry. Better Luck next time!!!"
+horizontal_alignment = 1
+
+[node name="Button" parent="." instance=ExtResource("4_iom2i")]
+offset_left = 384.0
+offset_top = 256.0
+offset_right = 512.0
+offset_bottom = 384.0
+
+[node name="BlueLemon" type="Sprite2D" parent="."]
+position = Vector2(576, 320)
+texture = ExtResource("5_oao5r")
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource("6_cbjnu")]
 
 [connection signal="pressed" from="play_again" to="play_again" method="_on_pressed"]
-[connection signal="pressed" from="main_menu" to="main_menu" method="_on_pressed"]

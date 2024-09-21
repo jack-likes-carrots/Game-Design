@@ -57,7 +57,7 @@ func _physics_process(delta):
 
 var normal_gravity = 200.0
 var fast_drop_gravity = 500.0
-
+var velocity = Vector2()
 
 # This is the only _physics_process function in the script
 func handle_physics(delta: float) -> void:
@@ -69,7 +69,7 @@ func handle_physics(delta: float) -> void:
 		drop_faster(delta)
 
 	# Apply movement
-	move_and_slide()
+	move_and_slide(velocity)
 
 # Function to make the player drop faster
 func drop_faster(delta: float) -> void:

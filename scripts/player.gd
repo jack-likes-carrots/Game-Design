@@ -54,4 +54,23 @@ func _physics_process(delta):
 		anim.play("run_back")
 	
 
-	
+
+var normal_gravity = 200.0
+var fast_drop_gravity = 500.0
+
+
+# This is the only _physics_process function in the script
+func handle_physics(delta: float) -> void:
+	# Apply normal gravity
+	if not is_on_floor():
+		velocity.y += normal_gravity * delta
+
+	if Input.is_action_pressed("ui_down"):
+		drop_faster(delta)
+
+	# Apply movement
+	move_and_slide()
+
+# Function to make the player drop faster
+func drop_faster(delta: float) -> void:
+	velocity.y += fast_drop_gravity * delta

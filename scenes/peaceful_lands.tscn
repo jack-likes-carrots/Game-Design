@@ -20,7 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://bctej106jjdu" path="res://prefabs/player.tscn" id="21_im1ey"]
 [ext_resource type="Texture2D" uid="uid://3mewxk7g4di4" path="res://sprites/anim_enemy_peace.png" id="22_23lwn"]
 [ext_resource type="Texture2D" uid="uid://cmaukb6aaylw0" path="res://sprites/Piggy.png" id="22_du3jq"]
-[ext_resource type="AudioStream" uid="uid://cdsfqglur23tb" path="res://Audio/music.mp3" id="22_es1jc"]
+[ext_resource type="AudioStream" uid="uid://dm0pak1keqt17" path="res://Audio/credits:controls.mp3" id="22_f5u4v"]
 [ext_resource type="PackedScene" uid="uid://cprxrgvyikfv5" path="res://prefabs/peaceful_enemy.tscn" id="24_udorj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pin5y"]
@@ -204,11 +204,6 @@ text = "LEMONADE!!! :D"
 position = Vector2(1464, -192)
 texture = ExtResource("18_g3xwl")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("22_es1jc")
-autoplay = true
-parameters/looping = true
-
 [node name="LemonNormal" type="Sprite2D" parent="."]
 position = Vector2(342, -66)
 scale = Vector2(0.375, 1.07812)
@@ -298,3 +293,8 @@ position = Vector2(8888, 960)
 
 [node name="player" parent="." instance=ExtResource("21_im1ey")]
 position = Vector2(-1472, 328)
+
+[node name="Credits_controls" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("22_f5u4v")
+autoplay = true
+parameters/looping = true

@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://d3heh62io0anf" path="res://art/New Piskel-1.png.png" id="20_w4s4c"]
 [ext_resource type="Script" path="res://scripts/lemon_tree_button.gd" id="21_8q8n4"]
 [ext_resource type="PackedScene" uid="uid://bctej106jjdu" path="res://prefabs/player.tscn" id="21_im1ey"]
-[ext_resource type="AudioStream" uid="uid://cdsfqglur23tb" path="res://Audio/music.mp3" id="22_es1jc"]
+[ext_resource type="PackedScene" uid="uid://c1iwcprnmb50t" path="res://prefabs/end_game.tscn" id="22_qqefh"]
 [ext_resource type="PackedScene" uid="uid://12pxm85q21j7" path="res://prefabs/enemy_lvl2.tscn" id="23_l8oni"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b1h8x"]
@@ -210,11 +210,6 @@ texture = ExtResource("20_w4s4c")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_vk4cj")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("22_es1jc")
-autoplay = true
-parameters/looping = true
-
 [node name="enemy" parent="." instance=ExtResource("23_l8oni")]
 position = Vector2(7864, 960)
 
@@ -240,6 +235,8 @@ script = ExtResource("21_8q8n4")
 
 [node name="player" parent="." instance=ExtResource("21_im1ey")]
 position = Vector2(-1472, 328)
+
+[node name="AudioStreamPlayer2" parent="." instance=ExtResource("22_qqefh")]
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

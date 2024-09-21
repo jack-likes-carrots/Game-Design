@@ -1,9 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://cjajan76h3fsm"]
+[gd_scene load_steps=4 format=3 uid="uid://cjajan76h3fsm"]
 
 [ext_resource type="Texture2D" uid="uid://by1xkoakl5j5x" path="res://art/mr_hippo.jpg" id="1_tywpp"]
+[ext_resource type="AudioStream" uid="uid://bbfh8q5jriche" path="res://Audio/mr_hippo.mp3" id="2_5j55v"]
+[ext_resource type="Script" path="res://scripts/mr_hippo.gd" id="3_clsu2"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="MrHippo" type="Sprite2D" parent="."]
 position = Vector2(576, 360)
 texture = ExtResource("1_tywpp")
+
+[node name="MrHippo2" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(416, 104)
+stream = ExtResource("2_5j55v")
+autoplay = true
+parameters/looping = true
+
+[node name="Button" type="Button" parent="."]
+offset_right = 1152.0
+offset_bottom = 646.0
+flat = true
+script = ExtResource("3_clsu2")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

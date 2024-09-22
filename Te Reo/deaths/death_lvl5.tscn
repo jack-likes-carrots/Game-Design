@@ -2,10 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://xx0ulljbl31x" path="res://art/bubble bath.png" id="1_divpg"]
 [ext_resource type="Texture2D" uid="uid://ck7rt7j7tcfjy" path="res://art/image (1).png" id="2_6gh4v"]
-[ext_resource type="Script" path="res://scripts/play_again_lvl4.gd" id="3_v738p"]
-[ext_resource type="PackedScene" uid="uid://14dwmo2l5tq0" path="res://prefabs/main_menu_button.tscn" id="4_okl5e"]
+[ext_resource type="Script" path="res://Te Reo/scripts/play_again_lvl5.gd" id="3_iroku"]
 [ext_resource type="Texture2D" uid="uid://dtsbhtmh4tdgt" path="res://art/green_lemon.png" id="5_sw3vj"]
 [ext_resource type="PackedScene" uid="uid://bwmcodteemvmo" path="res://prefabs/death_theme.tscn" id="6_0im4o"]
+[ext_resource type="PackedScene" uid="uid://cbk5bxjvnbvhs" path="res://Te Reo/prefabs/main_menu_button.tscn" id="6_1gnb7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gqs34"]
 texture = ExtResource("1_divpg")
@@ -34,9 +34,10 @@ offset_left = 384.0
 offset_top = 80.0
 offset_right = 767.0
 offset_bottom = 170.0
-theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 1, 0.372549, 1)
 theme_override_font_sizes/font_size = 63
-text = "Your Dead :("
+text = "To Mate :("
+horizontal_alignment = 1
 
 [node name="play_again" type="Button" parent="."]
 offset_left = 640.0
@@ -48,29 +49,29 @@ theme_override_colors/font_color = Color(0, 1, 0, 1)
 theme_override_font_sizes/font_size = 24
 text = "Play Again"
 flat = true
-script = ExtResource("3_v738p")
+script = ExtResource("3_iroku")
 
 [node name="text" type="Label" parent="."]
-offset_left = 240.0
+offset_left = 176.0
 offset_top = 160.0
-offset_right = 917.0
+offset_right = 981.0
 offset_bottom = 233.0
-theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 1, 0.309804, 1)
 theme_override_font_sizes/font_size = 25
-text = "I'm so sorry. You are in the big leagues now. You have to 
-go back to the start sorry. Better Luck next time!!!"
+text = "Ka nui taku pouri. Kei roto koe i nga riiki nui inaianei. Me mahi koe 
+hoki ki te timatanga pouri. Kia pai ake te waimarie a muri ake nei!!!"
 horizontal_alignment = 1
-
-[node name="Button" parent="." instance=ExtResource("4_okl5e")]
-offset_left = 384.0
-offset_top = 256.0
-offset_right = 512.0
-offset_bottom = 384.0
 
 [node name="GreenLemon" type="Sprite2D" parent="."]
 position = Vector2(576, 320)
 texture = ExtResource("5_sw3vj")
 
 [node name="AudioStreamPlayer" parent="." instance=ExtResource("6_0im4o")]
+
+[node name="Button" parent="." instance=ExtResource("6_1gnb7")]
+offset_left = 384.0
+offset_top = 256.0
+offset_right = 512.0
+offset_bottom = 384.0
 
 [connection signal="pressed" from="play_again" to="play_again" method="_on_pressed"]

@@ -1,18 +1,18 @@
-[gd_scene load_steps=9 format=3 uid="uid://csuf875in4r2h"]
+[gd_scene load_steps=9 format=3 uid="uid://c2w8ogi0q6f5y"]
 
-[ext_resource type="Texture2D" uid="uid://xx0ulljbl31x" path="res://art/bubble bath.png" id="1_43q6p"]
-[ext_resource type="Texture2D" uid="uid://ck7rt7j7tcfjy" path="res://art/image (1).png" id="2_bbju6"]
-[ext_resource type="PackedScene" uid="uid://c1iwcprnmb50t" path="res://prefabs/end_game.tscn" id="3_84iam"]
-[ext_resource type="PackedScene" uid="uid://di8ma6x8cwegs" path="res://prefabs/next_level_button.tscn" id="4_cj6rv"]
-[ext_resource type="Script" path="res://scripts/next_level_button_lvl5.gd" id="5_tyvvo"]
+[ext_resource type="Texture2D" uid="uid://xx0ulljbl31x" path="res://art/bubble bath.png" id="1_p3y36"]
+[ext_resource type="Texture2D" uid="uid://ck7rt7j7tcfjy" path="res://art/image (1).png" id="2_taei4"]
+[ext_resource type="PackedScene" uid="uid://c1iwcprnmb50t" path="res://prefabs/end_game.tscn" id="3_aisxb"]
+[ext_resource type="PackedScene" uid="uid://di8ma6x8cwegs" path="res://prefabs/next_level_button.tscn" id="4_i3o08"]
+[ext_resource type="Script" path="res://scripts/next_level_button_lvl5.gd" id="5_7jdhv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6ejpi"]
-texture = ExtResource("1_43q6p")
+texture = ExtResource("1_p3y36")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nw6dm"]
-texture = ExtResource("2_bbju6")
+texture = ExtResource("2_taei4")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 
@@ -30,28 +30,29 @@ format = 2
 layer_0/tile_data = PackedInt32Array(262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 196608, 1, 0, 131072, 1, 0, 65536, 1, 0, 0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 65544, 1, 0, 131080, 1, 0, 196616, 1, 0, 196615, 1, 0, 196614, 1, 0, 196613, 1, 0, 196612, 1, 0, 196611, 1, 0, 196610, 1, 0, 196609, 1, 0, 131073, 1, 0, 65537, 1, 0, 65538, 1, 0, 65539, 1, 0, 65540, 1, 0, 65541, 1, 0, 65542, 1, 0, 65543, 1, 0, 131079, 1, 0, 131078, 1, 0, 131077, 1, 0, 131076, 1, 0, 131075, 1, 0, 131074, 1, 0)
 
 [node name="Label" type="Label" parent="."]
-offset_left = 264.0
+offset_left = 192.0
 offset_top = 8.0
-offset_right = 893.0
+offset_right = 953.0
 offset_bottom = 381.0
 theme_override_colors/font_color = Color(0.106238, 0.333863, 0.709082, 1)
 theme_override_font_sizes/font_size = 31
-text = "You are so close, you can't give 
-up now. If you die you restart. 
-No lives. This is endgame. 
-But there are laws about workplace 
-regulations so have fun with it. 
-The blue lemon represents emotion,
-tears, hard work and wisom. Again
-completely irrelavant from the game."
+text = "He tino tata koe, kaore e taea e koe te tuku 
+ake inaianei. Mena ka mate koe ka timata ano koe. 
+Kaore he oranga. He kemu mutunga tenei. 
+Engari he ture mo te waahi mahi 
+no reira, kia ngahau nga ture. 
+Ko te rēmana kahurangi e tohu ana i te kare-a-roto
+roimata, mahi pukumahi me te mohio. Ano
+tino koretake mai i te keemu.
+"
 horizontal_alignment = 1
 
-[node name="AudioStreamPlayer" parent="." instance=ExtResource("3_84iam")]
+[node name="AudioStreamPlayer" parent="." instance=ExtResource("3_aisxb")]
 parameters/looping = true
 
-[node name="play_again" parent="." instance=ExtResource("4_cj6rv")]
+[node name="play_again" parent="." instance=ExtResource("4_i3o08")]
 offset_left = 512.0
 offset_top = 384.0
 offset_right = 640.0
 offset_bottom = 512.0
-script = ExtResource("5_tyvvo")
+script = ExtResource("5_7jdhv")

@@ -1,20 +1,20 @@
-[gd_scene load_steps=11 format=3 uid="uid://ljn4a3hsihak"]
+[gd_scene load_steps=11 format=3 uid="uid://47hp58hxj3lc"]
 
-[ext_resource type="Texture2D" uid="uid://ck7rt7j7tcfjy" path="res://art/image (1).png" id="1_qm3mk"]
-[ext_resource type="Texture2D" uid="uid://xx0ulljbl31x" path="res://art/bubble bath.png" id="2_kdxib"]
-[ext_resource type="Texture2D" uid="uid://bobgaanwh4yi0" path="res://art/Lemonade.png" id="3_d8dtc"]
-[ext_resource type="PackedScene" uid="uid://di8ma6x8cwegs" path="res://prefabs/next_level_button.tscn" id="4_1ebbk"]
-[ext_resource type="Script" path="res://scripts/next_level_button_lvl2.gd" id="5_jthh0"]
-[ext_resource type="PackedScene" uid="uid://14dwmo2l5tq0" path="res://prefabs/main_menu_button.tscn" id="6_umbp4"]
-[ext_resource type="AudioStream" uid="uid://n1oh2x5gvjng" path="res://Audio/complete.mp3" id="7_tk26x"]
+[ext_resource type="Texture2D" uid="uid://ck7rt7j7tcfjy" path="res://art/image (1).png" id="1_2nw61"]
+[ext_resource type="Texture2D" uid="uid://xx0ulljbl31x" path="res://art/bubble bath.png" id="2_f1kme"]
+[ext_resource type="Texture2D" uid="uid://bobgaanwh4yi0" path="res://art/Lemonade.png" id="3_pvoj5"]
+[ext_resource type="PackedScene" uid="uid://di8ma6x8cwegs" path="res://prefabs/next_level_button.tscn" id="4_ud172"]
+[ext_resource type="Script" path="res://Te Reo/scripts/next_level_button_lvl_2.gd" id="5_liu4m"]
+[ext_resource type="AudioStream" uid="uid://n1oh2x5gvjng" path="res://Audio/complete.mp3" id="7_h6rxu"]
+[ext_resource type="PackedScene" uid="uid://cbk5bxjvnbvhs" path="res://Te Reo/prefabs/main_menu_button.tscn" id="7_qhitm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_80r67"]
-texture = ExtResource("1_qm3mk")
+texture = ExtResource("1_2nw61")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mxavi"]
-texture = ExtResource("2_kdxib")
+texture = ExtResource("2_f1kme")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 
@@ -37,30 +37,31 @@ offset_right = 1145.0
 offset_bottom = 232.0
 theme_override_colors/font_color = Color(1, 1, 0.239216, 1)
 theme_override_font_sizes/font_size = 39
-text = "You may have completed the first level. 
-But now comes your first test.
-Watch out. Also here is some complimentry Lemonade :)"
+text = "Kua oti pea i a koe te taumata tuatahi. 
+Engari inaianei ka tae mai to whakamatautau tuatahi.
+Matakitaki atu. Anei ano etahi o nga Lemonade mihi :)
+"
 horizontal_alignment = 1
 
 [node name="Lemonade" type="Sprite2D" parent="."]
 position = Vector2(368, 392)
 scale = Vector2(1.75, 1.75)
-texture = ExtResource("3_d8dtc")
+texture = ExtResource("3_pvoj5")
 
-[node name="play_again" parent="." instance=ExtResource("4_1ebbk")]
+[node name="play_again" parent="." instance=ExtResource("4_ud172")]
 offset_left = 640.0
 offset_top = 384.0
 offset_right = 768.0
 offset_bottom = 512.0
-script = ExtResource("5_jthh0")
+script = ExtResource("5_liu4m")
 
-[node name="Button" parent="." instance=ExtResource("6_umbp4")]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_h6rxu")
+autoplay = true
+parameters/looping = true
+
+[node name="Button" parent="." instance=ExtResource("7_qhitm")]
 offset_left = 640.0
 offset_top = 256.0
 offset_right = 768.0
 offset_bottom = 384.0
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_tk26x")
-autoplay = true
-parameters/looping = true

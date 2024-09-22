@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=3 uid="uid://bdr7r4a732v2r"]
 
 [ext_resource type="Texture2D" uid="uid://xx0ulljbl31x" path="res://art/bubble bath.png" id="1_1f0w6"]
-[ext_resource type="Script" path="res://scripts/play_again_training.gd" id="2_35rte"]
 [ext_resource type="Texture2D" uid="uid://ck7rt7j7tcfjy" path="res://art/image (1).png" id="2_iljgp"]
-[ext_resource type="PackedScene" uid="uid://14dwmo2l5tq0" path="res://prefabs/main_menu_button.tscn" id="4_rffvt"]
+[ext_resource type="Script" path="res://Te Reo/scripts/play_again_training.gd" id="3_hoox1"]
 [ext_resource type="Texture2D" uid="uid://5yv8375w2nbk" path="res://art/yellow_lemon.png" id="5_cpb1w"]
 [ext_resource type="PackedScene" uid="uid://bwmcodteemvmo" path="res://prefabs/death_theme.tscn" id="6_4jx0v"]
+[ext_resource type="PackedScene" uid="uid://cbk5bxjvnbvhs" path="res://Te Reo/prefabs/main_menu_button.tscn" id="6_avulj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ghqcl"]
 texture = ExtResource("1_1f0w6")
@@ -44,27 +44,29 @@ theme_override_colors/font_color = Color(1, 1, 0, 1)
 theme_override_font_sizes/font_size = 24
 text = "Play Again"
 flat = true
-script = ExtResource("2_35rte")
+script = ExtResource("3_hoox1")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 352.0
 offset_top = 120.0
 offset_right = 800.0
 offset_bottom = 225.0
-theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 0, 1)
 theme_override_font_sizes/font_size = 76
-text = "Your Dead :("
-
-[node name="Button2" parent="." instance=ExtResource("4_rffvt")]
-offset_left = 384.0
-offset_top = 256.0
-offset_right = 512.0
-offset_bottom = 384.0
+text = "To Mate :(
+"
+horizontal_alignment = 1
 
 [node name="YellowLemon" type="Sprite2D" parent="."]
 position = Vector2(576, 320)
 texture = ExtResource("5_cpb1w")
 
 [node name="AudioStreamPlayer" parent="." instance=ExtResource("6_4jx0v")]
+
+[node name="Button2" parent="." instance=ExtResource("6_avulj")]
+offset_left = 384.0
+offset_top = 256.0
+offset_right = 512.0
+offset_bottom = 384.0
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

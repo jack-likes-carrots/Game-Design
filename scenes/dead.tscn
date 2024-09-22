@@ -51,7 +51,7 @@ offset_left = 352.0
 offset_top = 120.0
 offset_right = 800.0
 offset_bottom = 225.0
-theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 0, 1)
 theme_override_font_sizes/font_size = 76
 text = "Your Dead :("
 

@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=3 uid="uid://bogo7kqeejvb6"]
 
 [ext_resource type="Texture2D" uid="uid://ck7rt7j7tcfjy" path="res://art/image (1).png" id="1_k48m7"]
-[ext_resource type="Script" path="res://scripts/play_again_lvl3.gd" id="1_oip6h"]
 [ext_resource type="Texture2D" uid="uid://xx0ulljbl31x" path="res://art/bubble bath.png" id="2_r42w1"]
-[ext_resource type="PackedScene" uid="uid://14dwmo2l5tq0" path="res://prefabs/main_menu_button.tscn" id="4_13baj"]
+[ext_resource type="Script" path="res://Te Reo/scripts/play_again_lvl3.gd" id="3_3mpbd"]
 [ext_resource type="Texture2D" uid="uid://whs1bmr4dmi7" path="res://art/purple_lemon.png" id="5_dc0bt"]
 [ext_resource type="PackedScene" uid="uid://bwmcodteemvmo" path="res://prefabs/death_theme.tscn" id="6_eftwq"]
+[ext_resource type="PackedScene" uid="uid://cbk5bxjvnbvhs" path="res://Te Reo/prefabs/main_menu_button.tscn" id="6_hi2uc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ihnx2"]
 texture = ExtResource("1_k48m7")
@@ -34,9 +34,10 @@ offset_left = 392.0
 offset_top = 128.0
 offset_right = 775.0
 offset_bottom = 218.0
-theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 0, 1, 1)
 theme_override_font_sizes/font_size = 63
-text = "Your Dead :("
+text = "To Mate :("
+horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="."]
 offset_left = 640.0
@@ -48,18 +49,18 @@ theme_override_colors/font_color = Color(0.505882, 0, 1, 1)
 theme_override_font_sizes/font_size = 24
 text = "Play Again"
 flat = true
-script = ExtResource("1_oip6h")
-
-[node name="Button2" parent="." instance=ExtResource("4_13baj")]
-offset_left = 384.0
-offset_top = 256.0
-offset_right = 512.0
-offset_bottom = 384.0
+script = ExtResource("3_3mpbd")
 
 [node name="PurpleLemon" type="Sprite2D" parent="."]
 position = Vector2(576, 320)
 texture = ExtResource("5_dc0bt")
 
 [node name="AudioStreamPlayer" parent="." instance=ExtResource("6_eftwq")]
+
+[node name="Button2" parent="." instance=ExtResource("6_hi2uc")]
+offset_left = 384.0
+offset_top = 256.0
+offset_right = 512.0
+offset_bottom = 384.0
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

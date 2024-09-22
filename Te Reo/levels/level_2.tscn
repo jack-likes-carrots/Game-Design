@@ -1,63 +1,65 @@
-[gd_scene load_steps=46 format=3 uid="uid://dusg64fmiqiot"]
+[gd_scene load_steps=48 format=3 uid="uid://ic2mcx7yko0i"]
 
-[ext_resource type="PackedScene" uid="uid://dmvc24hk4u1dv" path="res://bath_lvl2.tscn" id="1_gl476"]
-[ext_resource type="Texture2D" uid="uid://d04ocgv1osxsa" path="res://art/WTF.png" id="2_26elp"]
-[ext_resource type="Texture2D" uid="uid://br4211rf570nq" path="res://art/bush 1.png" id="3_bm34t"]
-[ext_resource type="Texture2D" uid="uid://ceyo3plp7aoic" path="res://art/wood 1.png" id="4_334ty"]
-[ext_resource type="Texture2D" uid="uid://wopy58fy80i" path="res://art/cave_terrain.png" id="5_vnhmf"]
-[ext_resource type="Texture2D" uid="uid://ck7rt7j7tcfjy" path="res://art/image (1).png" id="6_x3hll"]
-[ext_resource type="Texture2D" uid="uid://bo8ogbbu3i6ax" path="res://kenney.nl/New Piskel (1).png" id="7_yfcft"]
-[ext_resource type="Texture2D" uid="uid://bceoeunatew8p" path="res://art/no physics.png" id="8_uogqp"]
-[ext_resource type="Texture2D" uid="uid://c3f8se6jux6ar" path="res://art/clouds.png" id="9_gdvsm"]
-[ext_resource type="Texture2D" uid="uid://ccsvqolpa7plf" path="res://art/tiles.png" id="10_oisw1"]
-[ext_resource type="Texture2D" uid="uid://dlpcdyrmgtwtn" path="res://art/cave_interior.png" id="11_yv3ob"]
-[ext_resource type="Texture2D" uid="uid://bf5a6ppahysgi" path="res://art/background.png" id="12_qwg86"]
-[ext_resource type="Texture2D" uid="uid://0byurus8hwk3" path="res://art/cave_interior2.png" id="13_537kn"]
-[ext_resource type="Texture2D" uid="uid://cc28soqyf3gau" path="res://art/Wood 17.png" id="14_gck1c"]
-[ext_resource type="Texture2D" uid="uid://g2krsk11n3jx" path="res://art/tree.png" id="15_vpuqm"]
-[ext_resource type="Texture2D" uid="uid://c55gudfukp1kb" path="res://art/cage.png" id="16_dc3kv"]
-[ext_resource type="Texture2D" uid="uid://rdbby3alnkpf" path="res://sprites/Freddy.png" id="17_fs4qu"]
-[ext_resource type="Texture2D" uid="uid://cmaukb6aaylw0" path="res://sprites/Piggy.png" id="18_ej6dd"]
-[ext_resource type="Texture2D" uid="uid://bobgaanwh4yi0" path="res://art/Lemonade.png" id="19_uo08v"]
-[ext_resource type="Script" path="res://scripts/portallvl2.gd" id="20_jfcqu"]
-[ext_resource type="Texture2D" uid="uid://d3heh62io0anf" path="res://art/New Piskel-1.png.png" id="21_8px2i"]
-[ext_resource type="AudioStream" uid="uid://cdsfqglur23tb" path="res://Audio/music.mp3" id="22_xcoda"]
-[ext_resource type="PackedScene" uid="uid://12pxm85q21j7" path="res://prefabs/enemy_lvl2.tscn" id="23_qio6s"]
-[ext_resource type="PackedScene" uid="uid://bctej106jjdu" path="res://prefabs/player.tscn" id="24_yti6x"]
+[ext_resource type="PackedScene" uid="uid://dmvc24hk4u1dv" path="res://bath_lvl2.tscn" id="1_acjmf"]
+[ext_resource type="Texture2D" uid="uid://d04ocgv1osxsa" path="res://art/WTF.png" id="2_2jkmj"]
+[ext_resource type="Script" path="res://Te Reo/scripts/bath_lvl_2.gd" id="2_ce8xg"]
+[ext_resource type="Texture2D" uid="uid://br4211rf570nq" path="res://art/bush 1.png" id="3_6kwou"]
+[ext_resource type="Texture2D" uid="uid://ceyo3plp7aoic" path="res://art/wood 1.png" id="4_k0vr2"]
+[ext_resource type="Texture2D" uid="uid://wopy58fy80i" path="res://art/cave_terrain.png" id="5_n5sej"]
+[ext_resource type="Texture2D" uid="uid://ck7rt7j7tcfjy" path="res://art/image (1).png" id="6_klx7a"]
+[ext_resource type="Texture2D" uid="uid://bo8ogbbu3i6ax" path="res://kenney.nl/New Piskel (1).png" id="7_q7h2a"]
+[ext_resource type="Texture2D" uid="uid://bceoeunatew8p" path="res://art/no physics.png" id="8_4bt66"]
+[ext_resource type="Texture2D" uid="uid://c3f8se6jux6ar" path="res://art/clouds.png" id="9_4ir6s"]
+[ext_resource type="Texture2D" uid="uid://ccsvqolpa7plf" path="res://art/tiles.png" id="10_6qufm"]
+[ext_resource type="Texture2D" uid="uid://dlpcdyrmgtwtn" path="res://art/cave_interior.png" id="11_pfdds"]
+[ext_resource type="Texture2D" uid="uid://bf5a6ppahysgi" path="res://art/background.png" id="12_hb7t2"]
+[ext_resource type="Texture2D" uid="uid://0byurus8hwk3" path="res://art/cave_interior2.png" id="13_ry000"]
+[ext_resource type="Texture2D" uid="uid://cc28soqyf3gau" path="res://art/Wood 17.png" id="14_wjrkn"]
+[ext_resource type="Texture2D" uid="uid://g2krsk11n3jx" path="res://art/tree.png" id="15_pccd2"]
+[ext_resource type="Texture2D" uid="uid://c55gudfukp1kb" path="res://art/cage.png" id="16_g5rc1"]
+[ext_resource type="Texture2D" uid="uid://rdbby3alnkpf" path="res://sprites/Freddy.png" id="17_uxvif"]
+[ext_resource type="Texture2D" uid="uid://cmaukb6aaylw0" path="res://sprites/Piggy.png" id="18_ek82r"]
+[ext_resource type="Texture2D" uid="uid://bobgaanwh4yi0" path="res://art/Lemonade.png" id="19_cmid7"]
+[ext_resource type="Texture2D" uid="uid://d3heh62io0anf" path="res://art/New Piskel-1.png.png" id="21_7bijl"]
+[ext_resource type="Script" path="res://Te Reo/scripts/portal_lvl2.gd" id="21_p3uk5"]
+[ext_resource type="AudioStream" uid="uid://cdsfqglur23tb" path="res://Audio/music.mp3" id="22_fiprp"]
+[ext_resource type="PackedScene" uid="uid://12pxm85q21j7" path="res://prefabs/enemy_lvl2.tscn" id="23_erem3"]
+[ext_resource type="PackedScene" uid="uid://bctej106jjdu" path="res://prefabs/player.tscn" id="24_eimjx"]
+[ext_resource type="Script" path="res://Te Reo/scripts/enemy_lvl_2.gd" id="24_x1u1x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b1h8x"]
-texture = ExtResource("3_bm34t")
+texture = ExtResource("3_6kwou")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u7k1t"]
-texture = ExtResource("4_334ty")
+texture = ExtResource("4_k0vr2")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w0dhc"]
-texture = ExtResource("5_vnhmf")
+texture = ExtResource("5_n5sej")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
 0:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xv7xv"]
-texture = ExtResource("6_x3hll")
+texture = ExtResource("6_klx7a")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mydhj"]
-texture = ExtResource("7_yfcft")
+texture = ExtResource("7_q7h2a")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_es5gw"]
-texture = ExtResource("8_uogqp")
+texture = ExtResource("8_4bt66")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
@@ -73,7 +75,7 @@ sources/11 = SubResource("TileSetAtlasSource_u7k1t")
 sources/12 = SubResource("TileSetAtlasSource_w0dhc")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iyrbi"]
-texture = ExtResource("9_gdvsm")
+texture = ExtResource("9_4ir6s")
 texture_region_size = Vector2i(128, 128)
 0:1/0 = 0
 0:0/0 = 0
@@ -81,42 +83,42 @@ texture_region_size = Vector2i(128, 128)
 1:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_axol3"]
-texture = ExtResource("5_vnhmf")
+texture = ExtResource("5_n5sej")
 texture_region_size = Vector2i(128, 128)
 0:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l87ju"]
-texture = ExtResource("4_334ty")
+texture = ExtResource("4_k0vr2")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i5kap"]
-texture = ExtResource("10_oisw1")
+texture = ExtResource("10_6qufm")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_57v0o"]
-texture = ExtResource("11_yv3ob")
+texture = ExtResource("11_pfdds")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kg73y"]
-texture = ExtResource("12_qwg86")
+texture = ExtResource("12_hb7t2")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hpvpv"]
-texture = ExtResource("3_bm34t")
+texture = ExtResource("3_6kwou")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aui73"]
-texture = ExtResource("8_uogqp")
+texture = ExtResource("8_4bt66")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pc4rh"]
-texture = ExtResource("13_537kn")
+texture = ExtResource("13_ry000")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 
@@ -133,13 +135,13 @@ sources/7 = SubResource("TileSetAtlasSource_aui73")
 sources/8 = SubResource("TileSetAtlasSource_pc4rh")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_reuh4"]
-texture = ExtResource("6_x3hll")
+texture = ExtResource("6_klx7a")
 0:0/size_in_atlas = Vector2i(8, 8)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r8uty"]
-texture = ExtResource("14_gck1c")
+texture = ExtResource("14_wjrkn")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
@@ -155,16 +157,17 @@ size = Vector2(128, 128)
 
 [node name="level_2" type="Node2D"]
 
-[node name="Area2D2" parent="." instance=ExtResource("1_gl476")]
+[node name="Area2D2" parent="." instance=ExtResource("1_acjmf")]
 position = Vector2(8488, 1440)
+script = ExtResource("2_ce8xg")
 
 [node name="Wtf" type="Sprite2D" parent="."]
 position = Vector2(1600, 352)
-texture = ExtResource("2_26elp")
+texture = ExtResource("2_2jkmj")
 
 [node name="Wtf2" type="Sprite2D" parent="."]
 position = Vector2(1728, 352)
-texture = ExtResource("2_26elp")
+texture = ExtResource("2_2jkmj")
 
 [node name="terrain" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_vls1h")
@@ -184,22 +187,22 @@ layer_0/tile_data = PackedInt32Array(458812, 0, 0, 393276, 0, 0, 458816, 0, 0, 3
 [node name="tree" type="Sprite2D" parent="."]
 position = Vector2(5080, 39.9999)
 scale = Vector2(5.375, 5.375)
-texture = ExtResource("15_vpuqm")
+texture = ExtResource("15_pccd2")
 
 [node name="cage" type="Sprite2D" parent="."]
 position = Vector2(5084, 4.00009)
 scale = Vector2(5.9375, 5.9375)
-texture = ExtResource("16_dc3kv")
+texture = ExtResource("16_g5rc1")
 
 [node name="freddy" type="Sprite2D" parent="."]
 position = Vector2(-24, 256)
 scale = Vector2(1.9375, 1.9375)
-texture = ExtResource("17_fs4qu")
+texture = ExtResource("17_uxvif")
 
 [node name="piggy" type="Sprite2D" parent="."]
 position = Vector2(-352, 152)
 scale = Vector2(2.32813, 2.32813)
-texture = ExtResource("18_ej6dd")
+texture = ExtResource("18_ek82r")
 flip_v = true
 
 [node name="Label3" type="Label" parent="."]
@@ -212,58 +215,61 @@ theme_override_font_sizes/font_size = 52
 text = "LEMONADE!!! :D"
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 4032.0
-offset_top = -192.0
-offset_right = 4770.0
-offset_bottom = 85.0
+offset_left = 3944.0
+offset_top = -184.0
+offset_right = 4682.0
+offset_bottom = 93.0
 theme_override_colors/font_color = Color(1, 1, 0, 1)
 theme_override_font_sizes/font_size = 38
 text = "Aue!!!! Kua maukati te Rakau Lemon. 
 Me whiwhi koe i te chrystal Lemons 
 mena kei te pirangi koe ki te iriti i te 
 whare herehere me te TIAKI
-to turanga Lemonade"
+to turanga Lemonade
+"
 
 [node name="Label" type="Label" parent="."]
 modulate = Color(1, 1, 0, 1)
-offset_left = 656.0
-offset_top = 16.0
-offset_right = 1406.0
-offset_bottom = 245.0
-theme_override_font_sizes/font_size = 32
+offset_left = 688.0
+offset_top = 8.0
+offset_right = 1407.0
+offset_bottom = 237.0
+theme_override_font_sizes/font_size = 40
 text = "Aue KORE! Kua pau koe i nga Lemons 
 mo o kaihoko. Haere ki roto i te ana 
-ki te kite mena ka taea e koe te hauhake ano mo 
-to Lemonade Tu
+ki te kite mena ka taea e koe te 
+hauhake ano mo to Lemonade Tu
 "
 
 [node name="Lemonade" type="Sprite2D" parent="."]
 position = Vector2(1464, -192)
-texture = ExtResource("19_uo08v")
+texture = ExtResource("19_cmid7")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(11840, 960)
-script = ExtResource("20_jfcqu")
+script = ExtResource("21_p3uk5")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
-texture = ExtResource("21_8px2i")
+texture = ExtResource("21_7bijl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_vk4cj")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("22_xcoda")
+stream = ExtResource("22_fiprp")
 autoplay = true
 parameters/looping = true
 
-[node name="enemy" parent="." instance=ExtResource("23_qio6s")]
+[node name="enemy" parent="." instance=ExtResource("23_erem3")]
 position = Vector2(7864, 960)
+script = ExtResource("24_x1u1x")
 
-[node name="enemy2" parent="." instance=ExtResource("23_qio6s")]
+[node name="enemy2" parent="." instance=ExtResource("23_erem3")]
 position = Vector2(10296, 960)
+script = ExtResource("24_x1u1x")
 
-[node name="player" parent="." instance=ExtResource("24_yti6x")]
+[node name="player" parent="." instance=ExtResource("24_eimjx")]
 position = Vector2(1216, 320)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cbk5bxjvnbvhs"]
 
-[ext_resource type="Script" path="res://scripts/back_menu.gd" id="1_bvm3t"]
+[ext_resource type="Script" path="res://Te Reo/scripts/main_menu_button.gd" id="1_dakbf"]
 [ext_resource type="Texture2D" uid="uid://dyebynmq1ron0" path="res://art/14-147111_menu-button-png-menu-button-icon-png.png" id="2_uag61"]
 
 [sub_resource type="Theme" id="Theme_v7frn"]
@@ -12,7 +12,7 @@ theme = SubResource("Theme_v7frn")
 theme_override_colors/font_color = Color(0.835746, 0.000164607, 0.719857, 1)
 theme_override_font_sizes/font_size = 20
 flat = true
-script = ExtResource("1_bvm3t")
+script = ExtResource("1_dakbf")
 
 [node name="14-147111Menu-button-png-menu-button-icon-png" type="Sprite2D" parent="."]
 position = Vector2(64, 64)

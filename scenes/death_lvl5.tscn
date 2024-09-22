@@ -34,7 +34,7 @@ offset_left = 384.0
 offset_top = 80.0
 offset_right = 767.0
 offset_bottom = 170.0
-theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 1, 0, 1)
 theme_override_font_sizes/font_size = 63
 text = "Your Dead :("
 
@@ -55,7 +55,7 @@ offset_left = 240.0
 offset_top = 160.0
 offset_right = 917.0
 offset_bottom = 233.0
-theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 1, 0.0627451, 1)
 theme_override_font_sizes/font_size = 25
 text = "I'm so sorry. You are in the big leagues now. You have to 
 go back to the start sorry. Better Luck next time!!!"

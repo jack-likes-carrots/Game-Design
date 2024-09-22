@@ -1,17 +1,18 @@
-[gd_scene load_steps=8 format=3 uid="uid://dqwdpo8f1fh2g"]
+[gd_scene load_steps=9 format=3 uid="uid://bubqs64o6a8w8"]
 
-[ext_resource type="Texture2D" uid="uid://xx0ulljbl31x" path="res://art/bubble bath.png" id="1_60ior"]
-[ext_resource type="Texture2D" uid="uid://ck7rt7j7tcfjy" path="res://art/image (1).png" id="2_e4cir"]
-[ext_resource type="PackedScene" uid="uid://di8ma6x8cwegs" path="res://prefabs/next_level_button.tscn" id="3_qe4l8"]
-[ext_resource type="AudioStream" uid="uid://n1oh2x5gvjng" path="res://Audio/complete.mp3" id="4_vkprf"]
+[ext_resource type="Texture2D" uid="uid://xx0ulljbl31x" path="res://art/bubble bath.png" id="1_cwv0k"]
+[ext_resource type="Texture2D" uid="uid://ck7rt7j7tcfjy" path="res://art/image (1).png" id="2_x15vh"]
+[ext_resource type="PackedScene" uid="uid://di8ma6x8cwegs" path="res://prefabs/next_level_button.tscn" id="3_e5ko0"]
+[ext_resource type="AudioStream" uid="uid://n1oh2x5gvjng" path="res://Audio/complete.mp3" id="4_6kxb6"]
+[ext_resource type="Script" path="res://Te Reo/scripts/next_level_button_lvl3.gd" id="4_wr51e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rxiuj"]
-texture = ExtResource("1_60ior")
+texture = ExtResource("1_cwv0k")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xgpln"]
-texture = ExtResource("2_e4cir")
+texture = ExtResource("2_x15vh")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 
@@ -28,29 +29,31 @@ format = 2
 layer_0/tile_data = PackedInt32Array(0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 65544, 1, 0, 131080, 1, 0, 131079, 1, 0, 131078, 1, 0, 131077, 1, 0, 131076, 1, 0, 131075, 1, 0, 131074, 1, 0, 131073, 1, 0, 131072, 1, 0, 65536, 1, 0, 65537, 1, 0, 65538, 1, 0, 65539, 1, 0, 65540, 1, 0, 65541, 1, 0, 65542, 1, 0, 65543, 1, 0, 196616, 1, 0, 196615, 1, 0, 196614, 1, 0, 196613, 1, 0, 196612, 1, 0, 196611, 1, 0, 196610, 1, 0, 196609, 1, 0, 196608, 1, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0)
 
 [node name="Congrats" type="Label" parent="."]
-offset_left = 216.0
-offset_top = 88.0
-offset_right = 947.0
-offset_bottom = 343.0
+offset_left = 104.0
+offset_top = 64.0
+offset_right = 1056.0
+offset_bottom = 362.0
 theme_override_colors/font_color = Color(1, 0, 1, 1)
 theme_override_font_sizes/font_size = 29
-text = "Well Done!!! You have found the first chrystal 
-lemon. That wasn't too hard was it? You only
-have to find two more. The purple lemon represents 
-lust, greed and power. Of course this is completely
-irrelevant to the plot. There is no turning back now.
-If you die you are back to the start.
-GOOD LUCK!!!!"
+text = "Ka pai!!! Kua kitea e koe te chrystal tuatahi 
+rēmana. Kaore i tino uaua? Ko koe anake
+me kimi e rua ano. Ko te rēmana papura te tohu 
+te hiahia, te apo me te kaha. Ko te tikanga he tino katoa tenei
+he koretake ki te kaupapa. Karekau he hokinga whakamuri inaianei.
+Mena ka mate koe kua hoki ano koe ki te timatanga.
+WAIMARIE!!!!
+"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="play_again" parent="." instance=ExtResource("3_qe4l8")]
+[node name="play_again" parent="." instance=ExtResource("3_e5ko0")]
 offset_left = 512.0
 offset_top = 384.0
 offset_right = 640.0
 offset_bottom = 512.0
+script = ExtResource("4_wr51e")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_vkprf")
+stream = ExtResource("4_6kxb6")
 autoplay = true
 parameters/looping = true

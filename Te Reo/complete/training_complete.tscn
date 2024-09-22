@@ -1,18 +1,18 @@
-[gd_scene load_steps=9 format=3 uid="uid://b3r533a6b0cmp"]
+[gd_scene load_steps=9 format=3 uid="uid://8754ntsp4kcw"]
 
-[ext_resource type="Texture2D" uid="uid://xx0ulljbl31x" path="res://art/bubble bath.png" id="1_t2j5m"]
-[ext_resource type="Texture2D" uid="uid://ck7rt7j7tcfjy" path="res://art/image (1).png" id="2_lbacx"]
-[ext_resource type="AudioStream" uid="uid://n1oh2x5gvjng" path="res://Audio/complete.mp3" id="3_wa2nn"]
-[ext_resource type="PackedScene" uid="uid://xlothxxaxnoa" path="res://Te Reo/prefabs/next_level_button_lvl1.tscn" id="4_kob25"]
-[ext_resource type="PackedScene" uid="uid://cbk5bxjvnbvhs" path="res://Te Reo/prefabs/main_menu_button.tscn" id="5_ayh0o"]
+[ext_resource type="Texture2D" uid="uid://xx0ulljbl31x" path="res://art/bubble bath.png" id="1_b64fj"]
+[ext_resource type="Texture2D" uid="uid://ck7rt7j7tcfjy" path="res://art/image (1).png" id="2_omuf1"]
+[ext_resource type="AudioStream" uid="uid://n1oh2x5gvjng" path="res://Audio/complete.mp3" id="3_uxh1s"]
+[ext_resource type="PackedScene" uid="uid://cbk5bxjvnbvhs" path="res://Te Reo/prefabs/main_menu_button.tscn" id="4_fk12r"]
+[ext_resource type="PackedScene" uid="uid://xlothxxaxnoa" path="res://Te Reo/prefabs/next_level_button_lvl1.tscn" id="5_7dbo3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_omagu"]
-texture = ExtResource("1_t2j5m")
+texture = ExtResource("1_b64fj")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sx78l"]
-texture = ExtResource("2_lbacx")
+texture = ExtResource("2_omuf1")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 
@@ -30,9 +30,9 @@ layer_0/tile_data = PackedInt32Array(0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0
 
 [node name="Label" type="Label" parent="."]
 offset_left = 56.0
-offset_top = 72.0
+offset_top = 48.0
 offset_right = 1090.0
-offset_bottom = 261.0
+offset_bottom = 237.0
 theme_override_colors/font_color = Color(0.638727, 0.127258, 0.799061, 1)
 theme_override_font_sizes/font_size = 44
 text = "Mihi! Kua oti koe
@@ -41,18 +41,18 @@ nuku ki te Taumata 1!! :)"
 horizontal_alignment = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_wa2nn")
+stream = ExtResource("3_uxh1s")
 autoplay = true
 parameters/looping = true
 
-[node name="play_again" parent="." instance=ExtResource("4_kob25")]
-offset_left = 515.0
-offset_top = 256.0
-offset_right = 643.0
-offset_bottom = 384.0
-
-[node name="Button" parent="." instance=ExtResource("5_ayh0o")]
+[node name="Button" parent="." instance=ExtResource("4_fk12r")]
 offset_left = 512.0
 offset_top = 384.0
 offset_right = 640.0
 offset_bottom = 512.0
+
+[node name="play_again" parent="." instance=ExtResource("5_7dbo3")]
+offset_left = 512.0
+offset_top = 256.0
+offset_right = 640.0
+offset_bottom = 384.0

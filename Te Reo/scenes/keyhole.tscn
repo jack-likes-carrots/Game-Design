@@ -1,0 +1,121 @@
+[gd_scene load_steps=18 format=3 uid="uid://bfhwo4wouhp24"]
+
+[ext_resource type="Texture2D" uid="uid://ck7rt7j7tcfjy" path="res://art/image (1).png" id="1_rvll4"]
+[ext_resource type="Texture2D" uid="uid://xx0ulljbl31x" path="res://art/bubble bath.png" id="2_4g84d"]
+[ext_resource type="Texture2D" uid="uid://dfmjmt1l8jclb" path="res://art/Black.png" id="3_fhq6l"]
+[ext_resource type="Texture2D" uid="uid://dqp8ciuihjop2" path="res://art/blue_lemon.png" id="4_2epgg"]
+[ext_resource type="Texture2D" uid="uid://dtsbhtmh4tdgt" path="res://art/green_lemon.png" id="5_w8o0s"]
+[ext_resource type="Texture2D" uid="uid://whs1bmr4dmi7" path="res://art/purple_lemon.png" id="6_n2hw7"]
+[ext_resource type="Script" path="res://Te Reo/scripts/ending1.gd" id="7_mf0lx"]
+[ext_resource type="Script" path="res://Te Reo/scripts/ending_2.gd" id="8_kebq3"]
+[ext_resource type="Script" path="res://Te Reo/scripts/ending_3.gd" id="9_hrju0"]
+[ext_resource type="AudioStream" uid="uid://n1oh2x5gvjng" path="res://Audio/complete.mp3" id="10_entxe"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s3dmx"]
+texture = ExtResource("1_rvll4")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tu8ov"]
+texture = ExtResource("2_4g84d")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gu14t"]
+texture = ExtResource("3_fhq6l")
+texture_region_size = Vector2i(128, 128)
+1:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kqtdp"]
+texture = ExtResource("4_2epgg")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nwukb"]
+texture = ExtResource("5_w8o0s")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ljwo8"]
+texture = ExtResource("6_n2hw7")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_noqm0"]
+tile_size = Vector2i(128, 128)
+sources/0 = SubResource("TileSetAtlasSource_s3dmx")
+sources/1 = SubResource("TileSetAtlasSource_tu8ov")
+sources/2 = SubResource("TileSetAtlasSource_gu14t")
+sources/3 = SubResource("TileSetAtlasSource_kqtdp")
+sources/4 = SubResource("TileSetAtlasSource_nwukb")
+sources/5 = SubResource("TileSetAtlasSource_ljwo8")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_noqm0")
+format = 2
+layer_0/tile_data = PackedInt32Array(262144, 1, 0, 262145, 1, 0, 262146, 1, 0, 262147, 1, 0, 262148, 1, 0, 262149, 1, 0, 262150, 1, 0, 262151, 1, 0, 262152, 1, 0, 196608, 0, 0, 131072, 0, 0, 65536, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 7, 0, 0, 8, 0, 0, 6, 0, 0, 65544, 0, 0, 131080, 0, 0, 196616, 0, 0, 196615, 0, 0, 196614, 0, 0, 196613, 0, 0, 196612, 0, 0, 196611, 0, 0, 196610, 0, 0, 196609, 0, 0, 131073, 0, 0, 65537, 0, 0, 131077, 0, 0, 131076, 0, 0, 131075, 0, 0, 65539, 0, 0, 65538, 0, 0, 131079, 0, 0, 131074, 5, 0, 65540, 4, 0, 131078, 3, 0)
+
+[node name="congrats" type="Label" parent="."]
+offset_left = 392.0
+offset_top = 272.0
+offset_right = 761.0
+offset_bottom = 368.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "Kua whakahokia e koe te toenga. 
+Ka taea e te tangata te tae ki reira rēmana. 
+He rangimarie kei waenganui i te tupuni"
+horizontal_alignment = 1
+
+[node name="Ending" type="Button" parent="."]
+offset_left = 256.0
+offset_top = 256.0
+offset_right = 384.0
+offset_bottom = 384.0
+flat = true
+script = ExtResource("7_mf0lx")
+
+[node name="Ending2" type="Button" parent="."]
+offset_left = 512.0
+offset_top = 128.0
+offset_right = 640.0
+offset_bottom = 256.0
+flat = true
+script = ExtResource("8_kebq3")
+
+[node name="Ending3" type="Button" parent="."]
+offset_left = 768.0
+offset_top = 256.0
+offset_right = 896.0
+offset_bottom = 384.0
+flat = true
+script = ExtResource("9_hrju0")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 160.0
+offset_top = 24.0
+offset_right = 994.0
+offset_bottom = 102.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 57
+text = "WHIRIWHIRIA HE MUTUNGA!!!!"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 440.0
+offset_top = 96.0
+offset_right = 723.0
+offset_bottom = 131.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Me pehi noa i te Lemon"
+
+[node name="Complete" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_entxe")
+autoplay = true
+parameters/looping = true
+
+[connection signal="pressed" from="Ending" to="Ending" method="_on_pressed"]
+[connection signal="pressed" from="Ending2" to="Ending2" method="_on_pressed"]
+[connection signal="pressed" from="Ending3" to="Ending3" method="_on_pressed"]

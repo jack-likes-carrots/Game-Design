@@ -1,51 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://c6106whsp1h6h"]
+[gd_scene load_steps=2 format=3 uid="uid://c6106whsp1h6h"]
 
-[ext_resource type="Script" path="res://scripts/bath_level_5.gd" id="1_1vqiw"]
-[ext_resource type="PackedScene" uid="uid://ba7hxvc2k0687" path="res://prefabs/bath_lvl4.tscn" id="1_guxyh"]
+[ext_resource type="PackedScene" uid="uid://cw8qjnr5pwpa5" path="res://Te Reo/prefabs/death_bath_lvl5.tscn" id="1_fe35b"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Area2D1" type="Area2D" parent="."]
-script = ExtResource("1_1vqiw")
-
-[node name="Area2D" parent="Area2D1" instance=ExtResource("1_guxyh")]
-position = Vector2(168, 160)
-script = null
-
-[node name="Area2D2" parent="Area2D1" instance=ExtResource("1_guxyh")]
-position = Vector2(2600, 160)
-script = null
-
-[node name="Area2D3" parent="Area2D1" instance=ExtResource("1_guxyh")]
-position = Vector2(5032, 160)
-script = null
-
-[node name="Area2D4" parent="Area2D1" instance=ExtResource("1_guxyh")]
-position = Vector2(7464, 160)
-script = null
-
-[node name="Area2D5" parent="Area2D1" instance=ExtResource("1_guxyh")]
-position = Vector2(9896, 160)
-script = null
-
-[node name="Area2D6" parent="Area2D1" instance=ExtResource("1_guxyh")]
-position = Vector2(12328, 160)
-script = null
-
-[node name="Area2D7" parent="Area2D1" instance=ExtResource("1_guxyh")]
-position = Vector2(14760, 160)
-script = null
-
-[node name="Area2D8" parent="Area2D1" instance=ExtResource("1_guxyh")]
-position = Vector2(17184, 160)
-script = null
-
-[node name="Area2D9" parent="Area2D1" instance=ExtResource("1_guxyh")]
-position = Vector2(19616, 160)
-script = null
-
-[node name="Area2D10" parent="Area2D1" instance=ExtResource("1_guxyh")]
-position = Vector2(20392, 160)
-script = null
-
-[connection signal="body_entered" from="Area2D1" to="Area2D1" method="_on_body_entered"]
+[node name="Area2D1" parent="." instance=ExtResource("1_fe35b")]

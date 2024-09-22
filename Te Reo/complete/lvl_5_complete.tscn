@@ -1,18 +1,18 @@
-[gd_scene load_steps=9 format=3 uid="uid://dymcl3mqd2282"]
+[gd_scene load_steps=9 format=3 uid="uid://ljyndajoqu7j"]
 
-[ext_resource type="Texture2D" uid="uid://xx0ulljbl31x" path="res://art/bubble bath.png" id="1_4tc88"]
-[ext_resource type="Texture2D" uid="uid://ck7rt7j7tcfjy" path="res://art/image (1).png" id="2_yap31"]
-[ext_resource type="Texture2D" uid="uid://g2krsk11n3jx" path="res://art/tree.png" id="3_4kxdv"]
-[ext_resource type="Script" path="res://scripts/tree.gd" id="4_4p1q7"]
-[ext_resource type="AudioStream" uid="uid://sdjdljvq05ky" path="res://Audio/end game.mp3" id="5_83o7u"]
+[ext_resource type="Texture2D" uid="uid://xx0ulljbl31x" path="res://art/bubble bath.png" id="1_ih23b"]
+[ext_resource type="Texture2D" uid="uid://ck7rt7j7tcfjy" path="res://art/image (1).png" id="2_w7bi2"]
+[ext_resource type="Texture2D" uid="uid://g2krsk11n3jx" path="res://art/tree.png" id="3_7vdsc"]
+[ext_resource type="Script" path="res://Te Reo/scripts/lvl5_complete.gd" id="4_hk5qo"]
+[ext_resource type="PackedScene" uid="uid://c1iwcprnmb50t" path="res://prefabs/end_game.tscn" id="5_o1onm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g0m68"]
-texture = ExtResource("1_4tc88")
+texture = ExtResource("1_ih23b")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sjd4e"]
-texture = ExtResource("2_yap31")
+texture = ExtResource("2_w7bi2")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 
@@ -29,15 +29,15 @@ format = 2
 layer_0/tile_data = PackedInt32Array(0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 131080, 1, 0, 196616, 1, 0, 196615, 1, 0, 196614, 1, 0, 196613, 1, 0, 196612, 1, 0, 196611, 1, 0, 196610, 1, 0, 196609, 1, 0, 196608, 1, 0, 131072, 1, 0, 65536, 1, 0, 65537, 1, 0, 65538, 1, 0, 65539, 1, 0, 65540, 1, 0, 65541, 1, 0, 65542, 1, 0, 65543, 1, 0, 131079, 1, 0, 131078, 1, 0, 131077, 1, 0, 131076, 1, 0, 131075, 1, 0, 131074, 1, 0, 131073, 1, 0, 65544, 1, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0)
 
 [node name="Label" type="Label" parent="."]
-offset_left = 280.0
+offset_left = 168.0
 offset_top = 128.0
-offset_right = 868.0
+offset_right = 980.0
 offset_bottom = 251.0
 theme_override_colors/font_color = Color(0, 0.64505, 0.0959914, 1)
 theme_override_font_sizes/font_size = 28
-text = "YOU DID IT!!! Congragulations. Now 
-you must go back to the lemon tree
-and unlock it. This is simple. I believe in you"
+text = "I MAHIA E KOE!! Mihi. Inaianei 
+me hoki koe ki te rakau rēmana
+na ka iriti. He ngawari tenei. E whakapono ana ahau ki a koe"
 horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="."]
@@ -45,13 +45,10 @@ offset_left = 504.0
 offset_top = 272.0
 offset_right = 640.0
 offset_bottom = 408.0
-icon = ExtResource("3_4kxdv")
+icon = ExtResource("3_7vdsc")
 flat = true
-script = ExtResource("4_4p1q7")
+script = ExtResource("4_hk5qo")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_83o7u")
-autoplay = true
-parameters/looping = true
+[node name="AudioStreamPlayer" parent="." instance=ExtResource("5_o1onm")]
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

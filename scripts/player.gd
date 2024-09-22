@@ -5,7 +5,7 @@ const SPEED = 900.0
 const JUMP_VELOCITY = -750.0
 #double jumping
 var jump_count = 0
-var max_jumps = 15
+var max_jumps = 2
 
 func jump():
 	velocity.y = JUMP_VELOCITY
@@ -54,22 +54,20 @@ func _physics_process(delta):
 		anim.play("run_back")
 	
 
-
 var normal_gravity = 200.0
 var fast_drop_gravity = 500.0
-var velocity = Vector2()
 
-# This is the only _physics_process function in the script
-func handle_physics(delta: float) -> void:
-	# Apply normal gravity
+func apply_fast_drop(delta: float) -> void:
+	# Apply normal gravity when the player is not on the floor
 	if not is_on_floor():
 		velocity.y += normal_gravity * delta
 
-	if Input.is_action_pressed("ui_down"):
+	# Apply fast drop if "S" is pressed
+	if Input.is_action_pressed("ui_down"):  # Make sure "ui_down" is mapped to "S"
 		drop_faster(delta)
 
-	# Apply movement
-	move_and_slide(velocity)
+	# Use built-in velocity with move_and_slide
+	move_and_slide()
 
 # Function to make the player drop faster
 func drop_faster(delta: float) -> void:

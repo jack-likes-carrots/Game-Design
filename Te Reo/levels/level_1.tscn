@@ -1,36 +1,37 @@
-[gd_scene load_steps=21 format=3 uid="uid://ibmounbq4wfl"]
+[gd_scene load_steps=22 format=3 uid="uid://dx6fw0daruk61"]
 
-[ext_resource type="PackedScene" uid="uid://cxwcpi4qfkye5" path="res://prefabs/portal.tscn" id="1_jwlxu"]
-[ext_resource type="Texture2D" uid="uid://bo8ogbbu3i6ax" path="res://kenney.nl/New Piskel (1).png" id="2_cnnml"]
-[ext_resource type="Script" path="res://Te Reo/scripts/portal_lvl1.gd" id="2_pt6ep"]
-[ext_resource type="Texture2D" uid="uid://xx0ulljbl31x" path="res://art/bubble bath.png" id="3_nj8m1"]
-[ext_resource type="Texture2D" uid="uid://14u6gr4t446a" path="res://art/icon.svg" id="4_gjmuu"]
-[ext_resource type="Texture2D" uid="uid://ck7rt7j7tcfjy" path="res://art/image (1).png" id="5_3tnwk"]
-[ext_resource type="Texture2D" uid="uid://c3f8se6jux6ar" path="res://art/clouds.png" id="6_370ms"]
-[ext_resource type="Texture2D" uid="uid://ccsvqolpa7plf" path="res://art/tiles.png" id="7_3ltfb"]
-[ext_resource type="PackedScene" uid="uid://debl7ita11e0h" path="res://prefabs/area_2d.tscn" id="8_l8ta2"]
-[ext_resource type="AudioStream" uid="uid://cdsfqglur23tb" path="res://Audio/music.mp3" id="9_e4gso"]
-[ext_resource type="PackedScene" uid="uid://bctej106jjdu" path="res://prefabs/player.tscn" id="10_7jnm7"]
+[ext_resource type="PackedScene" uid="uid://cxwcpi4qfkye5" path="res://prefabs/portal.tscn" id="1_05wm7"]
+[ext_resource type="Texture2D" uid="uid://bo8ogbbu3i6ax" path="res://kenney.nl/New Piskel (1).png" id="2_ayp6g"]
+[ext_resource type="Script" path="res://Te Reo/scripts/portal_lvl1.gd" id="2_hpuq3"]
+[ext_resource type="Texture2D" uid="uid://xx0ulljbl31x" path="res://art/bubble bath.png" id="3_y488i"]
+[ext_resource type="Texture2D" uid="uid://14u6gr4t446a" path="res://art/icon.svg" id="4_2tdd5"]
+[ext_resource type="Texture2D" uid="uid://ck7rt7j7tcfjy" path="res://art/image (1).png" id="5_wbg87"]
+[ext_resource type="Texture2D" uid="uid://c3f8se6jux6ar" path="res://art/clouds.png" id="6_8ytna"]
+[ext_resource type="Texture2D" uid="uid://ccsvqolpa7plf" path="res://art/tiles.png" id="7_thtfx"]
+[ext_resource type="PackedScene" uid="uid://debl7ita11e0h" path="res://prefabs/area_2d.tscn" id="8_u0qki"]
+[ext_resource type="AudioStream" uid="uid://cdsfqglur23tb" path="res://Audio/music.mp3" id="9_wm8hd"]
+[ext_resource type="Script" path="res://Te Reo/scripts/bath_training.gd" id="10_byyvx"]
+[ext_resource type="PackedScene" uid="uid://bctej106jjdu" path="res://prefabs/player.tscn" id="10_pwg7l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jhguc"]
-texture = ExtResource("2_cnnml")
+texture = ExtResource("2_ayp6g")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w4afm"]
-texture = ExtResource("3_nj8m1")
+texture = ExtResource("3_y488i")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hxe86"]
-texture = ExtResource("4_gjmuu")
+texture = ExtResource("4_2tdd5")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vlq4l"]
-texture = ExtResource("5_3tnwk")
+texture = ExtResource("5_wbg87")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
@@ -44,7 +45,7 @@ sources/1 = SubResource("TileSetAtlasSource_jhguc")
 sources/3 = SubResource("TileSetAtlasSource_w4afm")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lvrxt"]
-texture = ExtResource("6_370ms")
+texture = ExtResource("6_8ytna")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 1:0/0 = 0
@@ -52,12 +53,12 @@ texture_region_size = Vector2i(128, 128)
 0:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_51rxu"]
-texture = ExtResource("5_3tnwk")
+texture = ExtResource("5_wbg87")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0b5lh"]
-texture = ExtResource("7_3ltfb")
+texture = ExtResource("7_thtfx")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 
@@ -69,9 +70,9 @@ sources/3 = SubResource("TileSetAtlasSource_0b5lh")
 
 [node name="training" type="Node2D"]
 
-[node name="Portal" parent="." instance=ExtResource("1_jwlxu")]
+[node name="Portal" parent="." instance=ExtResource("1_05wm7")]
 position = Vector2(2496, 320)
-script = ExtResource("2_pt6ep")
+script = ExtResource("2_hpuq3")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(2, 0)
@@ -84,13 +85,14 @@ tile_set = SubResource("TileSet_4klpi")
 format = 2
 layer_0/tile_data = PackedInt32Array(-196615, 3, 0, -196614, 3, 0, -196613, 3, 0, -196612, 3, 0, -196611, 3, 0, -196610, 3, 0, -196609, 3, 0, -262144, 3, 0, -262143, 3, 0, -262142, 3, 0, -262141, 3, 0, -262140, 3, 0, -262139, 3, 0, -262138, 3, 0, -262137, 3, 0, -262136, 3, 0, -262135, 3, 0, -262134, 3, 0, -262133, 3, 0, -262132, 3, 0, -262131, 3, 0, -262130, 3, 0, -262129, 3, 0, -262128, 3, 0, -262127, 3, 0, -262126, 3, 0, -262125, 3, 0, -262124, 3, 0, -262121, 3, 0, -262122, 3, 0, -262123, 3, 0, -196585, 3, 0, -196586, 3, 0, -196587, 3, 0, -196588, 3, 0, -196589, 3, 0, -196590, 3, 0, -196591, 3, 0, -196592, 3, 0, -196593, 3, 0, -196594, 3, 0, -196595, 3, 0, -196596, 3, 0, -196597, 3, 0, -196598, 3, 0, -196599, 3, 0, -196600, 3, 0, -196601, 3, 0, -196602, 3, 0, -196603, 3, 0, -196604, 3, 0, -196605, 3, 0, -196606, 3, 0, -196607, 3, 0, -196608, 3, 0, -131073, 3, 0, -131074, 3, 0, -131075, 3, 0, -131076, 3, 0, -131077, 3, 0, -131078, 3, 0, -131079, 3, 0, -65543, 3, 0, -65542, 3, 0, -65541, 3, 0, -4, 3, 0, -3, 3, 0, -2, 3, 0, -1, 3, 0, -65536, 3, 0, -65535, 3, 0, -65534, 3, 0, -131069, 3, 0, -131068, 3, 0, -131067, 3, 0, -131070, 3, 0, -131071, 3, 0, -131072, 3, 0, -65537, 3, 0, -65538, 3, 0, -65539, 3, 0, -65540, 3, 0, -6, 3, 0, -5, 3, 0, -7, 3, 0, 65529, 3, 0, 131065, 3, 0, 131066, 3, 0, 196602, 3, 0, 196601, 3, 0, 65530, 3, 0, 131067, 3, 0, 196603, 3, 0, 65531, 3, 0, 65532, 3, 0, 65533, 3, 0, 131068, 3, 0, 131069, 3, 0, 196605, 3, 0, 196606, 3, 0, 131070, 3, 0, 65534, 3, 0, 65535, 3, 0, 131071, 3, 0, 0, 3, 0, 1, 3, 0, 2, 3, 0, 65537, 3, 0, 65538, 3, 0, 65539, 3, 0, 3, 3, 0, -65533, 3, 0, 4, 3, 0, 5, 3, 0, 65541, 3, 0, 131077, 3, 0, 131078, 3, 0, 65542, 3, 0, 6, 3, 0, -131066, 3, 0, -131065, 3, 0, -131064, 3, 0, -131063, 3, 0, -131062, 3, 0, -131061, 3, 0, -131060, 3, 0, -131059, 3, 0, -131058, 3, 0, -131057, 3, 0, -131056, 3, 0, -131055, 3, 0, -131054, 3, 0, -131053, 3, 0, -131052, 3, 0, -131051, 3, 0, -131050, 3, 0, -131049, 3, 0, -65513, 3, 0, 23, 3, 0, 65559, 3, 0, 131095, 3, 0, 131094, 3, 0, 131093, 3, 0, 131092, 3, 0, 65556, 3, 0, 20, 3, 0, -65516, 3, 0, -65515, 3, 0, -65514, 3, 0, 22, 3, 0, 65558, 3, 0, 65557, 3, 0, 21, 3, 0, 65555, 3, 0, 19, 3, 0, -65517, 3, 0, -65518, 3, 0, 18, 3, 0, 65554, 3, 0, 131090, 3, 0, 131089, 3, 0, 17, 3, 0, -65519, 3, 0, 16, 3, 0, -65520, 3, 0, 131088, 3, 0, 131087, 3, 0, 131086, 3, 0, 131085, 3, 0, 131084, 3, 0, 131083, 3, 0, 131082, 3, 0, 131081, 3, 0, 131080, 3, 0, 131079, 3, 0, 65543, 3, 0, 7, 3, 0, -65521, 3, 0, 15, 3, 0, 65550, 3, 0, 65549, 3, 0, 65548, 3, 0, 65547, 3, 0, 65546, 3, 0, 65545, 3, 0, 65544, 3, 0, 196610, 3, 0, 196611, 3, 0, 131075, 3, 0, 131074, 3, 0, 196616, 3, 0, 196619, 3, 0, 196620, 3, 0, 196621, 3, 0, 196622, 3, 0, 196604, 3, 0, 196615, 3, 0, 196607, 3, 0, 131072, 3, 0, 65536, 3, 0, -65522, 3, 0, -65523, 3, 0, -65524, 3, 0, -65525, 3, 0, -65526, 3, 0, -65527, 3, 0, -65528, 3, 0, -65532, 3, 0, 65553, 3, 0, 65552, 3, 0, 65551, 3, 0, 14, 3, 0, 13, 3, 0, 12, 3, 0, 11, 3, 0, 10, 3, 0, 9, 3, 0, 8, 3, 0, -65530, 3, 0, -65531, 3, 0, -65529, 3, 0)
 
-[node name="Area2D" parent="." instance=ExtResource("8_l8ta2")]
+[node name="Area2D" parent="." instance=ExtResource("8_u0qki")]
 position = Vector2(320, 576)
+script = ExtResource("10_byyvx")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("9_e4gso")
+stream = ExtResource("9_wm8hd")
 autoplay = true
 parameters/looping = true
 
-[node name="player" parent="." instance=ExtResource("10_7jnm7")]
+[node name="player" parent="." instance=ExtResource("10_pwg7l")]
 position = Vector2(-446, 152)

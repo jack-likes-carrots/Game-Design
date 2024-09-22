@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://beqb22q17qsic"]
 
-[ext_resource type="Script" path="res://scenes/bubbles.gd" id="1_k213x"]
+[ext_resource type="Script" path="res://scripts/bath_lvl_3.gd" id="1_rmjq8"]
 [ext_resource type="Texture2D" uid="uid://xx0ulljbl31x" path="res://art/bubble bath.png" id="2_niqk4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_taint"]
@@ -8,7 +8,7 @@ size = Vector2(2432, 128)
 
 [node name="Area2D" type="Area2D"]
 position = Vector2(104, 96)
-script = ExtResource("1_k213x")
+script = ExtResource("1_rmjq8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-104, -96)

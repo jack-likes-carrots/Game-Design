@@ -9,9 +9,9 @@
 [ext_resource type="Script" path="res://scripts/lemon_lvl5.gd" id="6_q5yr8"]
 [ext_resource type="Texture2D" uid="uid://dtsbhtmh4tdgt" path="res://art/green_lemon.png" id="7_12n2a"]
 [ext_resource type="PackedScene" uid="uid://c1iwcprnmb50t" path="res://prefabs/end_game.tscn" id="9_f0hmu"]
-[ext_resource type="PackedScene" uid="uid://c6106whsp1h6h" path="res://prefabs/funky thing.tscn" id="9_k2hss"]
 [ext_resource type="Script" path="res://scripts/bath_lvl_5.gd" id="11_l5evm"]
 [ext_resource type="Script" path="res://scripts/bath_level_5.gd" id="12_b44ra"]
+[ext_resource type="PackedScene" uid="uid://cw8qjnr5pwpa5" path="res://Te Reo/prefabs/death_bath_lvl5.tscn" id="12_uv2mo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k6jgp"]
 texture = ExtResource("1_q48ty")
@@ -112,9 +112,6 @@ shape = SubResource("RectangleShape2D_8wafu")
 [node name="player" parent="." instance=ExtResource("6_eoxpp")]
 position = Vector2(320, 256)
 
-[node name="Node2D" parent="." instance=ExtResource("9_k2hss")]
-position = Vector2(6528, 3456)
-
 [node name="Area2D2" parent="." instance=ExtResource("5_w40ky")]
 position = Vector2(1320, 928)
 script = ExtResource("11_l5evm")
@@ -122,5 +119,8 @@ script = ExtResource("11_l5evm")
 [node name="Area2D3" parent="." instance=ExtResource("5_w40ky")]
 position = Vector2(2856, 928)
 script = ExtResource("12_b44ra")
+
+[node name="Area2D1" parent="." instance=ExtResource("12_uv2mo")]
+position = Vector2(6528, 3456)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

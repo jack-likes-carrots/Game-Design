@@ -1,9 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://c1iwcprnmb50t"]
+[gd_scene load_steps=2 format=3 uid="uid://c1iwcprnmb50t"]
 
 [ext_resource type="AudioStream" uid="uid://sdjdljvq05ky" path="res://Audio/end game.mp3" id="1_6w5pj"]
-[ext_resource type="Script" path="res://scripts/audio_stream_player_endgame.gd" id="2_xlnjo"]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer"]
 stream = ExtResource("1_6w5pj")
 autoplay = true
-script = ExtResource("2_xlnjo")

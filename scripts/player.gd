@@ -7,6 +7,9 @@ const JUMP_VELOCITY = -750.0
 var jump_count = 0
 var max_jumps = 2
 
+
+
+		
 func jump():
 	velocity.y = JUMP_VELOCITY
 
@@ -17,10 +20,13 @@ var start_position = Vector2(600, 250)
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
+	elif not is_on_floor() and Input.is_action_just_pressed("ui_right"):
+		anim.play("run_back")
 	else:
 		if velocity.x > 1:
 			anim.play("run")

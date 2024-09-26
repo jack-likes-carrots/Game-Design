@@ -1,0 +1,180 @@
+[gd_scene load_steps=4 format=3 uid="uid://bkpqw4qqnfxoy"]
+
+[ext_resource type="Script" path="res://scripts/bath_level_5.gd" id="1_khl3i"]
+[ext_resource type="Texture2D" uid="uid://xx0ulljbl31x" path="res://art/bubble bath.png" id="2_nesgs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r6nlb"]
+size = Vector2(22654.5, 130)
+
+[node name="Area2D1" type="Area2D"]
+script = ExtResource("1_khl3i")
+
+[node name="BubbleBath2" type="Sprite2D" parent="."]
+position = Vector2(192, 64)
+texture = ExtResource("2_nesgs")
+
+[node name="BubbleBath" type="Sprite2D" parent="."]
+position = Vector2(64, 64)
+texture = ExtResource("2_nesgs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(11327.2, 64)
+shape = SubResource("RectangleShape2D_r6nlb")
+
+[node name="BubbleBath3" type="Sprite2D" parent="."]
+position = Vector2(320, 64)
+texture = ExtResource("2_nesgs")
+
+[node name="BubbleBath4" type="Sprite2D" parent="."]
+position = Vector2(448, 64)
+texture = ExtResource("2_nesgs")
+
+[node name="BubbleBath5" type="Sprite2D" parent="."]
+position = Vector2(576, 64)
+texture = ExtResource("2_nesgs")
+
+[node name="BubbleBath6" type="Sprite2D" parent="."]
+position = Vector2(704, 64)
+texture = ExtResource("2_nesgs")
+
+[node name="BubbleBath7" type="Sprite2D" parent="."]
+position = Vector2(832, 64)
+texture = ExtResource("2_nesgs")
+
+[node name="BubbleBath8" type="Sprite2D" parent="."]
+position = Vector2(960, 64)
+texture = ExtResource("2_nesgs")
+
+[node name="BubbleBath9" type="Sprite2D" parent="."]
+position = Vector2(1088, 64)
+texture = ExtResource("2_nesgs")
+
+[node name="BubbleBath10" type="Sprite2D" parent="."]
+position = Vector2(1216, 64)
+texture = ExtResource("2_nesgs")
+
+[node name="BubbleBath11" type="Sprite2D" parent="."]
+position = Vector2(1344, 64)
+texture = ExtResource("2_nesgs")
+
+[node name="BubbleBath12" type="Sprite2D" parent="."]
+position = Vector2(1472, 64)
+texture = ExtResource("2_nesgs")
+
+[node name="BubbleBath13" type="Sprite2D" parent="."]
+position = Vector2(1600, 64)
+texture = ExtResource("2_nesgs")
+
+[node name="BubbleBath14" type="Sprite2D" parent="."]
+position = Vector2(1728, 64)
+texture = ExtResource("2_nesgs")
+
+[node name="BubbleBath15" type="Sprite2D" parent="."]
+position = Vector2(1856, 64)
+texture = ExtResource("2_nesgs")
+
+[node name="BubbleBath16" type="Sprite2D" parent="."]
+position = Vector2(1984, 64)
+texture = ExtResource("2_nesgs")
+
+[node name="BubbleBath17" type="Sprite2D" parent="."]
+position = Vector2(2112, 64)
+texture = ExtResource("2_nesgs")
+
+[node name="BubbleBath18" type="Sprite2D" parent="."]
+position = Vector2(2240, 64)
+texture = ExtResource("2_nesgs")
+
+[node name="BubbleBath19" type="Sprite2D" parent="."]
+position = Vector2(2368, 64)
+texture = ExtResource("2_nesgs")
+
+[node name="BubbleBath20" type="Sprite2D" parent="."]
+position = Vector2(2496, 64)
+texture = ExtResource("2_nesgs")
+
+[node name="BubbleBath21" type="Sprite2D" parent="."]
+position = Vector2(2624, 64)
+texture = ExtResource("2_nesgs")
+
+[node name="BubbleBath22" type="Sprite2D" parent="."]
+position = Vector2(2752, 64)
+texture = ExtResource("2_nesgs")
+
+[node name="BubbleBath23" type="Sprite2D" parent="."]
+position = Vector2(2880, 64)
+texture = ExtResource("2_nesgs")
+
+[node name="BubbleBath24" type="Sprite2D" parent="."]
+position = Vector2(3008, 64)
+texture = ExtResource("2_nesgs")
+
+[node name="BubbleBath25" type="Sprite2D" parent="."]
+position = Vector2(3136, 64)
+texture = ExtResource("2_nesgs")
+
+[node name="BubbleBath26" type="Sprite2D" parent="."]
+position = Vector2(3264, 64)
+texture = ExtResource("2_nesgs")
+
+[node name="BubbleBath27" type="Sprite2D" parent="."]
+position = Vector2(3392, 64)
+texture = ExtResource("2_nesgs")
+
+[node name="BubbleBath28" type="Sprite2D" parent="."]
+position = Vector2(3520, 64)
+texture = ExtResource("2_nesgs")
+
+[node name="BubbleBath29" type="Sprite2D" parent="."]
+position = Vector2(3648, 64)
+texture = ExtResource("2_nesgs")
+
+[node name="BubbleBath30" type="Sprite2D" parent="."]
+position = Vector2(3776, 64)
+texture = ExtResource("2_nesgs")
+
+[node name="BubbleBath31" type="Sprite2D" parent="."]
+position = Vector2(3904, 64)
+texture = ExtResource("2_nesgs")
+
+[node name="BubbleBath32" type="Sprite2D" parent="."]
+position = Vector2(4032, 64)
+texture = ExtResource("2_nesgs")
+
+[node name="BubbleBath33" type="Sprite2D" parent="."]
+position = Vector2(4160, 64)
+texture = ExtResource("2_nesgs")
+
+[node name="BubbleBath34" type="Sprite2D" parent="."]
+position = Vector2(4288, 64)
+texture = ExtResource("2_nesgs")
+
+[node name="BubbleBath35" type="Sprite2D" parent="."]
+position = Vector2(4416, 64)
+texture = ExtResource("2_nesgs")
+
+[node name="BubbleBath36" type="Sprite2D" parent="."]
+position = Vector2(4544, 64)
+texture = ExtResource("2_nesgs")
+
+[node name="BubbleBath37" type="Sprite2D" parent="."]
+position = Vector2(4672, 64)
+texture = ExtResource("2_nesgs")
+
+[node name="BubbleBath38" type="Sprite2D" parent="."]
+position = Vector2(4800, 64)
+texture = ExtResource("2_nesgs")
+
+[node name="BubbleBath39" type="Sprite2D" parent="."]
+position = Vector2(4928, 64)
+texture = ExtResource("2_nesgs")
+
+[node name="BubbleBath40" type="Sprite2D" parent="."]
+position = Vector2(5056, 64)
+texture = ExtResource("2_nesgs")
+
+[node name="BubbleBath41" type="Sprite2D" parent="."]
+position = Vector2(5184, 64)
+texture = ExtResource("2_nesgs")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

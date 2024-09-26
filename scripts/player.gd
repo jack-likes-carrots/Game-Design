@@ -25,8 +25,6 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
-	elif not is_on_floor() and Input.is_action_just_pressed("ui_right"):
-		anim.play("run_back")
 	else:
 		if velocity.x > 1:
 			anim.play("run")
@@ -44,6 +42,9 @@ func _physics_process(delta):
 		
 	if Input.is_action_just_pressed("ui_accept"):
 		AudioManager.play("res://Audio/jump-sound-14839.mp3")
+		
+	if not is_on_floor() and Input.is_action_just_pressed("ui_right"):
+		anim.play("run_back")
 	
 
 	# Get the input direction and handle the movement/deceleration.

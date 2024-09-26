@@ -10,8 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://dtsbhtmh4tdgt" path="res://art/green_lemon.png" id="7_12n2a"]
 [ext_resource type="PackedScene" uid="uid://c1iwcprnmb50t" path="res://prefabs/end_game.tscn" id="9_f0hmu"]
 [ext_resource type="Script" path="res://scripts/bath_lvl_5.gd" id="11_l5evm"]
+[ext_resource type="PackedScene" uid="uid://bkpqw4qqnfxoy" path="res://prefabs/death_bath_lvl5.tscn" id="12_5k53t"]
 [ext_resource type="Script" path="res://scripts/bath_level_5.gd" id="12_b44ra"]
-[ext_resource type="PackedScene" uid="uid://cw8qjnr5pwpa5" path="res://Te Reo/prefabs/death_bath_lvl5.tscn" id="12_uv2mo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k6jgp"]
 texture = ExtResource("1_q48ty")
@@ -120,7 +120,19 @@ script = ExtResource("11_l5evm")
 position = Vector2(2856, 928)
 script = ExtResource("12_b44ra")
 
-[node name="Area2D1" parent="." instance=ExtResource("12_uv2mo")]
+[node name="Area2D1" parent="." instance=ExtResource("12_5k53t")]
 position = Vector2(6528, 3456)
+
+[node name="Area2D4" parent="." instance=ExtResource("12_5k53t")]
+position = Vector2(11776, 3456)
+
+[node name="Area2D5" parent="." instance=ExtResource("12_5k53t")]
+position = Vector2(17024, 3456)
+
+[node name="Area2D6" parent="." instance=ExtResource("12_5k53t")]
+position = Vector2(22272, 3456)
+
+[node name="Area2D7" parent="." instance=ExtResource("12_5k53t")]
+position = Vector2(23936, 3456)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
